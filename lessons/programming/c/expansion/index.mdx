@@ -1,0 +1,312 @@
+---
+title: Expansion
+---
+
+# Expansion
+
+## If Else statements
+If Else statements are conditions. This is how the If else statement works:
+
+```
+If it's raining
+    take the umbrella
+else
+    no need to take the umbrella
+```
+
+To implement this program using If Else statements:
+```c
+// Defining an integer called rain and set the value to 1
+int rain = 1;
+
+/*
+Check if rain is 1 using the comparison operator ==
+if so, take the umbrella
+*/
+if (rain == 1) {
+    printf("Take the umbrella\n");
+}
+// else print no need to take the umbrella
+else {
+    printf("No need to take the umbrella\n");
+}
+```
+
+## True False statements
+In a programming language, **1** and **0** are determined as **true** and **false**. The statement that evaluates itself as **1** is called a **true statement** and **0** is called a **false statement**.
+
+## Increment and Decrement
+- The increment sign is **++**
+- The decrement sign is **—**
+
+## Loop
+Loop helps us to execute a task repeatedly. Instead of manually writing the same functions, we can write loops to do that for us.
+
+### for loop
+This loop executes a sequence of statements as per the given condition. This is generally used to loop array by specifying its index or length.
+
+```c
+#include <stdio.h>
+
+int main() {
+    /*
+    This for loop will print from 1 to 5 vertically using new line /n
+    It will not print 6 because 5 is less than 6 - keep in mind that    we're printing i
+    */
+    for (int i = 1; i < 6; i++) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
+```
+
+**Output:**
+```
+1
+2
+3
+4
+5
+```
+
+### while loop
+This executes the code until the given condition for the execution is true.
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    // We define an integer i and set it to 0
+    int i = 0;
+
+    // We declare a while loop
+    while (i < 10) {
+
+        // We use the print function to print the integer i using %d
+        printf("i is now: %d\n", i);
+
+        // We use i++ to increment - while the condition (i < 10) is true it increments the value of i by 1
+        i++;
+    }
+    return 0;
+}
+```
+
+**Output:**
+```
+i is now: 0
+i is now: 1
+i is now: 2
+i is now: 3
+i is now: 4
+i is now: 5
+i is now: 6
+i is now: 7
+i is now: 8
+i is now: 9
+```
+
+### do while loop
+It is similar to while loop except that the condition of the execution is at the end.
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    // Defining a integer variable and setting it to 0
+    int i = 0;
+
+    // Do loop
+    do {
+        // Prints i using the format specifier %d
+        printf("i is now: %d\n", i);
+
+        // increment by 1 using ++
+        i++;
+
+      // while condition
+    } while (i < 15);
+
+    return 0;
+}
+```
+
+**Output:**
+```
+i is now: 0
+i is now: 1
+i is now: 2
+i is now: 3
+i is now: 4
+i is now: 5
+i is now: 6
+i is now: 7
+i is now: 8
+i is now: 9
+i is now: 10
+i is now: 11
+i is now: 12
+i is now: 13
+i is now: 14
+```
+
+### Nested loop
+Nested loops are loops inside other loops used in large applications and algorithms. This is highly inefficient in some cases since it requires more memory.
+
+```c
+#include <stdio.h>
+
+int main() {
+
+  // First for loop with integer i
+  for (int i = 0; i < 5; i++) {
+      // Second for loop with integer j inside the first loop
+      for (int j = 5; j < 10; j++) {
+
+          // Printing i and j
+          printf("%d %d\n", i, j);
+      }
+  }
+
+  return 0;
+}
+```
+
+**Output:**
+```
+0 5
+0 6
+0 7
+0 8
+0 9
+1 5
+1 6
+1 7
+1 8
+1 9
+2 5
+2 6
+2 7
+2 8
+2 9
+3 5
+3 6
+3 7
+3 8
+3 9
+4 5
+4 6
+4 7
+4 8
+4 9
+```
+
+## Breaking the loop
+While coding you might encounter the infinite loop. This happens when the loop condition is always true. In these cases, the program keeps running and never terminates. You can break the loop.
+
+- **Break statement** - The loop is terminated by using a break; This caused the pointer to move out of the loop and executes the next statement following the loop code.
+- **Continue statement** - It causes the loop to skip the remainder of its body and immediately retest its condition before reiterating.
+- **Goto statement** - Transfers control to the labeled statement.
+
+<Note>To avoid infinite looping, ensure that the conditions given for the loop are validated at some point. This will stop the loop once the condition is false.</Note>
+
+## Switch case
+Switch case is used when you have a single parameter to compare with multiple integral values. It provides a way to compare different parts of code for the given value of expressions.  It also can change the control execution. Once the case is executed the further execution is not approved using **break;**
+
+## Functions
+Functions are known as building blocks of programs. A large problem can be divided into smaller functions, this makes the code readable. The function contains the programming statements that are closed in braces **{}**. Writing functions in the program have their benefit:
+
+- The reuse of the code is easy.
+- Each function take only one responsibility and is interdependent
+- Functions are logical, modular and readable to human eyes. Thus makes it easier to maintain the programs further.
+
+## Return types
+You can define different return types when declaring a function.
+
+To define a function:
+```c
+#include <stdio.h>
+
+/*
+Defining a function named number_compare() that returns
+an integer and takes two parameters, first_num and
+second_num
+*/
+int number_compare(first_num, second_num) {
+
+  // Writing a if else condition
+
+  // Checking if first_num the same as second_num using the == operator
+  if (first_num == second_num) {
+    printf("They are the same\n");
+  }
+  // else print they are not the same
+  else {
+    printf("Not the same\n");
+  }
+
+  // return the integer 0, means success
+  return 0;
+}
+
+// Declaring the main function
+int main() {
+
+  // Defining two integer variables with random numbers
+  int num1 = 2;
+  int num2 = 3;
+
+  // Calling the function and putting num1 and num2 as parameters
+  number_compare(num1, num2);
+
+  return 0;
+}
+```
+
+**Output:**
+```
+Not the same
+```
+
+### Void function
+A void function doesn’t return any value. To declare a void function:
+```c
+#include <stdio.h>
+
+// Defining a void function to add two numbers
+
+void add(first_num, second_num) {
+
+  // Adding num1 and num2 and putting the result in an integer called result
+  int result = first_num + second_num;
+
+  // Printing the output
+  printf("%d\n", result);
+
+}
+
+// Declaring the main function
+int main() {
+
+  // Defining two integer variables with random numbers
+  int num1 = 2;
+  int num2 = 3;
+
+  // Calling the void function and putting num1 and num2 as parameters
+  add(num1, num2);
+
+  return 0;
+}
+```
+
+<Note>The void function named <b>add()</b> doesn’t have any return value.</Note>
+
+**Output:**
+```
+5
+```
+
+## Take the quiz
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFh0ua0YwuMxYCFZGb8-U91HF9GdicJxIIV3EWkI5f4OJI1Q/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

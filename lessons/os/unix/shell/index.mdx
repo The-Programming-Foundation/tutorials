@@ -1,0 +1,108 @@
+---
+title: Unix Shell
+---
+
+# Unix Shell
+
+### The shell is the interactive command line interface for Unix based operating systems. The user can type commands to accomplish certain tasks.
+
+## Printing a message
+To display a **Hello Earth** message in a Unix shell, type:
+
+```sh
+user@theprogrammingfoundation:~$ echo "Hello Earth"
+```
+
+<Note>Quotations are not necessary. However, if the message contains special characters, it will show errors. Therefore, using quotations is nice practice.</Note>
+
+## Clearing the screen
+To clear the screen, type:
+
+```sh
+user@theprogrammingfoundation:~$ clear
+```
+
+## Listing files and directories
+To list all the directories and files, type:
+
+```sh
+user@theprogrammingfoundation:~$ ls
+```
+
+<Note>An alternative to <b>ls</b> is <b>l</b>. This works because <b>l</b> is an alias of <b>ls</b>.</Note>
+
+## Navigating through directories
+To go inside a directory, type:
+
+```sh
+user@theprogrammingfoundation:~$ cd Pictures
+```
+
+The shell prompt shows a **/** in the beginning of the current directory:
+```sh
+user@theprogrammingfoundation:~/Pictures$
+```
+
+To list contents of a directory without going inside the directory, type:
+```sh
+user@theprogrammingfoundation:~$ ls Pictures
+```
+
+## Creating directories and files
+To create a new directory in the Unix file system, type:
+
+```sh
+user@theprogrammingfoundation:~$ mkdir new_directory
+```
+
+Multiple directories can be created using:
+```sh
+user@theprogrammingfoundation:~$ mkdir new_directory1 new_directory2
+```
+
+<Note>The shell shows an error if a directory with the same name already exists.</Note>
+
+To create a file in an Unix file system, type:
+```
+user@theprogrammingfoundation:~$ touch file.txt
+```
+
+Multiple files with different extensions can be created using:
+```sh
+user@theprogrammingfoundation:~$ touch program.c program.h
+```
+
+<Note>Unix replaces the existing file with the new file, if they have the same name.</Note>
+
+## Adding and editing contents of a file
+Adding text in text file can be done using different programs such as, **GNU nano**, **Vim** or **Emacs**.
+
+To create a file using the text editor **Vim** and add text, type:
+```sh
+user@theprogrammingfoundation:~$ vim file.txt
+```
+
+Add some texts, press **[Esc]**, then type **:wq** to save.
+<Note>In Vim <b>w</b> stands for write and <b>q</b> stands for quit.</Note>
+
+## Reading files
+To read a text file, type:
+
+```sh
+user@theprogrammingfoundation:~$ cat file.txt
+```
+
+## Removing files and directories
+To remove a file from the Unix file system, type:
+
+```sh
+user@theprogrammingfoundation:~$ rm file.txt
+```
+
+Directories can be removed using the flag, -r:
+```sh
+user@theprogrammingfoundation:~$ rm -r new_directory
+```
+
+## Take the quiz
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSmnnWMbfjDoSbxCYCigXAFIdYN9Puc2d7mSGwDmsAr3VIoA/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
