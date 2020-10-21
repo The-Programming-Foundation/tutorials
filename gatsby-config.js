@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/',
+  pathPrefix: '/gatsby', // Temporary to match GH Pages prefix
   siteMetadata: {
     siteUrl: 'https://www.theprogrammingfoundation.org/',
     author: 'Subhajeet Mukherjee',
