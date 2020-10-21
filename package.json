@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "license": "BSD-3",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
