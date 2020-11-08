@@ -8,7 +8,6 @@ import Note from '../components/Note';
 const globalComponents = { Note };
 
 export default function Post({ data: { site, mdx }, pageContext }) {
-  console.log('Hello World');
   return (
     <Layout site={site} pageTitle={mdx.frontmatter.title}>
       <MDXProvider components={globalComponents}>

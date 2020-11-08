@@ -16,7 +16,6 @@ export default ({ data: { site, mdx } }) => {
           <IndexItem to="/os/unix/shell" title="Unix shell" subtitle="Navigating the operating system" img="https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582611240800-NPL7G88SHN3AF53VFHB4/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"></IndexItem>
         </IndexSection>
         </ReduxTestTemplate>
-
     </Layout>
   );
 }
