@@ -15,6 +15,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
