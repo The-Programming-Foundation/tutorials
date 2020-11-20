@@ -1,6 +1,6 @@
 import {createModel} from '@rematch/core';
 
-export const editorStorage = createModel({
+export const editorModel = createModel({
     state: [],
     reducers: {
         addEditor: (state, code) => {
@@ -10,6 +10,9 @@ export const editorStorage = createModel({
             }
             let newId = state[state.length -1].editorId + 1;
             return [...state, {editorId: newId, content: code}];
+        },
+        editor: (state, id, payload) => {
+            return {...state, [id]: payload}
         },
         destroyEditor: (state, id) => {
             return state.filter(editor => editor.id !== id)

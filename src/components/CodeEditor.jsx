@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import AceEditor from 'react-ace';
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/theme-tomorrow";
@@ -9,19 +9,23 @@ import {useSelector, useDispatch} from 'react-redux';
 
 
 export default function CodeEditor(props){
-    const editorStorage = useSelector((state) => state.editorStorage);
+    const {id, minimize, language} = props;
+
+    const editorModel = useSelector((state) => state.editorModel);
     const dispatch = useDispatch();
-    const [code, setCode] = useState(null);
-    const [checked, setChecked] = useState(true);
-    const [display, setDisplay] = useState(true);
-    const {minimize, language} = props;
+    useEffect(() => {
+        console.log(editorModel[id]);
+        if (editorModel[id] === undefined) {
+            dispatch.editorModel.editor(props.id, { code: "", display: true, isDark: true,})
+        }
+    });
     
     function handleMinimize(){
-        setDisplay(!display);
+        // setDisplay(!display);
     }
 
     function getContent(currentValue){
-        setCode(JSON.stringify(currentValue));
+        // setCode(JSON.stringify(currentValue));
     }
 
     return(
@@ -30,15 +34,14 @@ export default function CodeEditor(props){
             <input
                 type="checkbox"
                 id="theme"
-                checked={checked}
-                onChange={() => setChecked(!checked)}
+                checked={isDark}
             />
             <label for="theme">Dark Mode</label>
-            <button onClick={() => dispatch.editorStorage.addEditor(code)}>Save Editor</button>
+            <button onClick={() => dispatch.editorModel.editor(props.id, {code: "Hello world"})}>Save Editor</button>
             <AceEditor
-                style={{display: display ? 'block' : 'none'}}
+                style={{display: editorModel[id].display ? 'block' : 'none'}}
                 mode={language}
-                theme={checked ? 'monokai' : 'tomorrow'}
+                theme={editorModel[id]['isDark'] ? 'monokai' : 'tomorrow'}
                 onChange={getContent}
             />
         </React.Fragment>
