@@ -2,52 +2,53 @@ import React, {useRef, useEffect} from 'react';
 import AceEditor from 'react-ace';
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/theme-tomorrow";
-//need to implement dynamic imports
 import "ace-builds/src-noconflict/mode-python";
-
 import {useSelector, useDispatch} from 'react-redux';
 
-
 export default function CodeEditor(props){
-    const {id, minimize, language} = props;
-    let isDark = useRef(true);
-    let isDisplayed = useRef(minimize);
-
-    const editorModel = useSelector((state) => state.editorModel);
+    const {id, display, language} = props;
+    const editorModel = useSelector((state) => state.editorModel[id]);
     const dispatch = useDispatch();
+
+    let isDark = useRef(true);
+    let isDisplayed = useRef(display);
     
     useEffect(() => {
-        isDark.current = editorModel[id] && editorModel[id].isDark;
-        isDisplayed.current = editorModel[id] && editorModel[id].isDisplayed;
-
-        if (editorModel[id] === undefined) {
-            // dispatch.editorModel.editor(props.id, { code: "", isDisplayed: minimize, isDark: true,})
-        }
+        if (editorModel === undefined) {
+            dispatch.editorModel.editor(props.id, { code: "", isDisplayed: display, isDark: true,});
+        } 
     });
     
-    const handleMinimize = () => {
-        dispatch.editorModel.editor(props.id, {isDisplayed: !isDisplayed.current});
+    const minimize = () => {
+        isDisplayed.current = !editorModel.isDisplayed;
+        dispatch.editorModel.editor(id, {...editorModel, isDisplayed: isDisplayed.current});
     }
 
-    function getContent(currentValue){
-        // setCode(JSON.stringify(currentValue));
+    const switchTheme = () => {
+        isDark.current = !editorModel.isDark;
+        dispatch.editorModel.editor(id, {...editorModel, isDark: isDark.current});
+    }
+
+    // TODO: We can keep an eye on the preformace of this, possibly add an idel interval to dispatch
+    const saveCode = (code) => {
+        dispatch.editorModel.editor(id, {...editorModel, code: code});
     }
 
     return(
         <React.Fragment>
-            {isDisplayed ? <button onClick={handleMinimize}>Minimize</button> : ''}
+            {isDisplayed ? <button onClick={minimize}>Minimize</button> : ''}
             <input
                 type="checkbox"
-                id="theme"
+                id={id + "-theme"}
                 checked={isDark.current}
+                onChange={switchTheme}
             />
-            <label for="theme">Dark Mode</label>
-            <button onClick={() => dispatch.editorModel.editor(props.id, {code: "Hello world"})}>Save Editor</button>
+            <label htmlFor={id + "-theme"}>Dark Mode</label>
             <AceEditor
                 style={{display: isDisplayed.current ? 'block' : 'none'}}
                 mode={language}
                 theme={isDark.current ? 'monokai' : 'tomorrow'}
-                onChange={getContent}
+                onChange={saveCode}
             />
         </React.Fragment>
   );
