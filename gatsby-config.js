@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/learn-content', // Temporary to match GH Pages prefix
+  pathPrefix: '/tutorials', // Temporary to match GH Pages prefix
   siteMetadata: {
     siteUrl: 'https://www.theprogrammingfoundation.org/',
     author: 'Subhajeet Mukherjee',
@@ -12,6 +12,13 @@ module.exports = {
       options: {
         path: `${__dirname}/lessons`,
         name: 'lessons',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        allExtensions: true,
       },
     },
     {
