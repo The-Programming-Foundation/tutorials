@@ -35,21 +35,21 @@ export default function CodeEditor(props){
     }
 
     return(
-        <React.Fragment>
-            {isDisplayed ? <button onClick={minimize}>Minimize</button> : ''}
+        <>
+            {/* {isDisplayed ? <button onClick={minimize}>Minimize</button> : ''}
             <input
                 type="checkbox"
                 id={id + "-theme"}
                 checked={isDark.current}
                 onChange={switchTheme}
             />
-            <label htmlFor={id + "-theme"}>Dark Mode</label>
+            <label htmlFor={id + "-theme"}>Dark Mode</label> */}
             <AceEditor
                 style={{display: isDisplayed.current ? 'block' : 'none'}}
                 mode={language}
                 theme={isDark.current ? 'monokai' : 'tomorrow'}
                 onChange={saveCode}
             />
-        </React.Fragment>
+        </>
   );
 }
