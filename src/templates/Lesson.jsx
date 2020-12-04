@@ -3,10 +3,10 @@ import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
-
 import Note from '../components/Note';
+import CodeEditor from '../components/CodeEditor';
 
-const globalComponents = { Note };
+const globalComponents = { Note, CodeEditor };
 
 export default function Post({ data: { site, mdx }, pageContext }) {
   return (
