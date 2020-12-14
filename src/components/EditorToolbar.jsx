@@ -3,10 +3,15 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { IoIosPhonePortrait } from '@react-icons/all-files/io/IoIosPhonePortrait';
 import { IoIosPhoneLandscape } from '@react-icons/all-files/io/IoIosPhoneLandscape';
 import { IoIosMoon } from '@react-icons/all-files/io/IoIosMoon';
+import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline';
 import { BiExpand } from '@react-icons/all-files/bi/BiExpand';
 import { IoPlay } from '@react-icons/all-files/io5/IoPlay';
 import { CgUndo } from '@react-icons/all-files/cg/CgUndo';
 import { IoIosArrowDown } from '@react-icons/all-files/io/IoIosArrowDown';
+//Code Editor
+import AceEditor from 'react-ace';
+import "ace-builds/src-noconflict/theme-tomorrow";
+import "ace-builds/src-noconflict/theme-monokai";
 
 export default function EditorToolbar(){
 
@@ -49,8 +54,13 @@ export default function EditorToolbar(){
     }
 
     const [positionMode, setPositionMode] = useState(false);
-    const handleToggle = () => {
+    const [darkMode, setDarkMode] = useState(false);
+    const handlePositionChange = () => {
         setPositionMode(!positionMode);
+    }
+
+    const handleThemeChange = () => {
+        setDarkMode(!darkMode);
     }
     return(
         <div style={{backgroundColor: "#c4c4c4", padding: "25px"}}>
@@ -68,13 +78,19 @@ export default function EditorToolbar(){
                 </Row>
                 <Row className="d-flex justify-content-between">
                    <Col sm className="d-flex justify-content-start">
-                        <div type="button" style={buttonIconStyle} onClick={handleToggle}>{positionMode? <IoIosPhonePortrait style={iconStyle} /> : <IoIosPhoneLandscape style={iconStyle}/>}</div>
-                        <IoIosMoon style={iconStyle}/>
+                        <div type="button" style={buttonIconStyle} onClick={handlePositionChange}>{positionMode? <IoIosPhonePortrait style={iconStyle} /> : <IoIosPhoneLandscape style={iconStyle}/>}</div>
+                        <div type="button" style={buttonIconStyle} style={{marginLeft: "15px"}} onClick={handleThemeChange}>{darkMode? <IoIosMoon style={iconStyle} /> : <IoSunnyOutline style={iconStyle}/>}</div>
                     </Col>
                     <Col sm className="d-flex justify-content-end">
                         <BiExpand style={iconStyle}/>
                     </Col>
                 </Row>
+                {/* The following section has the code editor component included. Feel free to comment out when needed. */}
+                {/* TODO: Update CodeEditor component to implement toolbar and its functionalities */}
+                {/* TODO: Update useState to useRef */}
+                <Row style={{marginTop: buttonTheme.spacing[1]}}>
+                    <AceEditor theme={darkMode ? 'monokai' : 'tomorrow'} style={{width: "100%"}}></AceEditor>
+                </Row>    
             </Container>            
         </div>
     )
