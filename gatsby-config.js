@@ -60,5 +60,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `poppins`,
+        ],
+        display: 'swap'
+      }
+    }
   ],
 };
