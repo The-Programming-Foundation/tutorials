@@ -57,10 +57,10 @@ export default ({ children, pageTitle, site }) => {
       <Helmet title={title}>
         <html lang="en" />
       </Helmet>
-      <GlobalStyle />
-      <Header></Header>
-      <ContentContainer>{children}</ContentContainer>
-      <Footer></Footer>
+    <GlobalStyle />
+    <Header></Header>
+    <ContentContainer>{children}</ContentContainer>
+    <Footer></Footer>
     </LayoutContainer>
   );
 };
