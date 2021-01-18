@@ -15,6 +15,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `lessontopic`,
+        path: `${__dirname}/src/data/`,
+        
+      }
+    },
+    {
       resolve: `gatsby-plugin-typescript`,
       options: {
         isTSX: true,
