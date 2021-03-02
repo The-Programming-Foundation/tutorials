@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/tutorials', // Temporary to match GH Pages prefix
   siteMetadata: {
     siteUrl: 'https://www.theprogrammingfoundation.org/',
-    author: 'Subhajeet Mukherjee',
+    author: 'The Programming Foundation',
     title: 'The Programming Foundation',
     description: 'A high-level programming language for general purpose programming',
   },

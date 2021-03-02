@@ -2,13 +2,14 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
+import "@fontsource/poppins" // Defaults to weight 400.
 import Header from './Header';
 import Footer from './Footer';
 import '../../assets/prism-theme.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: Arial;
+    font-family: Poppins;
     line-height: 1.8;
   }
 
