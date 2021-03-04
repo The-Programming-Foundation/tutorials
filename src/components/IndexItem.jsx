@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const ItemContainer = styled.div`
-  width: 33%;
   margin: 15px;
   box-sizing: border-box;
 
