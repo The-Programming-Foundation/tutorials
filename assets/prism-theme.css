@@ -141,3 +141,7 @@ pre[class*="language-"] {
 .token.italic {
 	font-style: italic;
 }
+
+.carousel-container{
+	width: 100vw;
+}
