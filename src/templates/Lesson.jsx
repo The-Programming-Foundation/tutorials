@@ -5,8 +5,9 @@ import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
 import Note from '../components/Note';
 import CodeEditor from '../components/CodeEditor';
+import IframeV86 from '../components/IframeV86';
 
-const globalComponents = { Note, CodeEditor };
+const globalComponents = { Note, CodeEditor, IframeV86 };
 
 export default function Post({ data: { site, mdx }, pageContext }) {
   return (
