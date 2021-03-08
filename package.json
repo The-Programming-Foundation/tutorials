@@ -1,5 +1,6 @@
 {
   "name": "the-programming-foundation",
+  "homepage": "https://learn.theprogrammingfoundation.org/",
   "private": true,
   "description": "Interactive open source lessons",
   "version": "0.1.0",
