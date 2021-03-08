@@ -6,14 +6,13 @@
   "version": "0.1.0",
   "license": "BSD-3",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public"
-    //"deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@fontsource/poppins": "^4.2.1",
