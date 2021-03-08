@@ -47,7 +47,7 @@ export default () => {
         <HeaderMenuItem><a href="https://www.theprogrammingfoundation.org/donate">Donate</a></HeaderMenuItem>
         <HeaderMenuItem><a href="https://www.theprogrammingfoundation.org/blog">Blog</a></HeaderMenuItem>
         <HeaderMenuItem><a href="https://www.theprogrammingfoundation.org/charter">Charter</a></HeaderMenuItem>
-        <HeaderMenuItemAccent><Link to="/learn">Learn</Link></HeaderMenuItemAccent>
+        <HeaderMenuItemAccent><Link to="/">Learn</Link></HeaderMenuItemAccent>
       </ul>
     </HeaderContainer>
   );
