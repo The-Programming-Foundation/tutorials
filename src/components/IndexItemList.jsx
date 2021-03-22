@@ -39,6 +39,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
 import { IoIosArrowBack } from "@react-icons/all-files/io/IoIosArrowBack";
+import  '../style/style.css';
 
 const PrevArrow = (props) => {
   const { className, style, onClick } = props;
@@ -56,7 +57,7 @@ const NextArrow = (props) => {
   return (
       <IoIosArrowForward
           className={className}
-          style={{...style}}
+          style={{...style,display: "block"}}
           onClick={onClick}
       />
   );
@@ -64,6 +65,8 @@ const NextArrow = (props) => {
 
 export default ({ lessonTopic }) => {
   const settings = {
+    useCSS:true,
+    centerPadding: '20px',
     dots: false,
     speed: 1000,
     slidesToShow: 2,
@@ -87,15 +90,15 @@ export default ({ lessonTopic }) => {
   }; 
 
  return (
+  <div className="slick-container">
     <Slider {...settings}>
       {lessonTopic.map((itemlist) => {
-        const { to, title, subtitle, image } = itemlist;
+        const { id,to, title, subtitle, image } = itemlist;
         return (
-        
-          <IndexItem to={to} title={title} subtitle= {subtitle} img={image}></IndexItem>
+          <IndexItem key={id} to={to} title={title} subtitle= {subtitle} img={image}></IndexItem>
         );
       })}
     </Slider>
-    
+    </div>
   );
 };

@@ -11,11 +11,11 @@ const SectionContainer = styled.div`
   }
 
   .slick-prev{
-    margin-left: -25px;
+    margin-left: -15px;
   }
 
   .slick-next{
-    margin-right: -25px;
+    margin-right: -15px;
   }
 `;
 
@@ -24,7 +24,7 @@ export default ({ children, title }) => {
     <>
       <h3>{title}</h3>
       <SectionContainer>
-        {children}
+         {children}
       </SectionContainer>
     </>
   );

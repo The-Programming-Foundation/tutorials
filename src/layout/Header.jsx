@@ -1,54 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const HeaderContainer = styled.div`
-  display: flex;
-  height: 80px;
-  width: 100%;
-  padding: 15px;
-  justify-content: space-between;
-  align-items: center;
-`;
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Navbar, Nav} from 'react-bootstrap';
+import  '../style/style.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
-const HeaderTitle = styled.div`
-  font-weight: 500;
-  font-size: 2rem;
-`;
-
-const HeaderMenuItem = styled.li`
-  display: inline-block;
-  margin-left: 25px;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-`;
-
-const HeaderMenuItemAccent = styled.li`
-  display: inline-block;
-  margin-left: 25px;
-  color: white;
-  background: black;
-  padding: 10px 15px;
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-`;
 
 export default () => {
   return (
-    <HeaderContainer>
-      <HeaderTitle>The Programming Foundation</HeaderTitle>
-      <ul>
-        <HeaderMenuItem><a href="https://www.theprogrammingfoundation.org/donate">Donate</a></HeaderMenuItem>
-        <HeaderMenuItem><a href="https://www.theprogrammingfoundation.org/blog">Blog</a></HeaderMenuItem>
-        <HeaderMenuItem><a href="https://www.theprogrammingfoundation.org/charter">Charter</a></HeaderMenuItem>
-        <HeaderMenuItemAccent><Link to="/">Learn</Link></HeaderMenuItemAccent>
-      </ul>
-    </HeaderContainer>
+  <Container fluid>
+    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar.Brand href="/" className="navbarbrand">The Programming Foundation</Navbar.Brand>
+    <Navbar.Toggle aria-controls="navbarResponsive">
+       <FontAwesomeIcon icon={faBars} style={{color:"#fff"}} aria-controls="navbarResponsive" />
+    </Navbar.Toggle>
+    <Navbar.Collapse id="navbarResponsive">
+      <Nav as="ul" className="ml-auto">
+        <Nav.Item as ="li">
+          <Nav.Link href="https://www.theprogrammingfoundation.org/donate" activeclassname="active">Donate</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as ="li">
+          <Nav.Link href="https://www.theprogrammingfoundation.org/blog" activeclassname="active">Blog</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as ="li">
+          <Nav.Link href="https://www.theprogrammingfoundation.org/charter" activeclassname="active">Charter</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as ="li">
+          <Link to="/"  className="nav-link"  activeclassname="active">Learn</Link>
+        </Nav.Item>
+      </Nav>
+
+</Navbar.Collapse>
+</Navbar>
+</Container>
   );
 };

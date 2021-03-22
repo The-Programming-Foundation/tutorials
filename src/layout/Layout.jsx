@@ -1,11 +1,15 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 import "@fontsource/poppins" // Defaults to weight 400.
 import Header from './Header';
 import Footer from './Footer';
 import '../../assets/prism-theme.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col} from 'react-bootstrap';
+import  '../style/style.css'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -34,34 +38,28 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const LayoutContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-  const ContentContainer = styled.div`
-  padding: 15px;
-  margin: 50px 0;
-  width: 100%;
-  max-width: 1200px;
-`;
-
 export default ({ children, pageTitle, site }) => {
   let title = site.siteMetadata.title;
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
   }
-
+  
   return (
-    <LayoutContainer>
-      <Helmet title={title}>
-        <html lang="en" />
-      </Helmet>
-    <GlobalStyle />
-    <Header></Header>
-    <ContentContainer>{children}</ContentContainer>
-    <Footer></Footer>
-    </LayoutContainer>
+    <>
+       <Container fluid>
+        <Row>
+          <Helmet title={title}>
+            <html lang="en" />
+          </Helmet>
+          <GlobalStyle />
+          <Header></Header>
+          <Col md={2}></Col>
+          <Col md={8}>{children}</Col>
+          <Col xs lg="2">
+          </Col>
+          <Footer></Footer>
+         </Row>
+      </Container>
+    </>
   );
 };
