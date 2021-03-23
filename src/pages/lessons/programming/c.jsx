@@ -3,6 +3,7 @@ import Layout from '../../../layout/Layout';
 import IndexSection from '../../../components/IndexSection';
 import IndexItemList from '../../../components/IndexItemList';
 import LessonTopic from '../../../data/LessonTopic';
+import { graphql } from 'gatsby';
 
 const  filter = (lesson) => {
   return LessonTopic.filter(type => type.lessonType === lesson)

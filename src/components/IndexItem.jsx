@@ -27,6 +27,7 @@ const ItemSubTitle = styled.div`
 
 export default ({ to, title, subtitle, img }) => {
   return (
+    <React.Fragment>
     <ItemContainer>
       <Link to={to}>
         <ItemThumbnail src={img} alt={title} />
@@ -34,5 +35,6 @@ export default ({ to, title, subtitle, img }) => {
         <ItemSubTitle>{subtitle}</ItemSubTitle>
       </Link>
     </ItemContainer>
+    </React.Fragment>
   );
 }
