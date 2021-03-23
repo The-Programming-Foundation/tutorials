@@ -30,7 +30,6 @@
     font-weight: 600;
     height: 3.4rem;
     text-align: start;
-
 }
 nav a.nav-link{
     font-size: .8rem;
@@ -60,12 +59,25 @@ nav ul li{
     color: var(--primary-white);
 }
 
-.codeLabLayoutRow{
-    color:var(--primary-black);
-    background:var(--primary-white);
-    overflow-y: "auto";
-    height: 1000;
-    padding: 5px;
+ .codeLabLayout-container{
+    flex-grow: 1;
+}
+.codeLabLayout-row{
+    margin: -12xp;;
+}
+
+.codeLabLayout-row-col-scroll{
+    height: 1000px;
+    box-sizing: border-box; 
+}
+
+.codeLabLayout-row > .codeLabLayout-row-col-scroll{
+    padding: 12px;
+    overflow-y:scroll;
+}
+
+.codeLabLayout-iframe{
+   padding: 12px;
 }
 
 @media(max-width:768){

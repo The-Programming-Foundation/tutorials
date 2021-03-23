@@ -10,7 +10,7 @@ import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 export default () => {
   return (
-  <Container fluid>
+  <Container fluid style={{padding:"0 15"}} >
     <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
     <Navbar.Brand href="/" className="navbarbrand">The Programming Foundation</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarResponsive">

@@ -8,15 +8,13 @@ import  '../style/style.css';
 export default ({children, title}) => {
   return (
     <>
-     <Container fluid className="bg-dark">
-       <Row xs={1} md={2} className="codeLabLayoutRow">
-        <Col>
-          {children}
-        </Col>
-        <Col>
-          <IframV86 title={title}></IframV86>
-        </Col>  
-       </Row>
+     <Container className="codeLabLayout-container">
+        <Row className="codeLabLayout-row">
+          <Col className="codeLabLayout-row-col-scroll">{children}
+          </Col>
+          <Col className="codeLabLayout-iframe"><IframV86 title={title}></IframV86>
+          </Col>
+      </Row>
       </Container>
     </>
   );
