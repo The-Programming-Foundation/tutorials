@@ -27,6 +27,11 @@ const ExcerptDonateButton = styled.button`
   background: white;
   border: none;
   margin: 15px 0;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 `;
 
 const NavigationContainer = styled.div`
@@ -68,7 +73,7 @@ export default () => {
               <ExcerptTagline>Help us build a smarter us</ExcerptTagline>
               <p>The Programming Foundation commits to spreading awareness and education on computer programming and operating systems so that everyone is involved, and no one is left behind while the world advances.</p>
               <p>We are a registered 501(c)(3) nonprofit organization.</p>
-              <ExcerptDonateButton>Donate</ExcerptDonateButton>
+              <ExcerptDonateButton><a href="https://www.theprogrammingfoundation.org/donate">Donate</a></ExcerptDonateButton>
             </ExcerptContainer>
        </Col>
         <Col md sm lg={1}></Col>
@@ -86,16 +91,20 @@ export default () => {
           <NavigationHeader>About</NavigationHeader>
           <NavigationList>
             <li><a href="https://www.theprogrammingfoundation.org/leadership">Leadership</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/supporters">Supporters</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/privacy">Privacy Policy</a></li>
-            <li><a href="echo@smarterus.org">Contact</a></li>
+            <li><a href="https://www.theprogrammingfoundation.org/blog">Blog</a></li>
+            <li><a href="https://www.theprogrammingfoundation.org/brand">Brand</a></li>
+            <li><a href="https://www.theprogrammingfoundation.org/privacy">Privacy</a></li>
+            <li><a href="mailto:echo@smarterus.org">Contact</a></li>
           </NavigationList>
         </NavigationSubContainer>
         <NavigationSubContainer>
           <NavigationHeader>Get Involved</NavigationHeader>
           <NavigationList>
-            <li><a href="https://www.theprogrammingfoundation.org/volunteers">Volunteering</a></li>
+            <li><a href="https://www.theprogrammingfoundation.org/volunteering">Volunteering</a></li>
             <li><a href="https://github.com/The-Programming-Foundation">Open source</a></li>
+            <li><a href="https://www.theprogrammingfoundation.org/research">Research</a></li>
+            <li><a href="https://www.theprogrammingfoundation.org/podcast">Podcast</a></li>
+            <li><a href="https://www.google.com/url?q=https%3A%2F%2Fus17.campaign-archive.com%2Fhome%2F%3Fid%3D8ed970028d%26u%3D2b5505306c208a54f7daff686&sa=D&sntz=1&usg=AFQjCNH-dX29FbTo6sSuJDu4RBJUAornCQ">Newsletter</a></li>
           </NavigationList>
         </NavigationSubContainer>
       </NavigationContainer>
