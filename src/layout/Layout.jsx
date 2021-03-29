@@ -53,9 +53,9 @@ export default ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Col xl={2}></Col>
-          <Col md={12}>{children}</Col>
-          <Col xs xl="2">
+          <Col xl={2} md={1}></Col>
+          <Col xl={8} md={10} sm={12} >{children}</Col>
+          <Col xl={2} md={1}>
           </Col>
           <Footer></Footer>
         </Row>
