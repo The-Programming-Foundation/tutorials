@@ -8,8 +8,8 @@ import Footer from './Footer';
 import '../../assets/prism-theme.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col} from 'react-bootstrap';
-import  '../style/style.css'
+import { Container, Row, Col } from 'react-bootstrap';
+import '../style/style.css'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -43,22 +43,22 @@ export default ({ children, pageTitle, site }) => {
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
   }
-  
+
   return (
     <>
-       <Container fluid>
+      <Container fluid>
         <Row>
           <Helmet title={title}>
             <html lang="en" />
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Col md={2}></Col>
-          <Col md={8}>{children}</Col>
-          <Col xs lg="2">
+          <Col xl={2}></Col>
+          <Col md={12}>{children}</Col>
+          <Col xs xl="2">
           </Col>
           <Footer></Footer>
-         </Row>
+        </Row>
       </Container>
     </>
   );

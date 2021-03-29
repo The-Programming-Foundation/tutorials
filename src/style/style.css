@@ -74,13 +74,32 @@ nav ul li{
 .codeLabLayout-row > .codeLabLayout-row-col-scroll{
     padding: 12px;
     overflow-y:scroll;
+    max-width: 100%;
 }
 
 .codeLabLayout-iframe{
    padding: 12px;
+   max-width: 100%;
+   overflow: hidden;
 }
 
-@media(max-width:768){
+
+
+
+@media(max-width:768px){
+
+    h1 {
+        font-size: 3rem !important;
+    }
+    h2{
+        font-size: 2rem !important;
+    }
+    h3 {
+        font-size: 1.5rem !important;
+    }
+    h4 {
+        font-size: 1.3rem !important;
+    }
     .contentContainer h1{
         font-size: 1.7rem  !important;
     }
