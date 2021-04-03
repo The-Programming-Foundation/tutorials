@@ -15,6 +15,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-168060731-2",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `lessontopic`,
