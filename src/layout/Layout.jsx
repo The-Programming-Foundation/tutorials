@@ -5,6 +5,9 @@ import { Helmet } from 'react-helmet';
 import "@fontsource/poppins" // Defaults to weight 400.
 import Header from './Header';
 import Footer from './Footer';
+
+import NavButtons from './NavButtons';
+
 import '../../assets/prism-theme.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -53,10 +56,8 @@ export default ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          {/* <Col xl={1} md={1}></Col> */}
           <Col xl={12} md={12} sm={12} >{children}</Col>
-          {/* <Col xl={1} md={1}>
-          </Col> */}
+          <NavButtons />
           <Footer></Footer>
         </Row>
       </Container>
