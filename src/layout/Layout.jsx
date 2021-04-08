@@ -6,9 +6,9 @@ import "@fontsource/poppins" // Defaults to weight 400.
 import Header from './Header';
 import Footer from './Footer';
 import '../../assets/prism-theme.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import Player from '../components/Player';
 import '../style/style.css'
 
 const GlobalStyle = createGlobalStyle`
@@ -43,7 +43,6 @@ export default ({ children, pageTitle, site }) => {
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
   }
-
   return (
     <>
       <Container fluid>
@@ -53,8 +52,20 @@ export default ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Col xl={2} md={1}></Col>
-          <Col xl={8} md={10} sm={12} >{children}</Col>
+          <Col xl={2} md={1}>
+          </Col>
+          <Col xl={8} md={10} sm={12} >
+            <Row className="row_player">
+                <Col xl md={{ span: 11, offset: 11 }}>
+                  <Player />
+                </Col>
+            </Row>
+            <Row>
+              <Col>
+                {children}
+              </Col>
+            </Row>
+          </Col>
           <Col xl={2} md={1}>
           </Col>
           <Footer></Footer>

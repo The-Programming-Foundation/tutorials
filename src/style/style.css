@@ -83,8 +83,48 @@ nav ul li{
    overflow: hidden;
 }
 
+/*---------audio-------------*/
+.rhap_container, .rhap_container * :focus {
+    outline: none;
+}
 
+.rhap_main{
+   height: fit-content;
+   width: fit-content;
+}
 
+.rhap_play-pause-button {
+   font-size: 30px;
+   width: 30px;
+   height: 30px;
+}
+
+.rhap_container{
+   box-shadow:none;
+   width: 0px;
+   height:0px;
+   padding: 0px !important;
+   box-shadow:0 0 0px 0 rgb(0 0 0 / 20%) !important;
+} 
+
+.rhap_container svg {
+   color:var(--primary-black);
+}
+
+.rhap_container.player {
+   display: flex;
+   justify-items: center;
+   padding: 0.25em 0.75em;
+   border-radius: 10px;
+ }
+
+ .row_player{
+   text-align: end;
+   height: 45px;
+   margin: -10px 0px 1px 0px;
+ }
+
+/*----------------------*/
 
 @media(max-width:768px){
 
