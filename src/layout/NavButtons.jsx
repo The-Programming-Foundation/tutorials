@@ -12,6 +12,9 @@ const NavButtons = () => {
         const unixLessons = LessonTopic?.filter(type => type.lessonType === 'unix');
         const cLessons = LessonTopic?.filter(type => type.lessonType === 'c');
         const pythonLessons = LessonTopic?.filter(type => type.lessonType === 'python');
+        const oopLessons = LessonTopic?.filter(type => type.lessonType === 'oop');
+        const vimLessons = LessonTopic?.filter(type => type.lessonType === 'vim');
+        const kernelLessons = LessonTopic?.filter(type => type.lessonType === 'kernel');
 
         switch (currentLessonType) {
             case 'unix':
@@ -20,35 +23,40 @@ const NavButtons = () => {
                 return cLessons;
             case 'python':
                 return pythonLessons;
+            case 'oop':
+                return oopLessons;
+            case 'vim':
+                return vimLessons;
+            case 'kernel':
+                return kernelLessons;
             default:
                 return "";
         }
     }
-    // handling next lesson navigation button
-    const nextLesson = () => {
+    // handling next/previous lesson navigation buttons
+    const previousNextLesson = () => {
         const currentLessons = handleLessonNavButtons();
         const lessonIndex = currentLessons.indexOf(currentTitle[0]);
-        return currentLessons[lessonIndex + 1];
+        const lessonLinks = {
+            nextLesson: '',
+            previousLesson: ''
+        };
+        lessonLinks.nextLesson = currentLessons[lessonIndex + 1] || '';
+        lessonLinks.previousLesson = currentLessons[lessonIndex - 1] || '';
+        return lessonLinks;
     }
 
-    // handling previous lesson navigation button
-    const previousLesson = () => {
-        const currentLessons = handleLessonNavButtons();
-        const lessonIndex = currentLessons.indexOf(currentTitle[0]);
-        return currentLessons[lessonIndex - 1];
-    }
 
     return (
-        <div>
-            {(previousLesson || nextLesson) && (
-
-                <div style={{ display: 'flex', justifyContent: 'space-between', width: '95vw' }}>
-                    <Link to={previousLesson()?.to}>{previousLesson()?.title}</Link>
-                    <Link to={nextLesson()?.to}>{nextLesson()?.title}</Link>
-
+        <>
+            {/* if there's a previous or next lesson, display navigation buttons */}
+            { previousNextLesson && (
+                <div className='lesson-nav-buttons'>
+                    <Link to={previousNextLesson().previousLesson?.to}>{previousNextLesson().previousLesson?.title}</Link>
+                    <Link to={previousNextLesson().nextLesson?.to}>{previousNextLesson()?.nextLesson.title}</Link>
                 </div>
             )}
-        </div>
+        </>
     )
 }
 

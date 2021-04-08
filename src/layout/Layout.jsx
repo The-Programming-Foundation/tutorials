@@ -56,8 +56,10 @@ export default ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Col xl={12} md={12} sm={12} >{children}</Col>
-          <NavButtons />
+          <Col xl={12} md={12} sm={12} >
+            {children}
+            <NavButtons />
+          </Col>
           <Footer></Footer>
         </Row>
       </Container>
