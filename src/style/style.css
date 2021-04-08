@@ -83,6 +83,14 @@ nav ul li{
    overflow: hidden;
 }
 
+.lesson-nav-buttons {
+    display:flex;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: 700;
+}
+
+
 
 
 
