@@ -4,7 +4,11 @@ import LessonTopic from '../data/LessonTopic';
 
 const NavButtons = () => {
     // extracting current lesson information from url
-    const currentTitle = LessonTopic.filter(lesson => lesson.to === window.location.pathname);
+    const currentTitle = LessonTopic.filter(lesson => {
+        if (typeof (window) !== 'undefined') {
+            return lesson.to === window.location.pathname;
+        }
+    });
     const currentLessonType = currentTitle[0]?.lessonType;
 
     // creating sub arrays per lesson type
