@@ -50,7 +50,7 @@
     "react-ace": "^9.2.0",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^16.12.0",
-    "react-h5-audio-player": "^3.6.2",
+    "react-h5-audio-player": "^3.7.0",
     "react-helmet": "^6.1.0",
     "react-redux": "^7.2.2",
     "react-slick": "^0.28.0",

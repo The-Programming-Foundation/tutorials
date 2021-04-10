@@ -83,6 +83,12 @@ nav ul li{
    overflow: hidden;
 }
 
+.lesson-nav-buttons {
+    display:flex;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: 700;
+}
 /*---------audio-------------*/
 .rhap_container, .rhap_container * :focus {
     outline: none;
@@ -94,9 +100,9 @@ nav ul li{
 }
 
 .rhap_play-pause-button {
-   font-size: 30px;
-   width: 30px;
-   height: 30px;
+   font-size: 25px;
+   width: 25px;
+   height: 25px;
 }
 
 .rhap_container{
@@ -116,12 +122,14 @@ nav ul li{
    justify-items: center;
    padding: 0.25em 0.75em;
    border-radius: 10px;
+   float:right;
  }
 
  .row_player{
    text-align: end;
-   height: 45px;
+   height: 34px;
    margin: -10px 0px 1px 0px;
+   float:right;
  }
 
 /*----------------------*/
