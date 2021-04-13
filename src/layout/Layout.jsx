@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
@@ -12,7 +12,9 @@ import '../../assets/prism-theme.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../style/style.css'
+import '../style/style.css';
+import useSound from 'use-sound';
+import bootup from '../music/bootup.mp3';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -47,9 +49,14 @@ export default ({ children, pageTitle, site }) => {
     title = `${title} - ${pageTitle}`;
   }
 
+  const [playBootup] = useSound(bootup, { volume: 0.1 });
+  useEffect(() => {
+    playBootup();
+  }, []);
+
   return (
     <>
-      <Container fluid>
+      <Container fluid onClick={playBootup}>
         <Row>
           <Helmet title={title}>
             <html lang="en" />
