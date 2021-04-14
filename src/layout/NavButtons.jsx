@@ -8,6 +8,7 @@ const NavButtons = () => {
         if (typeof (window) !== 'undefined') {
             return lesson.to === window.location.pathname;
         }
+        return null;
     });
     const currentLessonType = currentTitle[0]?.lessonType;
 
@@ -48,16 +49,17 @@ const NavButtons = () => {
         lessonLinks.nextLesson = currentLessons[lessonIndex + 1] || '';
         lessonLinks.previousLesson = currentLessons[lessonIndex - 1] || '';
         return lessonLinks;
-    }
+    };
 
+    const { previousLesson, nextLesson } = previousNextLesson();
 
     return (
         <>
             {/* if there's a previous or next lesson, display navigation buttons */}
-            { previousNextLesson && (
+            { (previousLesson || nextLesson) && (
                 <div className='lesson-nav-buttons'>
-                    <Link to={previousNextLesson().previousLesson?.to}>{previousNextLesson().previousLesson?.title}</Link>
-                    <Link to={previousNextLesson().nextLesson?.to}>{previousNextLesson()?.nextLesson.title}</Link>
+                    <Link to={previousLesson.to || '/'}>{previousLesson.title}</Link>
+                    <Link to={nextLesson.to || '/'}>{nextLesson.title}</Link>
                 </div>
             )}
         </>
