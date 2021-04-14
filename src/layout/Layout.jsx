@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 import "@fontsource/poppins" // Defaults to weight 400.
+import Modal from '../layout/Modal';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -50,19 +51,20 @@ export default ({ children, pageTitle, site }) => {
   }
 
   const [playBootup] = useSound(bootup, { volume: 0.1 });
-  useEffect(() => {
-    playBootup();
-  }, []);
+  // useEffect(() => {
+  //   playBootup();
+  // }, []);
 
   return (
     <>
-      <Container fluid onClick={playBootup}>
+      <Container fluid>
         <Row>
           <Helmet title={title}>
             <html lang="en" />
           </Helmet>
           <GlobalStyle />
           <Header></Header>
+          <Modal playBootup={playBootup} />
           <Col xl={12} md={12} sm={12} >
             {children}
             <NavButtons />
