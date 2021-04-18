@@ -25,16 +25,18 @@ const ItemSubTitle = styled.div`
   font-size: 0.8rem;
 `;
 
-export default ({ to, title, subtitle, img }) => {
+const IndexItem = ({ to, title, subtitle, img }) => {
   return (
     <React.Fragment>
-    <ItemContainer>
-      <Link to={to}>
-        <ItemThumbnail src={img} alt={title} />
-        <ItemTitle>{title}</ItemTitle>
-        <ItemSubTitle>{subtitle}</ItemSubTitle>
-      </Link>
-    </ItemContainer>
+      <ItemContainer>
+        <Link to={to}>
+          <ItemThumbnail src={img} alt={title} />
+          <ItemTitle>{title}</ItemTitle>
+          <ItemSubTitle>{subtitle}</ItemSubTitle>
+        </Link>
+      </ItemContainer>
     </React.Fragment>
   );
-}
+};
+
+export default IndexItem;

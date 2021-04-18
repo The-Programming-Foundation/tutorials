@@ -19,13 +19,15 @@ const SectionContainer = styled.div`
   }
 `;
 
-export default ({ children, title }) => {
+const IndexSection = ({ children, title }) => {
   return (
     <>
       <h3>{title}</h3>
       <SectionContainer>
-         {children}
+        {children}
       </SectionContainer>
     </>
   );
-}
+};
+
+export default IndexSection;

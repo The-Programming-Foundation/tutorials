@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ title }) => {
+const IframeV86 = ({ title }) => {
 
   function handleIframeSrc(area) {
     const regex1 = /^Unix.+/;
@@ -28,4 +28,6 @@ export default ({ title }) => {
       <iframe title={title} src={handleIframeSrc(title)} width="1000" height="1000"></iframe>
     </div>
   );
-}
+};
+
+export default IframeV86;

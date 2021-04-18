@@ -61,7 +61,7 @@ const NavigationList = styled.ul`
   }
 `;
 
-export default () => {
+const Footer = () => {
   var year = new Date().getFullYear();
   return (
 
@@ -85,28 +85,28 @@ export default () => {
                 <li><Link to="/lessons/programming/c">C</Link></li>
                 <li><Link to="/lessons/programming/python">Python</Link></li>
               </NavigationList>
-          </NavigationSubContainer>
-        <NavigationSubContainer>
-          <NavigationHeader>About</NavigationHeader>
-          <NavigationList>
-            <li><a href="https://www.theprogrammingfoundation.org/leadership">Leadership</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/blog">Blog</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/brand">Brand</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/privacy">Privacy</a></li>
-            <li><a href="mailto:echo@smarterus.org">Contact</a></li>
-          </NavigationList>
-        </NavigationSubContainer>
-        <NavigationSubContainer>
-          <NavigationHeader>Get Involved</NavigationHeader>
-          <NavigationList>
-            <li><a href="https://www.theprogrammingfoundation.org/volunteering">Volunteering</a></li>
-            <li><a href="https://github.com/The-Programming-Foundation">Open source</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/research">Research</a></li>
-            <li><a href="https://www.theprogrammingfoundation.org/podcast">Podcast</a></li>
-            <li><a href="https://www.google.com/url?q=https%3A%2F%2Fus17.campaign-archive.com%2Fhome%2F%3Fid%3D8ed970028d%26u%3D2b5505306c208a54f7daff686&sa=D&sntz=1&usg=AFQjCNH-dX29FbTo6sSuJDu4RBJUAornCQ">Newsletter</a></li>
-          </NavigationList>
-        </NavigationSubContainer>
-      </NavigationContainer>
+            </NavigationSubContainer>
+            <NavigationSubContainer>
+              <NavigationHeader>About</NavigationHeader>
+              <NavigationList>
+                <li><a href="https://www.theprogrammingfoundation.org/leadership">Leadership</a></li>
+                <li><a href="https://www.theprogrammingfoundation.org/blog">Blog</a></li>
+                <li><a href="https://www.theprogrammingfoundation.org/brand">Brand</a></li>
+                <li><a href="https://www.theprogrammingfoundation.org/privacy">Privacy</a></li>
+                <li><a href="mailto:echo@smarterus.org">Contact</a></li>
+              </NavigationList>
+            </NavigationSubContainer>
+            <NavigationSubContainer>
+              <NavigationHeader>Get Involved</NavigationHeader>
+              <NavigationList>
+                <li><a href="https://www.theprogrammingfoundation.org/volunteering">Volunteering</a></li>
+                <li><a href="https://github.com/The-Programming-Foundation">Open source</a></li>
+                <li><a href="https://www.theprogrammingfoundation.org/research">Research</a></li>
+                <li><a href="https://www.theprogrammingfoundation.org/podcast">Podcast</a></li>
+                <li><a href="https://www.google.com/url?q=https%3A%2F%2Fus17.campaign-archive.com%2Fhome%2F%3Fid%3D8ed970028d%26u%3D2b5505306c208a54f7daff686&sa=D&sntz=1&usg=AFQjCNH-dX29FbTo6sSuJDu4RBJUAornCQ">Newsletter</a></li>
+              </NavigationList>
+            </NavigationSubContainer>
+          </NavigationContainer>
         </Col>
         <Col xl={2} md={3} sm={5}>
         </Col>
@@ -121,3 +121,5 @@ export default () => {
     </Container >
   );
 };
+
+export default Footer;

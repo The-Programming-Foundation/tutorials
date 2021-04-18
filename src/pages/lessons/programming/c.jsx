@@ -5,11 +5,11 @@ import IndexItemList from '../../../components/IndexItemList';
 import LessonTopic from '../../../data/LessonTopic';
 import { graphql } from 'gatsby';
 
-const  filter = (lesson) => {
+const filter = (lesson) => {
   return LessonTopic.filter(type => type.lessonType === lesson)
 }
 
-export default ({ data: { site, mdx } }) => {
+const c = ({ data: { site, mdx } }) => {
   return (
     <Layout site={site} pageTitle="C">
       <h1>C</h1>
@@ -30,3 +30,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default c;

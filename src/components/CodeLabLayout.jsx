@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../../assets/prism-theme.css';
 import '../style/style.css';
 
-export default ({ children, title }) => {
+const CodeLabLayout = ({ children, title }) => {
   return (
     <>
       <Container fluid className="codeLabLayout-container">
@@ -19,3 +19,5 @@ export default ({ children, title }) => {
     </>
   );
 };
+
+export default CodeLabLayout;

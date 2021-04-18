@@ -9,7 +9,7 @@ const filter = (lesson) => {
   return LessonTopic.filter(type => type.lessonType === lesson)
 }
 
-export default ({ data: { site, mdx } }) => {
+const oop = ({ data: { site, mdx } }) => {
   return (
     <Layout site={site} pageTitle="Object oriented programming">
       <h1>Object oriented programming</h1>
@@ -30,3 +30,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default oop;

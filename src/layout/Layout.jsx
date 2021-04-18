@@ -44,16 +44,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default ({ children, pageTitle, site }) => {
+const Layout = ({ children, pageTitle, site }) => {
   let title = site.siteMetadata.title;
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
   }
 
   const [playBootup] = useSound(bootup, { volume: 0.1 });
-  // useEffect(() => {
-  //   playBootup();
-  // }, []);
+
 
   return (
     <>
@@ -75,3 +73,5 @@ export default ({ children, pageTitle, site }) => {
     </>
   );
 };
+
+export default Layout;
