@@ -3,7 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 import "@fontsource/poppins" // Defaults to weight 400.
-import Modal from '../layout/Modal';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -14,8 +13,7 @@ import '../../assets/prism-theme.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../style/style.css';
-import useSound from 'use-sound';
-import bootup from '../music/bootup.mp3';
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -50,9 +48,6 @@ const Layout = ({ children, pageTitle, site }) => {
     title = `${title} - ${pageTitle}`;
   }
 
-  const [playBootup] = useSound(bootup, { volume: 0.1 });
-
-
   return (
     <>
       <Container fluid>
@@ -62,7 +57,6 @@ const Layout = ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Modal playBootup={playBootup} />
           <Col xl={12} md={12} sm={12} >
             {children}
             <NavButtons />
