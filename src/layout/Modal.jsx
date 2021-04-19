@@ -1,12 +1,27 @@
-import React from 'react'
+import React from 'react';
+import Player from '../components/Player';
+import { GrClose } from 'react-icons/gr';
 
-const Modal = ({ playBootup }) => {
+
+
+const Modal = ({ onToggle, showModal, play, stop, isPlaying }) => {
     return (
-        <div className='modal-learn'>
-            <button className='modal-btn' type='button' onClick={playBootup}>Start your journey</button>
-
-        </div>
+        <>
+            {!showModal ? (
+                <div className='modal-learn'>
+                    <button type='button' className='modal-btn' onClick={onToggle}>Start</button>
+                </div>
+            ) : (
+                <div className="modal-overlay">
+                    <div className="sound-modal">
+                        <button type='button' aria-label='close' className='icons icon-x' onClick={onToggle}><GrClose /></button>
+                        <h4>Let's start our journey</h4>
+                        <Player play={play} stop={stop} isPlaying={isPlaying} />
+                    </div>
+                </div>
+            )}
+        </>
     )
 }
 
-export default Modal
+export default Modal;
