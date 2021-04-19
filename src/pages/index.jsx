@@ -9,7 +9,7 @@ import { graphql } from 'gatsby';
 const filter = (lesson) => {
   return LessonTopic.filter(type => type.lessonType === lesson)
 }
-export default ({ data: { site, mdx } }) => {
+const index = ({ data: { site, mdx } }) => {
   return (
     <Layout site={site} pageTitle="Learn">
       <Container>
@@ -44,3 +44,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default index;

@@ -12,7 +12,8 @@ import '../../assets/prism-theme.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../style/style.css'
+import '../style/style.css';
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -41,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default ({ children, pageTitle, site }) => {
+const Layout = ({ children, pageTitle, site }) => {
   let title = site.siteMetadata.title;
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
@@ -66,3 +67,5 @@ export default ({ children, pageTitle, site }) => {
     </>
   );
 };
+
+export default Layout;

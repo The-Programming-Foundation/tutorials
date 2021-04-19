@@ -39,33 +39,33 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
 import { IoIosArrowBack } from "@react-icons/all-files/io/IoIosArrowBack";
-import  '../style/style.css';
+import '../style/style.css';
 
 const PrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-      <IoIosArrowBack
-          className={className}
-          style={{...style}}
-          onClick={onClick}
-      />
+    <IoIosArrowBack
+      className={className}
+      style={{ ...style }}
+      onClick={onClick}
+    />
   );
 }
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-      <IoIosArrowForward
-          className={className}
-          style={{...style,display: "block"}}
-          onClick={onClick}
-      />
+    <IoIosArrowForward
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
   );
 }
 
-export default ({ lessonTopic }) => {
+const IndexItemList = ({ lessonTopic }) => {
   const settings = {
-    useCSS:true,
+    useCSS: true,
     centerPadding: '20px',
     dots: false,
     speed: 1000,
@@ -86,19 +86,21 @@ export default ({ lessonTopic }) => {
           prevArrow: <PrevArrow />,
         }
       }
-    ] 
-  }; 
+    ]
+  };
 
- return (
-  <div className="slick-container">
-    <Slider {...settings}>
-      {lessonTopic.map((itemlist) => {
-        const { id,to, title, subtitle, image } = itemlist;
-        return (
-          <IndexItem key={id} to={to} title={title} subtitle= {subtitle} img={image}></IndexItem>
-        );
-      })}
-    </Slider>
+  return (
+    <div className="slick-container">
+      <Slider {...settings}>
+        {lessonTopic.map((itemlist) => {
+          const { id, to, title, subtitle, image } = itemlist;
+          return (
+            <IndexItem key={id} to={to} title={title} subtitle={subtitle} img={image}></IndexItem>
+          );
+        })}
+      </Slider>
     </div>
   );
 };
+
+export default IndexItemList;

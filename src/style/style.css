@@ -90,6 +90,44 @@ nav ul li{
     font-weight: 700;
 }
 
+.modal-learn {
+    margin: 1em auto;
+}
+
+.modal-btn {
+    border: var(--primary-black) 3px solid;
+    background: var(--primary-white);
+    font-weight: 700;
+    cursor: pointer;
+    position:relative;
+    z-index:1;
+}
+
+.modal-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: -webkit-transform 200ms ease-in;
+    transition: transform 200ms ease-in;
+    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+}
+
+.modal-btn:hover::after{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+}
+
 
 
 
