@@ -5,7 +5,6 @@ import useSound from 'use-sound';
 import bootup from '../music/bootup.mp3';
 
 import "@fontsource/poppins" // Defaults to weight 400.
-import Modal from '../layout/Modal';
 import Header from './Header';
 import Footer from './Footer';
 import NavButtons from './NavButtons';
