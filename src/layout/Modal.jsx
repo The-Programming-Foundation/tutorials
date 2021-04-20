@@ -34,14 +34,13 @@ const Modal = ({ onPlay, play, stop, isPlaying, showModal }) => {
                                 </button>
                             <button
                                 className='modal-btn'
-                                aria-label='donate and start music'
+                                aria-label='redirect to donate page and start music'
+                                name='donate'
                                 onClick={onPlay}
-                            ><a href="https://www.theprogrammingfoundation.org/donate">
-                                    Donate
-                                </a>
+                            >
+                                Donate
                             </button>
                         </div>
-
                     </div>
                 </div>
             )}

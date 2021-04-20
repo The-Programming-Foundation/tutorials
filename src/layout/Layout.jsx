@@ -56,10 +56,14 @@ const Layout = ({ children, pageTitle, site }) => {
   const [startMusic, setStartMusic] = useState(false);
   const [showModal, setShowModal] = useState(true);
 
-  const playMusic = () => {
+  const playMusic = (e) => {
     setStartMusic(!startMusic);
     play();
     setShowModal(!showModal);
+    if (e.target.name === 'donate') {
+      window.open('https://www.theprogrammingfoundation.org/donate', '_blank');
+    }
+
   }
 
   return (
