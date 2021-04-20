@@ -52,13 +52,15 @@ const Layout = ({ children, pageTitle, site }) => {
   };
 
   const [play, { stop, isPlaying }] = useSound(bootup);
-  const [showModal, setShowModal] = useState(false);
-  const toggleModal = () => {
+
+  const [startMusic, setStartMusic] = useState(false);
+  const [showModal, setShowModal] = useState(true);
+
+  const playMusic = () => {
+    setStartMusic(!startMusic);
+    play();
     setShowModal(!showModal);
-    if (isPlaying) {
-      stop();
-    }
-  };
+  }
 
   return (
     <>
@@ -71,7 +73,7 @@ const Layout = ({ children, pageTitle, site }) => {
           <Header></Header>
           <Modal
             play={play} stop={stop} isPlaying={isPlaying}
-            onToggle={toggleModal} showModal={showModal} />
+            onPlay={playMusic} showModal={showModal} />
           <Col xl={12} md={12} sm={12} >
             {children}
             <NavButtons />

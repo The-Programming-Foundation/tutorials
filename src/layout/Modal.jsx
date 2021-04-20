@@ -1,22 +1,47 @@
 import React from 'react';
-import Player from '../components/Player';
-import { GrClose } from 'react-icons/gr';
+import { AiOutlineClose } from 'react-icons/ai';
+import { GoUnmute, GoMute } from 'react-icons/go';
 
 
 
-const Modal = ({ onToggle, showModal, play, stop, isPlaying }) => {
+const Modal = ({ onPlay, play, stop, isPlaying, showModal }) => {
     return (
         <>
             {!showModal ? (
                 <div className='modal-learn'>
-                    <button type='button' className='modal-btn' onClick={onToggle}>Start</button>
+                    {/* Display mute/unmute buttons when music is playing */}
+                    {isPlaying ? (
+                        <button type='button' className='mute-btn' onClick={() => stop()}>Mute <GoMute /> </button>
+                    ) : (
+                        <button type='button' className='mute-btn' onClick={() => play()}>Unmute <GoUnmute /> </button>
+                    )}
                 </div>
             ) : (
+                // display modal when showModal state is true
                 <div className="modal-overlay">
                     <div className="sound-modal">
-                        <button type='button' aria-label='close' className='icons icon-x' onClick={onToggle}><GrClose /></button>
-                        <h4>Let's start our journey</h4>
-                        <Player play={play} stop={stop} isPlaying={isPlaying} />
+                        <button type='button' aria-label='close' className='icons icon-x' onClick={onPlay}><AiOutlineClose /></button>
+                        <h4>Hello there!</h4>
+                        <p>Welcome to Learn. We currently have three domains: Operating Systems, Programming, and Logic.
+                            Some of them provide interactive environments as you learn and explore them.</p>
+                        <div className="modal-buttons flex flex-between">
+                            <button
+                                className='modal-btn'
+                                aria-label='start music and close modal'
+                                onClick={onPlay}
+                            >
+                                Let's go!
+                                </button>
+                            <button
+                                className='modal-btn'
+                                aria-label='donate and start music'
+                                onClick={onPlay}
+                            ><a href="https://www.theprogrammingfoundation.org/donate">
+                                    Donate
+                                </a>
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             )}
