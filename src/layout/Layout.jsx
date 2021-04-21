@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import useSound from 'use-sound';
-import bootup from '../music/bootup.mp3';
+import learnSound from '../music/learn-sound.mp3';
 
 import "@fontsource/poppins" // Defaults to weight 400.
 import Header from './Header';
 import Footer from './Footer';
 import Modal from './Modal';
 import NavButtons from './NavButtons';
-
 
 import '../../assets/prism-theme.css';
 
@@ -51,7 +50,7 @@ const Layout = ({ children, pageTitle, site }) => {
     title = `${title} - ${pageTitle}`;
   };
 
-  const [play, { stop, isPlaying }] = useSound(bootup);
+  const [play, { stop, isPlaying }] = useSound(learnSound);
 
   const [startMusic, setStartMusic] = useState(false);
   const [showModal, setShowModal] = useState(true);
