@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import useSound from 'use-sound';
@@ -51,19 +51,26 @@ const Layout = ({ children, pageTitle, site }) => {
   };
 
   const [play, { stop, isPlaying }] = useSound(learnSound);
-
   const [startMusic, setStartMusic] = useState(false);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+
 
   const playMusic = (e) => {
     setStartMusic(!startMusic);
     play();
-    setShowModal(!showModal);
+    setShowModal(false);
     if (e.target.name === 'donate') {
-      window.open('https://www.theprogrammingfoundation.org/donate', '_blank');
+      window?.open('https://www.theprogrammingfoundation.org/donate', '_blank');
     }
+  };
 
-  }
+  useEffect(() => {
+    let modalViewed = Number(localStorage.getItem('modalViewed')) || 0;
+    if (modalViewed === 0) {
+      setShowModal(true);
+      localStorage.setItem('modalViewed', 1);
+    }
+  }, []);
 
   return (
     <>
