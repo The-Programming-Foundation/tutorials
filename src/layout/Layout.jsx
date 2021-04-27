@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import useSound from 'use-sound';
-import learnSound from '../music/learn-sound.mp3';
 
 import "@fontsource/poppins" // Defaults to weight 400.
 import Header from './Header';
 import Footer from './Footer';
-import Modal from './Modal';
 import NavButtons from './NavButtons';
 
 import '../../assets/prism-theme.css';
@@ -15,6 +12,7 @@ import '../../assets/prism-theme.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../style/style.css';
+import MuteButton from './MuteButton';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -50,24 +48,13 @@ const Layout = ({ children, pageTitle, site }) => {
     title = `${title} - ${pageTitle}`;
   };
 
-  const [play, { stop, isPlaying }] = useSound(learnSound);
-  const [startMusic, setStartMusic] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
-
-  const playMusic = (e) => {
-    setStartMusic(!startMusic);
-    play();
-    setShowModal(false);
-    if (e.target.name === 'donate') {
-      window?.open('https://www.theprogrammingfoundation.org/donate', '_blank');
-    }
-  };
+  const toggleModal = () => setShowModal(!showModal);
 
   useEffect(() => {
     let modalViewed = Number(localStorage.getItem('modalViewed')) || 0;
     if (modalViewed === 0) {
-      setShowModal(true);
+      toggleModal();
       localStorage.setItem('modalViewed', 1);
     }
   }, []);
@@ -81,9 +68,7 @@ const Layout = ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Modal
-            play={play} stop={stop} isPlaying={isPlaying}
-            onPlay={playMusic} showModal={showModal} />
+          <MuteButton showModal={showModal} toggleModal={toggleModal} />
           <Col xl={12} md={12} sm={12} >
             {children}
             <NavButtons />
