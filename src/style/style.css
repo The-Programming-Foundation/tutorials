@@ -103,8 +103,7 @@
     padding:1rem;
  }
  .modal-buttons {
-    max-width: 50%;
-
+    width: 60%;
  }
 
  .mute-btn {
@@ -121,7 +120,6 @@
     font-weight: 700;
     letter-spacing: 1px;
     padding: 0.5rem 1rem;
-    /* border-radius: 1.2rem; */
     line-height: 1.4;
     font-size: 1.5rem;
     cursor: pointer;
@@ -163,8 +161,7 @@
      background: var(--primary-black)!important;
      color:var(--primary-white)!important;
      border-radius: 0.6rem;
-     padding:0.4em 0.8em;
-    
+     padding:0.4em 0.8em; 
  }
 
  .modal-overlay {
@@ -185,7 +182,7 @@
      font-size: 1.5rem;
      line-height: 1.5;
      top: 5em;
-     max-width: 40%;
+     max-width: 50%;
      margin: 0 auto;
      vertical-align: middle;
      overflow-y: auto;
@@ -206,6 +203,31 @@
    font-size: 2rem;
  }
    
+ @media(max-width:1300px){
+    .sound-modal {
+       max-width: 65%;    
+    }
+}
+ @media(max-width:1000px){
+    .sound-modal {
+       max-width: 70%;    
+    } 
+   .modal-buttons {
+      width: 80%;
+     }
+   }
+
+     @media(max-width:850px){
+   .sound-modal {
+      font-size: 1rem;
+      top: 1rem;
+      max-width: 80%;
+      
+   }
+   .modal-btn {
+      font-size: 1rem;
+   }
+ }
  @media(max-width:768px){
   
     h1 {
@@ -223,11 +245,25 @@
     .contentContainer h1{
         font-size: 1.7rem  !important;
     }
- }
- @media (min-width: 600px){
-    .navbarbrand{
-    width: calc(100% / 4);
-    }
- }
- 
- 
+   }
+
+   @media(max-width: 500px) {
+      .modal-buttons {
+         width: 75%;
+      }
+      .sound-modal {
+         max-width: 90%;
+      }
+      
+   }
+   @media(max-width: 400px) {
+      .modal-buttons {
+         width: 100%;
+      }
+   }
+   
+   @media (min-width: 600px){
+      .navbarbrand{
+      width: calc(100% / 4);
+      }
+   }

@@ -12,7 +12,7 @@ import '../../assets/prism-theme.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../style/style.css';
-import MuteButton from './MuteButton';
+import AudioButton from './AudioButton';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -51,6 +51,7 @@ const Layout = ({ children, pageTitle, site }) => {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => setShowModal(!showModal);
 
+  // displaying modal only during the user's first visit to site
   useEffect(() => {
     let modalViewed = Number(localStorage.getItem('modalViewed')) || 0;
     if (modalViewed === 0) {
@@ -68,7 +69,7 @@ const Layout = ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <MuteButton showModal={showModal} toggleModal={toggleModal} />
+          <AudioButton showModal={showModal} toggleModal={toggleModal} />
           <Col xl={12} md={12} sm={12} >
             {children}
             <NavButtons />
