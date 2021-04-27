@@ -19,13 +19,13 @@ const Header = () => {
         <Navbar.Collapse id="navbarResponsive">
           <Nav as="ul" className="ml-auto">
             <Nav.Item as="li">
-              <Nav.Link href="https://www.theprogrammingfoundation.org/donate" activeclassname="active">Donate</Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li">
-              <Nav.Link href="https://www.theprogrammingfoundation.org/blog" activeclassname="active">Blog</Nav.Link>
+              <Nav.Link href="https://www.smarterus.org/home" activeclassname="active">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
               <Nav.Link href="https://www.theprogrammingfoundation.org/charter" activeclassname="active">Charter</Nav.Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+              <Nav.Link href="https://www.theprogrammingfoundation.org/donate" activeclassname="active">Donate</Nav.Link>
             </Nav.Item>
             <Nav.Item as="li">
               <Link to="/" className="nav-link" activeclassname="active">Learn</Link>
