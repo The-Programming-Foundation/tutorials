@@ -110,11 +110,12 @@
     margin-left: auto;
     outline: none;
     border:initial;
+    z-index: 10;
     background-color: initial;
     display: block;
     position: absolute;
     top: 120px;
-    right:10px;
+    right:20px;
  }
   
  .modal-btn {
