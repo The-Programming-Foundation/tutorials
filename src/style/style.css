@@ -2,21 +2,21 @@
     --primary-white:#fff;
     --primary-black: #000;
     --primary-dark: rgba(255,255,255,0);
-}
-
-.slick-container {
+ }
+  
+ .slick-container {
     width: 100%;
     height: 323px;
     margin: 2% 2%;
     padding: 10px 30px;
  }
-
-.slick-slide {
+  
+ .slick-slide {
     height: 320px;
     box-sizing: content-box;
-}
-
-.slick-slide img {
+ }
+  
+ .slick-slide img {
     width: 100%;
     box-sizing: content-box;
     align-self: auto;
@@ -24,86 +24,116 @@
     overflow: hidden;
     transition: 0.3s;
     object-fit: cover;
-}
-
-.navbar-brand{
+ }
+  
+ .navbar-brand{
     font-weight: 600;
     height: 3.4rem;
     text-align: start;
-}
-nav a.nav-link{
+ }
+ nav a.nav-link{
     font-size: .8rem;
     letter-spacing: 0.0375rem;
     cursor: pointer;
-}
-
-nav ul li{
+ }
+  
+ nav ul li{
     text-transform: uppercase;
-}
-.navbar-nav > li > a {
+ }
+ .navbar-nav > li > a {
     margin-right: 0.75rem;
     margin-left: 0.75rem;
     color: var(--primary-white) !important;
     border-bottom: 0.0875rem solid var(--primary-dark);
-}
-.navbar-nav > li > a.active, .navbar-nav > li > a.active:foucus {
+ }
+ .navbar-nav > li > a.active, .navbar-nav > li > a.active:foucus {
     background-color: var(--primary-white);
     color: var(--primary-black);
-}
-.navbar-nav > li > a:hover{
+ }
+ .navbar-nav > li > a:hover{
     border-bottom: 0.1875rem solid var(--primary-white);
-}
-
-.footer{
+ }
+  
+ .footer{
     background-color: var(--primary-black);
     color: var(--primary-white);
-}
-
+ }
+  
  .codeLabLayout-container{
     flex-grow: 1;
-}
-.codeLabLayout-row{
+ }
+ .codeLabLayout-row{
     margin: -12xp;;
-}
-
-.codeLabLayout-row-col-scroll{
+ }
+  
+ .codeLabLayout-row-col-scroll{
     height: 1000px;
-    box-sizing: border-box; 
-}
-
-.codeLabLayout-row > .codeLabLayout-row-col-scroll{
+    box-sizing: border-box;
+ }
+  
+ .codeLabLayout-row > .codeLabLayout-row-col-scroll{
     padding: 12px;
     overflow-y:scroll;
     max-width: 100%;
-}
-
-.codeLabLayout-iframe{
+ }
+  
+ .codeLabLayout-iframe{
    padding: 12px;
    max-width: 100%;
    overflow: hidden;
-}
+ }
+ .flex {
+    display: flex;
+ }
 
-.lesson-nav-buttons {
+ .flex-between {
+    justify-content: space-between;
+    margin-top: 1em;
+ }
+  
+ .lesson-nav-buttons {
     display:flex;
     justify-content: space-between;
     font-size: large;
     font-weight: 700;
-}
+ }
+  
+ .modal-learn {
+    margin-left:auto;
+    padding:1rem;
+ }
+ .modal-buttons {
+    width: 60%;
+ }
 
-.modal-learn {
-    margin: 1em auto;
-}
-
-.modal-btn {
+ .mute-btn {
+    margin-left: auto;
+    outline: none;
+    border:initial;
+    z-index: 10;
+    background-color: initial;
+    display: block;
+    position: absolute;
+    top: 120px;
+    right:20px;
+ }
+  
+ .modal-btn {
     border: var(--primary-black) 3px solid;
     background: var(--primary-white);
     font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    line-height: 1.4;
+    font-size: 1.5rem;
     cursor: pointer;
     position:relative;
     z-index:1;
-}
-
-.modal-btn::after {
+    margin: auto 0;
+    display:block;
+ }
+  
+ .modal-btn::after {
     content: "";
     position: absolute;
     top: 0;
@@ -119,21 +149,91 @@ nav ul li{
     transform: scaleX(0);
     -webkit-transform-origin: right;
     transform-origin: right;
-}
-
-.modal-btn:hover::after{
+ }
+  
+ .modal-btn:hover::after{
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -webkit-transform-origin: left;
     transform-origin: left;
+ }
+
+ .play-btn {
+     margin-left: auto;
+     cursor: pointer;
+     display: block;
+     background: var(--primary-black)!important;
+     color:var(--primary-white)!important;
+     border-radius: 0.6rem;
+     padding:0.4em 0.8em; 
+ }
+
+ .modal-overlay {
+     position: fixed;
+     top:0;
+     left:0;
+     z-index:1;
+     height:100vh;
+     width:100vw;
+     background-color: rgba(0, 0, 0, 0.7);
+ }
+
+ .sound-modal {
+     position: relative;
+     padding: 2em 4em;
+     background: var(--primary-black);
+     color: var(--primary-white);
+     font-size: 1.5rem;
+     line-height: 1.5;
+     top: 5em;
+     max-width: 50%;
+     margin: 0 auto;
+     vertical-align: middle;
+     overflow-y: auto;
+     border-radius: 0.3rem;
+ }
+
+ .icons {
+     background: initial;
+     border:initial;
+     outline: none;  
+ }
+
+ .icon-x {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   color: var(--primary-white);
+   font-size: 2rem;
+ }
+   
+ @media(max-width:1300px){
+    .sound-modal {
+       max-width: 65%;    
+    }
 }
+ @media(max-width:1000px){
+    .sound-modal {
+       max-width: 70%;    
+    } 
+   .modal-buttons {
+      width: 80%;
+     }
+   }
 
-
-
-
-
-@media(max-width:768px){
-
+     @media(max-width:850px){
+   .sound-modal {
+      font-size: 1rem;
+      top: 1rem;
+      max-width: 80%;
+      
+   }
+   .modal-btn {
+      font-size: 1rem;
+   }
+ }
+ @media(max-width:768px){
+  
     h1 {
         font-size: 3rem !important;
     }
@@ -149,9 +249,29 @@ nav ul li{
     .contentContainer h1{
         font-size: 1.7rem  !important;
     }
-}
-@media (min-width: 600px){
-    .navbarbrand{
-    width: calc(100% / 4);
-    }
-}
+   }
+
+   @media(max-width: 500px) {
+      .modal-buttons {
+         width: 75%;
+      }
+      .sound-modal {
+         max-width: 90%;
+      }
+      
+   }
+   @media(max-width: 400px) {
+      .modal-buttons {
+         width: 100%;
+      }
+      
+      .mute-btn {
+         top:140px;
+      }
+   }
+   
+   @media (min-width: 600px){
+      .navbarbrand{
+      width: calc(100% / 4);
+      }
+   }
