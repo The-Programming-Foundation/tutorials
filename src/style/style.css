@@ -112,6 +112,9 @@
     border:initial;
     background-color: initial;
     display: block;
+    position: absolute;
+    top: 120px;
+    right:10px;
  }
   
  .modal-btn {
@@ -259,6 +262,10 @@
    @media(max-width: 400px) {
       .modal-buttons {
          width: 100%;
+      }
+      
+      .mute-btn {
+         top:140px;
       }
    }
    
