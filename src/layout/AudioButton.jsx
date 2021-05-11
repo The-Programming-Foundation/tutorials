@@ -50,14 +50,18 @@ const AudioButton = () => {
         }
     });
 
+    // test easeout
+
+
     // fading out music on pause
     useEffect(() => {
         if (easeOutMusic === true) {
             // referencing the current instance of pause music when setTimeout makes an update
             pauseMusic.current = vol > 0.1 && setTimeout(() => {
                 setVol(vol - 0.05);
-                audioRef.current.volume = vol;
-            }, 100);
+                // limiting vol to 2 decimal places to enable a smooth transition
+                audioRef.current.volume = vol.toFixed(2);
+            }, 200);
         }
         return () => {
             clearTimeout(pauseMusic.current);
