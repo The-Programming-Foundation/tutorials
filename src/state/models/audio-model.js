@@ -13,6 +13,7 @@ export const audioModel = createModel({
             }
         },
 
+        // to be used for music fadeout transitioning
         pause: (state) => {
             return {
                 ...state,

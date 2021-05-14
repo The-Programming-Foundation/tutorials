@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation } from '@reach/router';
 import { GoUnmute, GoMute } from 'react-icons/go';
 import { useSelector, useDispatch } from 'react-redux';
@@ -14,18 +14,19 @@ const AudioButton = () => {
     const { audioIsPlaying, easeOutMusic } = audioModel;
     const dispatch = useDispatch();
 
-
+    // SSR method for accessing window.location 
     const location = useLocation();
     const [pathname, setPathname] = useState(location.pathname);
 
+    // current sound based on currentURL
     const currentSound = sounds(pathname);
     const soundRef = useRef(sounds(pathname));
 
     const [sound, setSound] = useState(sounds(soundRef.current));
-    const changeSound = () => {
+    const changeSound = useCallback(() => {
         dispatch.audioModel.pause();
         setSound(currentSound);
-    }
+    }, [currentSound, dispatch.audioModel]);
 
     if (typeof Audio != "undefined") {
         // browser-only code to enable server-side compiling
@@ -46,13 +47,15 @@ const AudioButton = () => {
         }
     };
 
-    const playMusic = () => {
+    const playMusic = useCallback(() => {
         dispatch.audioModel.toggle();
         audioRef.current.play();
-    }
+    }, [dispatch.audioModel]);
 
-    const pauseMusic = useRef(null);
-    const [vol, setVol] = useState(1);
+    const pauseMusic = () => {
+        dispatch.audioModel.toggle();
+        audioRef.current.pause();
+    }
 
     // pathname useEffect
     useEffect(() => {
@@ -65,8 +68,10 @@ const AudioButton = () => {
             changeSound();
             audioRef.current.src = currentSound;
             audioRef.current.load();
+            dispatch.audioModel.toggle();
+            audioRef.current.pause();
         }
-    }, [soundRef, sound, currentSound, audioIsPlaying])
+    }, [soundRef, sound, currentSound, audioIsPlaying, changeSound, dispatch.audioModel])
 
     // play new music when navigating to another section
     useEffect(() => {
@@ -74,7 +79,7 @@ const AudioButton = () => {
             soundRef.current = currentSound;
             playMusic();
         }
-    }, [sound, currentSound, audioIsPlaying, easeOutMusic])
+    }, [sound, currentSound, audioIsPlaying, easeOutMusic, playMusic])
 
     // displaying modal only during the user's first visit to site
     useEffect(() => {
@@ -85,30 +90,6 @@ const AudioButton = () => {
         }
     });
 
-    // fading out music on pause
-    useEffect(() => {
-        if (easeOutMusic === true) {
-            // referencing the current instance of pause music when setTimeout makes an update
-            pauseMusic.current = vol > 0.1 && setTimeout(() => {
-                setVol(vol - 0.05);
-                // limiting vol to 2 decimal places to enable a smooth transition
-                audioRef.current.volume = vol.toFixed(2);
-            }, 100);
-        }
-        return () => {
-            clearTimeout(pauseMusic.current);
-        }
-    }, [vol, easeOutMusic]);
-
-    useEffect(() => {
-        if (vol <= 0.1) {
-            dispatch.audioModel.pause();
-            dispatch.audioModel.toggle();
-            audioRef.current.pause();
-            setVol(1);
-        }
-    }, [vol, dispatch.audioModel]);
-
     return (
         <>
             < Modal showModal={showModal} playMusic={modalPlayMusic} />
@@ -117,7 +98,7 @@ const AudioButton = () => {
                     <div className='modal-learn' >
                         {/* Display mute/unmute buttons when music is playing */}
                         < button type='button' className='mute-btn' onClick={
-                            () => { dispatch.audioModel.pause() }
+                            () => pauseMusic()
                         }> Mute < GoMute /> </button >
                     </div >
                 ) : (
