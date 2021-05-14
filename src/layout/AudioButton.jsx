@@ -1,30 +1,38 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useLocation } from '@reach/router';
 import { GoUnmute, GoMute } from 'react-icons/go';
-import learnSound from '../music/learn-sound.mp3';
 import { useSelector, useDispatch } from 'react-redux';
 import Modal from './Modal';
+import sounds from '../utils/sounds';
 
 const AudioButton = () => {
     const [showModal, setShowModal] = useState(false);
     const toggleModal = () => setShowModal(!showModal);
 
-    // displaying modal only during the user's first visit to site
-    useEffect(() => {
-        let modalViewed = Number(localStorage.getItem('modalViewed')) || 0;
-        if (modalViewed === 0) {
-            toggleModal();
-            localStorage.setItem('modalViewed', 1);
-        }
-    });
-
+    // accessing global state redux rematch
     const audioModel = useSelector(state => state.audioModel);
-    const { audioIsPlaying } = audioModel;
+    const { audioIsPlaying, easeOutMusic } = audioModel;
     const dispatch = useDispatch();
+
+    // SSR method for accessing window.location 
+    const location = useLocation();
+    const [pathname, setPathname] = useState(location.pathname);
+
+    // current sound based on currentURL
+    const currentSound = sounds(pathname);
+    const soundRef = useRef(sounds(pathname));
+
+    const [sound, setSound] = useState(sounds(soundRef.current));
+    const changeSound = useCallback(() => {
+        dispatch.audioModel.pause();
+        setSound(currentSound);
+    }, [currentSound, dispatch.audioModel]);
 
     if (typeof Audio != "undefined") {
         // browser-only code to enable server-side compiling
-        var audio = new Audio(learnSound);
+        var audio = new Audio(sound);
     }
+
     const audioRef = useRef(audio);
 
     // start music when user click on initial modal
@@ -39,15 +47,48 @@ const AudioButton = () => {
         }
     };
 
-    const playMusic = () => {
+    const playMusic = useCallback(() => {
         dispatch.audioModel.toggle();
         audioRef.current.play();
-    }
+    }, [dispatch.audioModel]);
 
     const pauseMusic = () => {
         dispatch.audioModel.toggle();
         audioRef.current.pause();
     }
+
+    // pathname useEffect
+    useEffect(() => {
+        setPathname(location.pathname);
+    }, [location, pathname]);
+
+    // pause current music when navigating to another section
+    useEffect(() => {
+        if (audioIsPlaying && sound !== currentSound) {
+            changeSound();
+            audioRef.current.src = currentSound;
+            audioRef.current.load();
+            dispatch.audioModel.toggle();
+            audioRef.current.pause();
+        }
+    }, [soundRef, sound, currentSound, audioIsPlaying, changeSound, dispatch.audioModel])
+
+    // play new music when navigating to another section
+    useEffect(() => {
+        if (!audioIsPlaying && soundRef.current !== currentSound) {
+            soundRef.current = currentSound;
+            playMusic();
+        }
+    }, [sound, currentSound, audioIsPlaying, easeOutMusic, playMusic])
+
+    // displaying modal only during the user's first visit to site
+    useEffect(() => {
+        let modalViewed = Number(localStorage.getItem('modalViewed')) || 0;
+        if (modalViewed === 0) {
+            toggleModal();
+            localStorage.setItem('modalViewed', 1);
+        }
+    });
 
     return (
         <>
