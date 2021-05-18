@@ -31,6 +31,8 @@ const AudioButton = () => {
     if (typeof Audio != "undefined") {
         // browser-only code to enable server-side compiling
         var audio = new Audio(sound);
+        // enable continuous sound
+        audio.loop = true;
     }
 
     const audioRef = useRef(audio);

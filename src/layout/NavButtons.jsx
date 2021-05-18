@@ -1,14 +1,15 @@
 import React from 'react';
+import { useLocation } from '@reach/router';
 import { Link } from 'gatsby';
 import LessonTopic from '../data/LessonTopic';
 
+
 const NavButtons = () => {
+    const { pathname } = useLocation();
+
     // extracting current lesson information from url
     const currentTitle = LessonTopic.filter(lesson => {
-        if (typeof (window) !== 'undefined') {
-            return lesson.to === window.location.pathname;
-        }
-        return null;
+        return lesson.to === pathname;
     });
     const currentLessonType = currentTitle[0]?.lessonType;
 
@@ -67,5 +68,3 @@ const NavButtons = () => {
 }
 
 export default NavButtons
-
-
