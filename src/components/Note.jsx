@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useOnScroll from '../utils/useOnScroll';
 
 const Note = ({ children }) => {
-  return <div><b>Note: </b> {children}</div>;
+  const noteRef = useRef();
+  const scrolled = useOnScroll(noteRef, '0px');
+
+  return <div ref={noteRef}><b>Note: </b>
+    {children}
+    {scrolled && (<div className='sticky-note'><b>Note: </b>{children}</div>)}
+  </div>;
 };
 
 export default Note;
