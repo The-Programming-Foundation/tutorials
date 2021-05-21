@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 
-function useOnScroll(ref, rootMargin = '0px') {
+function useOnScroll(ref, rootMargin = '0px', threshold = 1.0) {
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
@@ -11,6 +11,9 @@ function useOnScroll(ref, rootMargin = '0px') {
             },
             {
                 rootMargin,
+            },
+            {
+                threshold
             }
         );
         if (ref.current) {
@@ -18,9 +21,9 @@ function useOnScroll(ref, rootMargin = '0px') {
         }
         // cleanup function
         return () => {
-            observer.unobserve(ref.current);
+            observer.unobserve(ref);
         };
-    }, []);
+    }, [ref, rootMargin, threshold]);
 
     return isIntersecting;
 }
