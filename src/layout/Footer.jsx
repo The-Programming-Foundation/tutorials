@@ -91,6 +91,7 @@ const Footer = () => {
               <NavigationList>
                 <li><a href="https://www.theprogrammingfoundation.org/leadership">Leadership</a></li>
                 <li><a href="https://www.theprogrammingfoundation.org/blog">Blog</a></li>
+                <li><a href="https://www.theprogrammingfoundation.org/in-the-news">In the News</a></li>
                 <li><a href="https://www.theprogrammingfoundation.org/brand">Brand</a></li>
                 <li><a href="https://www.theprogrammingfoundation.org/privacy">Privacy</a></li>
                 <li><a href="mailto:echo@smarterus.org">Contact</a></li>
