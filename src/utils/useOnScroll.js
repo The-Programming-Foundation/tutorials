@@ -5,7 +5,8 @@ function useOnScroll(ref, rootMargin = '0px', threshold = 1.0) {
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
+
+        const observer = new window.IntersectionObserver(
             ([entry]) => {
                 setIntersecting(entry.isIntersecting);
             },
@@ -18,14 +19,17 @@ function useOnScroll(ref, rootMargin = '0px', threshold = 1.0) {
         );
         if (ref.current) {
             observer.observe(ref.current);
+
+            // cleanup function
+            return () => {
+                observer.disconnect(ref);
+            };
         }
-        // cleanup function
-        return () => {
-            observer.unobserve(ref);
-        };
+
     }, [ref, rootMargin, threshold]);
 
     return isIntersecting;
 }
+
 
 export default useOnScroll;

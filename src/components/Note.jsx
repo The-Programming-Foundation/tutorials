@@ -3,7 +3,7 @@ import useOnScroll from '../utils/useOnScroll';
 
 const Note = ({ children }) => {
   const noteRef = useRef();
-  const scrolled = useOnScroll(noteRef, '0px 0px -91%');
+  const scrolled = useOnScroll(noteRef, '0px 0px -90%');
 
   return <div ref={noteRef}><b>Note: </b>
     {children}
