@@ -17,16 +17,18 @@ function useOnScroll(ref, rootMargin = '0px', threshold = 1.0) {
                 threshold
             }
         );
+
         if (ref.current) {
             observer.observe(ref.current);
 
+            console.log("isInt=", isIntersecting, "obs.ent=", observer.entry, "ref.curr=", ref.current);
             // cleanup function
             return () => {
                 observer.disconnect(ref);
             };
         }
 
-    }, [ref, rootMargin, threshold]);
+    }, [ref, rootMargin, threshold, isIntersecting]);
 
     return isIntersecting;
 }
