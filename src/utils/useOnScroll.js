@@ -21,7 +21,6 @@ function useOnScroll(ref, rootMargin = '0px', threshold = 1.0) {
         if (ref.current) {
             observer.observe(ref.current);
 
-            console.log("isInt=", isIntersecting, "obs.ent=", observer.entry, "ref.curr=", ref.current);
             // cleanup function
             return () => {
                 observer.disconnect(ref);

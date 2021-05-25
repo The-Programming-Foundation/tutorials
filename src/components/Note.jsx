@@ -18,7 +18,6 @@ const Note = ({ children }) => {
       setShowNote(true);
       setNoteToShow(prevNote.current);
     }
-    console.log("noteToShow=", noteToShow, '\n', children, "=children", '\n', prevNote.current, '=prevNote')
   }, [scrolled, noteToShow, children])
 
   return <div ref={noteRef}><b>Note: </b>
