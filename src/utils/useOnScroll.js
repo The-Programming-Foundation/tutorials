@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
 
-const options = {
-    threshold: 0,
-    trackVisibility: true,
-    delay: 100
-}
 
 function useOnScroll(ref) {
     const [isVisible, setIsVisible] = useState(false);
@@ -12,6 +7,11 @@ function useOnScroll(ref) {
 
     useEffect(() => {
         const current = ref.current;
+        const options = {
+            threshold: 0,
+            trackVisibility: true,
+            delay: 100
+        };
         const observer = new window.IntersectionObserver(
             ([entry]) => {
                 // setting note to visible per entry status
