@@ -1,36 +1,43 @@
 import { useState, useEffect } from 'react';
 
+const options = {
+    threshold: 0,
+    trackVisibility: true,
+    delay: 100
+}
 
-function useOnScroll(ref, rootMargin = '0px', threshold = 1.0) {
-    const [isIntersecting, setIntersecting] = useState(false);
+function useOnScroll(ref) {
+    const [isVisible, setIsVisible] = useState(false);
+    const [scrolledPast, setScrolledPast] = useState(false);
 
     useEffect(() => {
-
+        const current = ref.current;
         const observer = new window.IntersectionObserver(
             ([entry]) => {
-                setIntersecting(entry.isIntersecting);
+                // setting note to visible per entry status
+                if (entry.isVisible) setIsVisible(true);
+
+                // once idnetified as visible and later on is no loner on screen
+                // this setup is required due to the scrolled container notes are based in
+                if (isVisible && entry.intersectionRatio === 0) {
+                    setScrolledPast(true);
+                }
             },
-            {
-                rootMargin,
-            },
-            {
-                threshold
-            }
+            options
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (current) {
+            observer.observe(current);
 
             // cleanup function
             return () => {
-                observer.disconnect(ref);
+                observer.unobserve(current);
             };
         }
 
-    }, [ref, rootMargin, threshold, isIntersecting]);
+    }, [ref, isVisible, scrolledPast]);
 
-    return isIntersecting;
+    return scrolledPast;
 }
-
 
 export default useOnScroll;
