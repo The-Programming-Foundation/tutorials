@@ -8,14 +8,69 @@ title: Algorithm
 
 In real-life if you had to count the number of members in a room, you would count one by one until you finish counting the last member.
 
-So we count a member and add a next to the previous counted number and repeat the same procedure until there are no members in the room. This is a step-wise procedure and that a normal person follows to count the members.
+So we count a member and add one to the previous counted number, go to next member, and repeat the same procedure until there are no members in the room. This is a step-wise procedure and that a normal person follows to count the members.
 
-For a computer to do the exact steps like humans, we create an algorithm containing the steps to execute. In this case, pseudo-code of an algorithm to count the members will be like.
+For a computer to solve a problem or perform a task for us, for example, a counting poblem, we give it a sequence of instructions similar to the step-bt-step procedure humans follow ourselves. An algorithm is a sequence of instructions given to computers to solve problems or perform tasks.
+
+An algorithm can be written by a plain langugae, a pseudo-code or described by a diagram-representd flowchart and it can be implemented in different computer programming langugages. 
+
+## Pseudo-code
+Pseudo-codes are simplified version of computer programs and written in nantural language.
+
+- Pseudo-code can be read and followed by programmers to write computer program.
+- Pseudo-code does not have specific syntax and can't be excuted by a computer.
+- Pseudo-code can be implemented in specific programming language.
+
+for example, a pseudo-code of counting members is as follows:
+
+num_members_far is set to be zero before counting
+while the input of member name is not empty
+    increment number_members_so_far by one
+num_members_so_far is the total number of members at the end
 
 ## Flowchart
 An algorithm can be described as a pictorial representation with different symbols, shapes, arrow that describes the different process. Each shape describes a different process:
 
 - The process is represented graphically.
-- The process is described block by block.
+- The process is described block by block with the arrows between blocks indicating the order of workflow.
 - The described steps are easy to follow.
 - Cost less time and does not require the understanding of code.
+ 
+for example, a flowchart of counting members is as follows:
+        --------------------------------
+        |    num_members_so_far = 0     |
+        ---------------------------------
+                      |
+                      V
+                      *
+                    ******
+                  **********                      otherwise
+     ------->* while input name is not empty *-------------
+     |            **********                              |
+     |              *******                               |
+     |                 *                                  |
+     |                 |                                  |
+     |                 V                                  |
+     |    -------------------------------------------     |
+     ----|   increment number_members_so_far by one |     |
+         --------------------------------------------     |
+                                                          |
+                                                          |
+                                                          V
+         ---------------------------------------------------------
+         |  output number_members_so_far as total_number_members |
+         ----------------------------------------------------------
+
+## Example of Python code implementation
+For reference, the above pseudo-code or flowchart can be followed to write a Python code as follows:
+
+number_members_so_far = 0
+while (input("name? ") != ""):
+     number_members_so_far += 1
+print(number_members_so_far)
+
+sample output of the above Python code:
+name? Jack Lee
+name? Mary Lo
+name? 
+2
