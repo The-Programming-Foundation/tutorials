@@ -21,14 +21,16 @@ const AudioButton = () => {
     // current sound based on currentURL
     const currentSound = sounds(pathname);
     const soundRef = useRef(sounds(pathname));
+    // check for path changes
+    const [pathChanged, setPathChagned] = useState(false);
 
     const [sound, setSound] = useState(sounds(soundRef.current));
 
     // memoizing changeSound function
     const changeSound = useCallback(() => {
         // dispatch.audioModel.pause();
-
         setSound(currentSound);
+        console.log('change sound', currentSound.slice(7, 20));
     }, [currentSound]);
 
     // instatiating the audio object
@@ -54,9 +56,10 @@ const AudioButton = () => {
     };
 
     const playMusic = useCallback(() => {
-        dispatch.audioModel.toggle();
+        !audioIsPlaying && dispatch.audioModel.toggle();
         audioRef.current.play();
-    }, [dispatch.audioModel]);
+        console.log('playing Music')
+    }, [dispatch.audioModel, audioIsPlaying]);
 
 
     // fadeout sound when pausing music
@@ -64,10 +67,11 @@ const AudioButton = () => {
     useEffect(() => {
         let current = audioRef.current;
         let fadeout;
-        if (easeOutMusic) {
+        if (!!easeOutMusic) {
             fadeout = vol > 0.01 && setInterval(() => {
                 setVol(v => (v - 0.1).toFixed(2));
                 current.volume = vol;
+                console.log('current.vol from setInterval', current.volume)
             }, 100);
         }
         return () => {
@@ -83,32 +87,49 @@ const AudioButton = () => {
             audioRef.current.pause();
             setVol(1);
             audioRef.current.volume = 1;
+            console.log('reached 0', vol);
         }
     }, [vol, dispatch.audioModel]);
 
     // pathname useEffect
     useEffect(() => {
         setPathname(location.pathname);
-    }, [location, pathname]);
+        setPathChagned(true);
+        console.log(pathChanged, 'path changed eff')
+    }, [location, pathname, pathChanged]);
 
-    // pause current music when navigating to another section
+    // change current music when navigating to another section
     useEffect(() => {
         if (audioIsPlaying && sound !== currentSound) {
             changeSound();
             audioRef.current.src = currentSound;
-            audioRef.current.load();
-            dispatch.audioModel.toggle();
-            audioRef.current.pause();
+            // audioRef.current.load();
+            // audioRef.current.pause();
+            dispatch.audioModel.pause();
+            // ensure audioIsplaying true
+            // dispatch.audioModel.toggle();
+            console.log('easeout nav eff=', easeOutMusic, "playing=", audioIsPlaying);
         }
-    }, [soundRef, sound, currentSound, audioIsPlaying, changeSound, dispatch.audioModel])
+    }, [soundRef, sound, currentSound, audioIsPlaying, changeSound, dispatch.audioModel, easeOutMusic])
 
     // play new music when navigating to another section
     useEffect(() => {
         if (!audioIsPlaying && soundRef.current !== currentSound) {
             soundRef.current = currentSound;
+            // dispatch.audioModel.toggle();
+            console.log(soundRef.current.slice(7, 20), vol, easeOutMusic, "after switch=", audioIsPlaying, "==audioPlay",
+                '\n', pathChanged, 'pathchange');
+
             playMusic();
+
         }
-    }, [sound, currentSound, audioIsPlaying, easeOutMusic, playMusic])
+    }, [sound, currentSound, audioIsPlaying, easeOutMusic, playMusic, vol, pathChanged]);
+
+    // ================== test ========================
+    // useEffect(() => {
+    //     if (!easeOutMusic && audioIsPlaying && pathChanged) playMusic();
+    //     setPathChagned(!pathChanged);
+    // }, pathChanged, audioIsPlaying, easeOutMusic);
 
     // displaying modal only during the user's first visit to site
     useEffect(() => {
