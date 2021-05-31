@@ -23,11 +23,15 @@ const AudioButton = () => {
     const soundRef = useRef(sounds(pathname));
 
     const [sound, setSound] = useState(sounds(soundRef.current));
-    const changeSound = useCallback(() => {
-        dispatch.audioModel.pause();
-        setSound(currentSound);
-    }, [currentSound, dispatch.audioModel]);
 
+    // memoizing changeSound function
+    const changeSound = useCallback(() => {
+        // dispatch.audioModel.pause();
+
+        setSound(currentSound);
+    }, [currentSound]);
+
+    // instatiating the audio object
     if (typeof Audio != "undefined") {
         // browser-only code to enable server-side compiling
         var audio = new Audio(sound);
@@ -54,10 +58,33 @@ const AudioButton = () => {
         audioRef.current.play();
     }, [dispatch.audioModel]);
 
-    const pauseMusic = () => {
-        dispatch.audioModel.toggle();
-        audioRef.current.pause();
-    }
+
+    // fadeout sound when pausing music
+    const [vol, setVol] = useState(1);
+    useEffect(() => {
+        let current = audioRef.current;
+        let fadeout;
+        if (easeOutMusic) {
+            fadeout = vol > 0.01 && setInterval(() => {
+                setVol(v => (v - 0.1).toFixed(2));
+                current.volume = vol;
+            }, 100);
+        }
+        return () => {
+            clearTimeout(fadeout);
+        }
+    }, [easeOutMusic, vol]);
+
+    // pause after volume reached 0.01
+    useEffect(() => {
+        if (vol <= 0.01) {
+            dispatch.audioModel.pause();
+            dispatch.audioModel.toggle();
+            audioRef.current.pause();
+            setVol(1);
+            audioRef.current.volume = 1;
+        }
+    }, [vol, dispatch.audioModel]);
 
     // pathname useEffect
     useEffect(() => {
@@ -100,7 +127,7 @@ const AudioButton = () => {
                     <div className='modal-learn' >
                         {/* Display mute/unmute buttons when music is playing */}
                         < button type='button' className='mute-btn' onClick={
-                            () => pauseMusic()
+                            () => { dispatch.audioModel.pause() }
                         }> Mute < GoMute /> </button >
                     </div >
                 ) : (
