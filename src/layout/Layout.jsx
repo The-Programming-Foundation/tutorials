@@ -46,7 +46,7 @@ const Layout = ({ children, pageTitle, site }) => {
   return (
     <>
       <Container fluid>
-        <Row>
+        <Row >
           <Helmet title={title}>
             <html lang="en" />
           </Helmet>
