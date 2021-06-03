@@ -8,6 +8,7 @@ import sounds from '../utils/sounds';
 const AudioButton = () => {
     const [showModal, setShowModal] = useState(false);
     const toggleModal = () => setShowModal(!showModal);
+    const [muteClicked, setMuteClicked] = useState(false);
 
     // accessing global state redux rematch
     const audioModel = useSelector(state => state.audioModel);
@@ -19,19 +20,20 @@ const AudioButton = () => {
     const [pathname, setPathname] = useState(location.pathname);
 
     // current sound based on currentURL
-    const currentSound = sounds(pathname);
+    const currentSound = sounds(location.pathname);
     const soundRef = useRef(sounds(pathname));
     // check for path changes
-    const [pathChanged, setPathChagned] = useState(false);
+    const [pathChanged, setPathChanged] = useState(false);
 
+    // state to compare changes in sound source
     const [sound, setSound] = useState(sounds(soundRef.current));
 
     // memoizing changeSound function
     const changeSound = useCallback(() => {
-        // dispatch.audioModel.pause();
         setSound(currentSound);
-        console.log('change sound', currentSound.slice(7, 20));
-    }, [currentSound]);
+        soundRef.current = currentSound;
+        !muteClicked && dispatch.audioModel.pause();
+    }, [currentSound, dispatch.audioModel, muteClicked]);
 
     // instatiating the audio object
     if (typeof Audio != "undefined") {
@@ -58,9 +60,14 @@ const AudioButton = () => {
     const playMusic = useCallback(() => {
         !audioIsPlaying && dispatch.audioModel.toggle();
         audioRef.current.play();
-        console.log('playing Music')
+        setPathChanged(false);
+        setMuteClicked(false);
     }, [dispatch.audioModel, audioIsPlaying]);
 
+    const muteMusic = () => {
+        setMuteClicked(true);
+        dispatch.audioModel.pause();
+    };
 
     // fadeout sound when pausing music
     const [vol, setVol] = useState(1);
@@ -71,65 +78,38 @@ const AudioButton = () => {
             fadeout = vol > 0.01 && setInterval(() => {
                 setVol(v => (v - 0.1).toFixed(2));
                 current.volume = vol;
-                console.log('current.vol from setInterval', current.volume)
             }, 100);
         }
         return () => {
             clearTimeout(fadeout);
         }
-    }, [easeOutMusic, vol]);
+    }, [easeOutMusic, vol, pathChanged, muteClicked]);
 
     // pause after volume reached 0.01
     useEffect(() => {
-        if (vol <= 0.01) {
+        if (vol <= 0.01 && !!easeOutMusic) {
             dispatch.audioModel.pause();
-            dispatch.audioModel.toggle();
             audioRef.current.pause();
             setVol(1);
             audioRef.current.volume = 1;
-            console.log('reached 0', vol);
-        }
-    }, [vol, dispatch.audioModel]);
-
-    // pathname useEffect
-    useEffect(() => {
-        setPathname(location.pathname);
-        setPathChagned(true);
-        console.log(pathChanged, 'path changed eff')
-    }, [location, pathname, pathChanged]);
-
-    // change current music when navigating to another section
-    useEffect(() => {
-        if (audioIsPlaying && sound !== currentSound) {
-            changeSound();
+            dispatch.audioModel.toggle();
+        } if (pathChanged && !easeOutMusic && !audioIsPlaying) {
             audioRef.current.src = currentSound;
-            // audioRef.current.load();
-            // audioRef.current.pause();
-            dispatch.audioModel.pause();
-            // ensure audioIsplaying true
-            // dispatch.audioModel.toggle();
-            console.log('easeout nav eff=', easeOutMusic, "playing=", audioIsPlaying);
-        }
-    }, [soundRef, sound, currentSound, audioIsPlaying, changeSound, dispatch.audioModel, easeOutMusic])
-
-    // play new music when navigating to another section
-    useEffect(() => {
-        if (!audioIsPlaying && soundRef.current !== currentSound) {
-            soundRef.current = currentSound;
-            // dispatch.audioModel.toggle();
-            console.log(soundRef.current.slice(7, 20), vol, easeOutMusic, "after switch=", audioIsPlaying, "==audioPlay",
-                '\n', pathChanged, 'pathchange');
-
+        } if (pathChanged && !easeOutMusic && !audioIsPlaying && !muteClicked) {
             playMusic();
 
         }
-    }, [sound, currentSound, audioIsPlaying, easeOutMusic, playMusic, vol, pathChanged]);
+    }, [vol, dispatch.audioModel, pathChanged, audioIsPlaying, playMusic, currentSound, easeOutMusic, muteClicked]);
 
-    // ================== test ========================
-    // useEffect(() => {
-    //     if (!easeOutMusic && audioIsPlaying && pathChanged) playMusic();
-    //     setPathChagned(!pathChanged);
-    // }, pathChanged, audioIsPlaying, easeOutMusic);
+    // pathname useEffect
+    useEffect(() => {
+        if (pathname !== location.pathname) {
+            setPathname(location.pathname);
+            setPathChanged(true);
+        } if (sound !== currentSound) {
+            changeSound();
+        }
+    }, [location.pathname, pathname, pathChanged, currentSound, changeSound, sound]);
 
     // displaying modal only during the user's first visit to site
     useEffect(() => {
@@ -148,7 +128,7 @@ const AudioButton = () => {
                     <div className='modal-learn' >
                         {/* Display mute/unmute buttons when music is playing */}
                         < button type='button' className='mute-btn' onClick={
-                            () => { dispatch.audioModel.pause() }
+                            () => muteMusic()
                         }> Mute < GoMute /> </button >
                     </div >
                 ) : (
