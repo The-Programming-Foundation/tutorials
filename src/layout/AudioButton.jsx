@@ -6,32 +6,37 @@ import Modal from './Modal';
 import sounds from '../utils/sounds';
 
 const AudioButton = () => {
+
+    // display modal only on first visit
     const [showModal, setShowModal] = useState(false);
     const toggleModal = () => setShowModal(!showModal);
-    const [muteClicked, setMuteClicked] = useState(false);
 
     // accessing global state redux rematch
     const audioModel = useSelector(state => state.audioModel);
     const { audioIsPlaying, easeOutMusic } = audioModel;
     const dispatch = useDispatch();
 
-    // SSR method for accessing window.location 
+    // Hook for accessing window.location 
     const location = useLocation();
     const [pathname, setPathname] = useState(location.pathname);
 
-    // current sound based on currentURL
-    const currentSound = sounds(location.pathname);
-    const soundRef = useRef(sounds(pathname));
-    // check for path changes
+    // state for capturing navigation changes
     const [pathChanged, setPathChanged] = useState(false);
 
-    // state to compare changes in sound source
-    const [sound, setSound] = useState(sounds(soundRef.current));
+    // current sound to be played based on utils sounds function
+    const currentSound = sounds(pathname);
+
+    // state to compare sound playing vs sound to be played 
+    //after navigating to another page
+    const [sound, setSound] = useState(sounds(pathname));
+
+    // state to capture if the mute button was clicked
+    const [muteClicked, setMuteClicked] = useState(false);
 
     // memoizing changeSound function
     const changeSound = useCallback(() => {
         setSound(currentSound);
-        soundRef.current = currentSound;
+        // pause sound only if mute is not clicked
         !muteClicked && dispatch.audioModel.pause();
     }, [currentSound, dispatch.audioModel, muteClicked]);
 
@@ -39,7 +44,7 @@ const AudioButton = () => {
     if (typeof Audio != "undefined") {
         // browser-only code to enable server-side compiling
         var audio = new Audio(sound);
-        // enable continuous sound
+        // enable audio continuous sound
         audio.loop = true;
     }
 
@@ -58,18 +63,21 @@ const AudioButton = () => {
     };
 
     const playMusic = useCallback(() => {
+        // set audioIsPlaying to true and play current sound
         !audioIsPlaying && dispatch.audioModel.toggle();
         audioRef.current.play();
+        // once music is played, reset pathChanged and mute states
         setPathChanged(false);
         setMuteClicked(false);
     }, [dispatch.audioModel, audioIsPlaying]);
 
+    // seperating a mute function to prevent fading out music when mute was selected
     const muteMusic = () => {
         setMuteClicked(true);
         dispatch.audioModel.pause();
     };
 
-    // fadeout sound when pausing music
+    // fadeout sound before pausing music
     const [vol, setVol] = useState(1);
     useEffect(() => {
         let current = audioRef.current;
@@ -85,7 +93,7 @@ const AudioButton = () => {
         }
     }, [easeOutMusic, vol, pathChanged, muteClicked]);
 
-    // pause after volume reached 0.01
+    // pause completely after volume reached 0.01
     useEffect(() => {
         if (vol <= 0.01 && !!easeOutMusic) {
             dispatch.audioModel.pause();
@@ -93,15 +101,18 @@ const AudioButton = () => {
             setVol(1);
             audioRef.current.volume = 1;
             dispatch.audioModel.toggle();
+            // change the actual audioRef src if the path has changed and fading out completed
         } if (pathChanged && !easeOutMusic && !audioIsPlaying) {
             audioRef.current.src = currentSound;
+            // play music after changing path and if mute hasn't been clicked
         } if (pathChanged && !easeOutMusic && !audioIsPlaying && !muteClicked) {
             playMusic();
 
         }
     }, [vol, dispatch.audioModel, pathChanged, audioIsPlaying, playMusic, currentSound, easeOutMusic, muteClicked]);
 
-    // pathname useEffect
+    // change the actual pathname based on the location and call changeSound when sound needs to be changed
+    // no need to change sound when navigating within the same lesson or lesson w/o a dedicated sound 
     useEffect(() => {
         if (pathname !== location.pathname) {
             setPathname(location.pathname);
