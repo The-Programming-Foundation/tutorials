@@ -1,0 +1,100 @@
+---
+title: File Handling
+---
+
+# File Handling
+Python has built-in functions to perform operations on files, including reading and writing files.
+
+To perform a file operation, first,  a file has to be opened. Then the file operation is performed. Close the file afterward.
+
+## Opening a file
+The built-in open() function opens a file. It accesses a file by the specified filename (in the current directory) or a path to that file. 
+A mode can also be specified for different purposes as follows:
+```
+'r': Opens the specified file for reading, and this is the default mode of operation. An error occurs if a file does not exist.
+'a': Opens the specified file for appending. A new file will be created if it does not exist.
+'w': Opens the specified file for writing. A new file will be created if it does not exist.
+'x': Creates the specified file. An error occurs if the file exists.
+```
+
+As another option, the file could be specified to be one of the two types of mode:
+```
+'t': Text mode, and this is the default mode.
+'b': Binary mode.
+```
+
+## Reading a file
+```
+read(): read bytes as a string
+readline(): read a line in the file as a string
+readlines(): read all lines in the file as a list of strings (each line is a string)
+```
+## Writing a file
+```
+write(<a string is specified>): write a string as a line into the file
+writelines(<a list of strings is specified>): write multiple strings, each string as a line, into a file.
+```
+## Closing a file
+Python function close() will free up the memory spaces used by the file.
+
+### Read in a file and count the number of lines in it
+For example, count how many records in a file named "records.txt" with the content: 
+```
+1. Jerry Smith, USA
+2. Lily Tom, Canada
+3. Peter Frank, France
+4. Susan Yellen, USA
+5. David Elli, Japan
+```
+
+It is first opened by open(), then one line is read in and counted at a time; after all lines are read in and counted, the file is closed, and the number of lines is displayed. 
+```Python 
+records = open("records.txt", "r")
+num_records = 0
+
+for record in records:
+    num_records += 1
+    
+records.close()
+print(num_records)
+
+```
+#### Output:
+```
+5
+```
+## With statement
+"With" statement prevents the problem that the file is not closed properly.
+
+#### Write shopping items to a file by using "with" statement and write()
+```Python
+shopping_list = ["apples", "bananas", "green beans", "turkey"]
+
+with open("shopping_memo.txt", "w") as f:
+    for i in range(len(shopping_list)):
+        item = shopping_list[i] + "\n"
+        f.write(str(i+1) + ": " + item)
+
+with open("shopping_memo.txt", "r") as f:
+    lines = f.readlines()
+    for line in lines:
+        print(line.strip()) # strip() removes "\n"
+
+```
+#### The content in shopping_memo_txt after execution:
+```
+1: apples
+2: bananas
+3: green beans
+4: turkey
+
+```
+
+#### Output:
+```
+1: apples
+2: bananas
+3: green beans
+4: turkey
+
+```

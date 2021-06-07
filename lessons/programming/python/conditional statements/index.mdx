@@ -1,0 +1,141 @@
+---
+title: Conditional Statements
+---
+
+# Conditional Statements
+For some problems, we are going to take different actions depending on the conditions. 
+For example, take an umbrella when it's raining outside;  otherwise don't need to.
+
+Conditional statements are the instructions we give computers to make decisions and do something accordingly.
+
+There are different kinds of conditional statements.
+## 1. if statement:
+It has one condition and takes action only when the condition is true. It does not care when the condition is 
+not true thus does nothing.
+   
+For example, 
+if a number is equal to the pre-set number:
+     output "You won!"
+
+#### Python syntax:
+``` 
+if condition:
+    do something
+```
+### Python implementation:
+```Python
+winning_number = 65
+num = int(input("Pick a lucky number between 1 and 100: "))
+
+if num == winning_number:
+    print("You won!")
+```
+Output:
+```
+Pick a lucky number between 1 and 100: 65
+You won!
+```
+
+## 2. if-else statement:
+It takes one action when the condition is true and another action when the condition is false.
+
+For example, a math tutor tells if the answer to a math question is correct or not and displays the correct answer if the answer is incorrect.
+
+#### Python syntax:
+```
+if condition:
+    do something
+else:
+    do something else
+```
+
+### Python implementation:
+```Python
+answer = int(input("What is the answer of 2 to the power of 8? "))
+if answer == 2**8:
+    print("Correct")
+else:
+    print("Incorrect. The answer is ", 2**8)
+```
+Output:
+```
+What is the answer of 2 to the power of 8? 64
+Incorrect. The answer is  256
+```
+```
+What is the answer of 2 to the power of 8? 256
+Correct
+```
+
+## 3. if-elif-else statement:
+it has more than one condition, and it takes different actions depending on the condition. If all conditions do not match, it does the action of the "else" part.
+
+For example, know the letter grade 'A', 'B', 'C', 'D', or 'F' by the score. 
+```
+90-100 => "A"
+80-89 => "B"
+70-79 => "C"
+60-69 => "D"
+below 60 => "F"
+```
+
+#### Python syntax
+```
+if condition:
+    action1
+elif condition:
+    action2
+(we can have more 
+elif condition: action
+)
+else:
+    other_action
+```
+
+### Python implementation:
+```Python
+score = int(input("Your score(0-100): "))
+
+if score >= 90 and score <= 100:
+    print("A")
+elif score >= 80 and score < 90:
+    print("B")
+elif score >= 70 and score < 80:
+    print("C")
+elif score >= 60 and score < 70:
+    print("D")
+elif score >= 0 and score < 60:
+    print("F")
+else:
+    print("invalid score")
+```
+Output:
+```
+Your score(0-100): 83
+B
+```
+
+```
+Your score(0-100): 59
+F
+```
+
+```
+Your score(0-100): -100
+invalid score```
+```
+ 
+## 4. Python shorthand if-else:
+
+#### Python syntax:
+action1 if condition else action2
+
+### Python implementation
+```Python
+num1, num2 = 99, 100
+print(num1, ">", num2) if num1 > num2 else print(num1, '<=', num2)
+```
+Output:
+```
+99 <= 100
+```
