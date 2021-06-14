@@ -223,7 +223,19 @@
     right: -5px;
     font-size: 1.3rem;
  }
-   
+
+ .chat-container {
+    width: 75px;
+    z-index: 2;
+    position: fixed;
+    left: 45%;
+    top: 85%;
+ }
+ 
+ .chat-logo {
+    width: 100%;
+ }
+
  @media(max-width:1300px){
     .sound-modal {
        max-width: 65%;    

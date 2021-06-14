@@ -3,6 +3,7 @@ import Layout from '../../../layout/Layout';
 import IndexSection from '../../../components/IndexSection';
 import IndexItemList from '../../../components/IndexItemList';
 import LessonTopic from '../../../data/LessonTopic';
+import Chatbot from '../../../layout/Chatbot.jsx'
 import { graphql } from 'gatsby';
 
 const filter = (lesson) => {
@@ -17,6 +18,7 @@ const unix = ({ data: { site, mdx } }) => {
       <IndexSection title="Core concepts">
         <IndexItemList lessonTopic={filter('unix')} />
       </IndexSection>
+      <Chatbot/>
     </Layout>
   );
 }
