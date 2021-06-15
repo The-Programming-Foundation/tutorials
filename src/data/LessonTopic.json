@@ -154,7 +154,7 @@
     {
         "id": 20,
         "lessonType": "python",
-        "to": "/programming/python/Conditional Statements",
+        "to": "/programming/python/conditional-statements",
         "title": "Conditional Statements",
         "subtitle": "Writing conditional statements in Python",
         "image": "https://images.unsplash.com/photo-1600074169098-16a54d791d0d?ixid=MnwxMjA3fDB8MHxwaG90[…]GVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
@@ -162,7 +162,7 @@
     {
         "id": 21,
         "lessonType": "python",
-        "to": "/programming/python/Loops",
+        "to": "/programming/python/loops",
         "title": "Loops",
         "subtitle": "Loops in Python",
         "image": "https://images.unsplash.com/flagged/photo-1572422476918-416e3aecb6a7?ixid=MnwxMjA3fDB8[…]GVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80"
@@ -170,7 +170,7 @@
     {
         "id": 22,
         "lessonType": "python",
-        "to": "/programming/python/Functions",
+        "to": "/programming/python/functions",
         "title": "Functions",
         "subtitle": "Writing functions in Python",
         "image": "https://images.unsplash.com/photo-1539477192933-1a7dde04aa77?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1868&q=80"
@@ -178,7 +178,7 @@
     {
         "id": 23,
         "lessonType": "python",
-        "to": "/programming/python/File Handling",
+        "to": "/programming/python/file-handling",
         "title": "File Handling",
         "subtitle": "Handling Files in Python",
         "image": "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1953&q=80"
