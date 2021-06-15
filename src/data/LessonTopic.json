@@ -1,200 +1,218 @@
 [
     {
-        "id":"1",
-        "lessonType":"operatingsystem",
+        "id": 1,
+        "lessonType": "operatingsystem",
         "to": "/lessons/os/unix",
         "title": "Unix",
         "subtitle": "An operating system",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582612021859-DO0PIXR9DYGQEF46B6PA/ke17ZwdGBToddI8pDm48kNieQx9KL1evre9Hd4ljT6d7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0g9xiYCO_4ze-uEG5pWlE5NgKb-p0Dd42f6sHlMt4hzAejhns344gPXv5yMHayH2Hw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582612021859-DO0PIXR9DYGQEF46B6PA/ke17ZwdGBToddI8pDm48kNieQx9KL1evre9Hd4ljT6d7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0g9xiYCO_4ze-uEG5pWlE5NgKb-p0Dd42f6sHlMt4hzAejhns344gPXv5yMHayH2Hw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"2",
-        "lessonType":"operatingsystem",
+        "id": 2,
+        "lessonType": "operatingsystem",
         "to": "/os/vim",
         "title": "Vim",
         "subtitle": "A text editor",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581829260732-4AD8IRF1X3Z558RJU8F9/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581829260732-4AD8IRF1X3Z558RJU8F9/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"3",
-        "lessonType":"operatingsystem",
+        "id": 3,
+        "lessonType": "operatingsystem",
         "to": "/os/kernel",
         "title": "Kernel",
         "subtitle": "The core of an operating system",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581829485790-UJP5E5LMKCAQK7CH9078/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581829485790-UJP5E5LMKCAQK7CH9078/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
     },
     {
-        "id":"4",
-        "lessonType":"programming",
+        "id": 4,
+        "lessonType": "programming",
         "to": "/lessons/programming/c",
         "title": "C",
         "subtitle": "A general purpose programming language",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581811705530-X1G32U20RTWIRWK46SHP/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581811705530-X1G32U20RTWIRWK46SHP/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/image-asset.jpeg?format=500w"
     },
     {
-        "id":"5",
-        "lessonType":"programming",
+        "id": 5,
+        "lessonType": "programming",
         "to": "/lessons/programming/python",
         "title": "Python",
         "subtitle": "A high-level programming language for general purpose programming",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581825924842-MET363P2K0V5DHM25K3E/ke17ZwdGBToddI8pDm48kIK1RqlxOH0feb2s6eaQaPx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0lqfkVpRp1g_2L-WsTQRP4ItMlUScqTrNl4Qam9qClu3p72N-Hx3V_QwM4ngpqU4bA/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581825924842-MET363P2K0V5DHM25K3E/ke17ZwdGBToddI8pDm48kIK1RqlxOH0feb2s6eaQaPx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0lqfkVpRp1g_2L-WsTQRP4ItMlUScqTrNl4Qam9qClu3p72N-Hx3V_QwM4ngpqU4bA/image-asset.jpeg?format=500w"
     },
     {
-        "id":"6",
-        "lessonType":"programming",
+        "id": 6,
+        "lessonType": "programming",
         "to": "/lessons/programming/oop",
         "title": "Object oriented programming",
         "subtitle": "A practical way to approach programming",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581826071214-K7OAQ9AY2KM9LIUGJ8EB/ke17ZwdGBToddI8pDm48kFyD7pzB8zoMIVY5aiUuFlp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jG2lbcDYBOeMi4OFSYem8DMb5PTLoEDdB05UqhYu-xbnSznFxIRsaAU-3g5IaylIg/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581826071214-K7OAQ9AY2KM9LIUGJ8EB/ke17ZwdGBToddI8pDm48kFyD7pzB8zoMIVY5aiUuFlp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jG2lbcDYBOeMi4OFSYem8DMb5PTLoEDdB05UqhYu-xbnSznFxIRsaAU-3g5IaylIg/image-asset.jpeg?format=500w"
     },
     {
-        "id":"7",
-        "lessonType":"programming",
+        "id": 7,
+        "lessonType": "programming",
         "to": "/programming/algorithm",
         "title": "Algorithm",
         "subtitle": "Instructing the computer in different ways",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581826369804-ZUVGF630H9NRY1CQVGPY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581826369804-ZUVGF630H9NRY1CQVGPY/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/image-asset.jpeg?format=500w"
     },
     {
-        "id":"8",
-        "lessonType":"logic",
+        "id": 8,
+        "lessonType": "logic",
         "to": "/logic/binaries",
         "title": "Binaries",
         "subtitle": "Computer only understands zeros and ones",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581830587778-B1T9S9GLSOQEA6MZ4JWJ/ke17ZwdGBToddI8pDm48kK60W-ob1oA2Fm-j4E_9NQB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kD6Ec8Uq9YczfrzwR7e2Mh5VMMOxnTbph8FXiclivDQnof69TlCeE0rAhj6HUpXkw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581830587778-B1T9S9GLSOQEA6MZ4JWJ/ke17ZwdGBToddI8pDm48kK60W-ob1oA2Fm-j4E_9NQB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kD6Ec8Uq9YczfrzwR7e2Mh5VMMOxnTbph8FXiclivDQnof69TlCeE0rAhj6HUpXkw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"9",
-        "lessonType":"logic",
+        "id": 9,
+        "lessonType": "logic",
         "to": "/logic/gates",
         "title": "Gates",
         "subtitle": "Logical operations using binaries",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581830485164-MMFAJZ60IGUVVF9WWWBO/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1581830485164-MMFAJZ60IGUVVF9WWWBO/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"10",
-        "lessonType":"unix",
+        "id": 10,
+        "lessonType": "unix",
         "to": "/os/unix/structure",
         "title": "Structure",
         "subtitle": "Components of Unix",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582610978752-BCZTT8FININRVJ9XU357/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582610978752-BCZTT8FININRVJ9XU357/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"11",
-        "lessonType":"unix",
+        "id": 11,
+        "lessonType": "unix",
         "to": "/os/unix/file-structure",
         "title": "Unix file structure",
         "subtitle": "File system",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582611416303-XGBNQBJWSWJ0K2PRY3BX/ke17ZwdGBToddI8pDm48kK60W-ob1oA2Fm-j4E_9NQB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kD6Ec8Uq9YczfrzwR7e2Mh5VMMOxnTbph8FXiclivDQnof69TlCeE0rAhj6HUpXkw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582611416303-XGBNQBJWSWJ0K2PRY3BX/ke17ZwdGBToddI8pDm48kK60W-ob1oA2Fm-j4E_9NQB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kD6Ec8Uq9YczfrzwR7e2Mh5VMMOxnTbph8FXiclivDQnof69TlCeE0rAhj6HUpXkw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"12",
-        "lessonType":"unix",
+        "id": 12,
+        "lessonType": "unix",
         "to": "/os/unix/shell",
         "title": "Unix shell",
         "subtitle": "Navigating the operating system",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582611240800-NPL7G88SHN3AF53VFHB4/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1582611240800-NPL7G88SHN3AF53VFHB4/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
-
     {
-        "id":"13",
-        "lessonType":"c",
+        "id": 13,
+        "lessonType": "c",
         "to": "/programming/c/structure",
         "title": "Structure",
         "subtitle": "Structure of the program",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583705866397-A6LNCTH6YF8UM0D25LQL/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583705866397-A6LNCTH6YF8UM0D25LQL/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
     },
     {
-        "id":"14",
-        "lessonType":"c",
+        "id": 14,
+        "lessonType": "c",
         "to": "/programming/c/hello-earth",
         "title": "Hello Earth",
         "subtitle": "Printing a statement",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583706070494-RKFKGUMQTEYYMJ8P3AT9/ke17ZwdGBToddI8pDm48kH_uwxGOYX5bivALGm05uZJ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0o8OMvY5tuV_wqZQCqqStn4KIrOGbVMte_dx5txYAcAiYRCymfPHcwrRJHBuR8xPlA/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583706070494-RKFKGUMQTEYYMJ8P3AT9/ke17ZwdGBToddI8pDm48kH_uwxGOYX5bivALGm05uZJ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0o8OMvY5tuV_wqZQCqqStn4KIrOGbVMte_dx5txYAcAiYRCymfPHcwrRJHBuR8xPlA/image-asset.jpeg?format=500w"
     },
     {
-        "id":"15",
-        "lessonType":"c",
+        "id": 15,
+        "lessonType": "c",
         "to": "/programming/c/calculation",
         "title": "Calculation",
         "subtitle": "Calculating numbers",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583723141864-VOAC613RIUA0C1CRT8HV/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583723141864-VOAC613RIUA0C1CRT8HV/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
     },
     {
-        "id":"16",
-        "lessonType":"c",
+        "id": 16,
+        "lessonType": "c",
         "to": "/programming/c/expansion",
         "title": "Expansion",
         "subtitle": "Expanded functionalities",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583723326813-U9991RW4L6HCNUUJ3J0P/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1583723326813-U9991RW4L6HCNUUJ3J0P/ke17ZwdGBToddI8pDm48kFmfxoboNKufWj-55Bgmc-J7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iXS6XmVv7bUJ418E8Yoc1hjuviiiZmrL38w1ymUdqq4JaGeFUxjM-HeS7Oc-SSFcg/image-asset.jpeg?format=500w"
     },
-
     {
-        "id":"17",
-        "lessonType":"python",
+        "id": 17,
+        "lessonType": "python",
         "to": "/programming/python/structure",
         "title": "Structure",
         "subtitle": "Structure of the program",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585021265794-911SECAM23XQLIEGLDQZ/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585021265794-911SECAM23XQLIEGLDQZ/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
     },
-
     {
-        "id":"18",
-        "lessonType":"python",
+        "id": 18,
+        "lessonType": "python",
         "to": "/programming/python/hello-earth",
         "title": "Hello Earth",
         "subtitle": "Displaying an output",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585021436459-ZP0VUL56EDKGM80B8ABV/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585021436459-ZP0VUL56EDKGM80B8ABV/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/image-asset.jpeg?format=500w"
     },
     {
-        "id":"19",
-        "lessonType":"python",
+        "id": 19,
+        "lessonType": "python",
         "to": "/programming/python/calculation",
         "title": "Calculation",
         "subtitle": "Calculating numbers",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585021372063-A6UGUOFVUGXZNSX0ILJU/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585021372063-A6UGUOFVUGXZNSX0ILJU/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"20",
-        "lessonType":"python",
-        "to": "/programming/python/expansion",
-        "title": "Expansion",
-        "subtitle": "Expanded functionalities",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585722698930-T8TYFL74OS2UZES0C4N3/ke17ZwdGBToddI8pDm48kFQjgsZ4YX2MPjYhYa0gYA97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p4XabXLlNWpcJMv7FrN_NJ9AAnuqPO6283_GrIBRQsPMpi0GZwhwBwybpQV6zSS3A/image-asset.jpeg?format=500w"
+        "id": 20,
+        "lessonType": "python",
+        "to": "/programming/python/Conditional Statements",
+        "title": "Conditional Statements",
+        "subtitle": "Writing conditional statements in Python",
+        "image": "https://images.unsplash.com/photo-1600074169098-16a54d791d0d?ixid=MnwxMjA3fDB8MHxwaG90[…]GVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
     },
-
-
     {
-        "id":"21",
-        "lessonType":"oop",
+        "id": 21,
+        "lessonType": "python",
+        "to": "/programming/python/Loops",
+        "title": "Loops",
+        "subtitle": "Loops in Python",
+        "image": "https://images.unsplash.com/flagged/photo-1572422476918-416e3aecb6a7?ixid=MnwxMjA3fDB8[…]GVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80"
+    },
+    {
+        "id": 22,
+        "lessonType": "python",
+        "to": "/programming/python/Functions",
+        "title": "Functions",
+        "subtitle": "Writing functions in Python",
+        "image": "https://images.unsplash.com/photo-1539477192933-1a7dde04aa77?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1868&q=80"
+    },
+    {
+        "id": 23,
+        "lessonType": "python",
+        "to": "/programming/python/File Handling",
+        "title": "File Handling",
+        "subtitle": "Handling Files in Python",
+        "image": "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1953&q=80"
+    },
+    {
+        "id": 24,
+        "lessonType": "oop",
         "to": "/programming/oop/abstraction",
         "title": "Abstraction",
         "subtitle": "Hiding the unnecessary stuffs",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022695913-YZ24K5FYX0RMXJEHXXGF/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022695913-YZ24K5FYX0RMXJEHXXGF/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"22",
-        "lessonType":"oop",
+        "id": 25,
+        "lessonType": "oop",
         "to": "/programming/oop/inheritance",
         "title": "Inheritance",
         "subtitle": "Hierarchies",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022138908-Y63WJMTTYRF13Z7BE1A5/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022138908-Y63WJMTTYRF13Z7BE1A5/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"23",
-        "lessonType":"oop",
+        "id": 26,
+        "lessonType": "oop",
         "to": "/programming/oop/encapsulation",
         "title": "Encapsulation",
         "subtitle": "Bindings",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022354128-QLWM33O0032RPUKR6QY9/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022354128-QLWM33O0032RPUKR6QY9/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/image-asset.jpeg?format=500w"
     },
     {
-        "id":"24",
-        "lessonType":"oop",
+        "id": 27,
+        "lessonType": "oop",
         "to": "/programming/oop/polymorphism",
         "title": "Polymorphism",
         "subtitle": "Forms",
-        "image":"https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpxbQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpxbQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
     }
-   
-  ]
+]
