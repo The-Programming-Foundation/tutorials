@@ -6,6 +6,8 @@ import Modal from './Modal';
 import sounds from '../utils/sounds';
 
 const AudioButton = () => {
+
+    // display modal only on first visit
     const [showModal, setShowModal] = useState(false);
     const toggleModal = () => setShowModal(!showModal);
 
@@ -14,24 +16,35 @@ const AudioButton = () => {
     const { audioIsPlaying, easeOutMusic } = audioModel;
     const dispatch = useDispatch();
 
-    // SSR method for accessing window.location 
+    // Hook for accessing window.location 
     const location = useLocation();
     const [pathname, setPathname] = useState(location.pathname);
 
-    // current sound based on currentURL
+    // state for capturing navigation changes
+    const [pathChanged, setPathChanged] = useState(false);
+
+    // current sound to be played based on utils sounds function
     const currentSound = sounds(pathname);
-    const soundRef = useRef(sounds(pathname));
 
-    const [sound, setSound] = useState(sounds(soundRef.current));
+    // state to compare sound playing vs sound to be played 
+    //after navigating to another page
+    const [sound, setSound] = useState(sounds(pathname));
+
+    // state to capture if the mute button was clicked
+    const [muteClicked, setMuteClicked] = useState(false);
+
+    // memoizing changeSound function
     const changeSound = useCallback(() => {
-        dispatch.audioModel.pause();
         setSound(currentSound);
-    }, [currentSound, dispatch.audioModel]);
+        // pause sound only if mute is not clicked
+        !muteClicked && dispatch.audioModel.pause();
+    }, [currentSound, dispatch.audioModel, muteClicked]);
 
+    // instatiating the audio object
     if (typeof Audio != "undefined") {
         // browser-only code to enable server-side compiling
         var audio = new Audio(sound);
-        // enable continuous sound
+        // enable audio continuous sound
         audio.loop = true;
     }
 
@@ -50,38 +63,64 @@ const AudioButton = () => {
     };
 
     const playMusic = useCallback(() => {
-        dispatch.audioModel.toggle();
+        // set audioIsPlaying to true and play current sound
+        !audioIsPlaying && dispatch.audioModel.toggle();
         audioRef.current.play();
-    }, [dispatch.audioModel]);
+        // once music is played, reset pathChanged and mute states
+        setPathChanged(false);
+        setMuteClicked(false);
+    }, [dispatch.audioModel, audioIsPlaying]);
 
-    const pauseMusic = () => {
-        dispatch.audioModel.toggle();
-        audioRef.current.pause();
-    }
+    // seperating a mute function to prevent fading out music when mute was selected
+    const muteMusic = () => {
+        setMuteClicked(true);
+        dispatch.audioModel.pause();
+    };
 
-    // pathname useEffect
+    // fadeout sound before pausing music
+    const [vol, setVol] = useState(1);
     useEffect(() => {
-        setPathname(location.pathname);
-    }, [location, pathname]);
+        let current = audioRef.current;
+        let fadeout;
+        if (!!easeOutMusic) {
+            fadeout = vol > 0.01 && setInterval(() => {
+                setVol(v => (v - 0.1).toFixed(2));
+                current.volume = vol;
+            }, 100);
+        }
+        return () => {
+            clearTimeout(fadeout);
+        }
+    }, [easeOutMusic, vol, pathChanged, muteClicked]);
 
-    // pause current music when navigating to another section
+    // pause completely after volume reached 0.01
     useEffect(() => {
-        if (audioIsPlaying && sound !== currentSound) {
-            changeSound();
-            audioRef.current.src = currentSound;
-            audioRef.current.load();
-            dispatch.audioModel.toggle();
+        if (vol <= 0.01 && !!easeOutMusic) {
+            dispatch.audioModel.pause();
             audioRef.current.pause();
-        }
-    }, [soundRef, sound, currentSound, audioIsPlaying, changeSound, dispatch.audioModel])
-
-    // play new music when navigating to another section
-    useEffect(() => {
-        if (!audioIsPlaying && soundRef.current !== currentSound) {
-            soundRef.current = currentSound;
+            setVol(1);
+            audioRef.current.volume = 1;
+            dispatch.audioModel.toggle();
+            // change the actual audioRef src if the path has changed and fading out completed
+        } if (pathChanged && !easeOutMusic && !audioIsPlaying) {
+            audioRef.current.src = currentSound;
+            // play music after changing path and if mute hasn't been clicked
+        } if (pathChanged && !easeOutMusic && !audioIsPlaying && !muteClicked) {
             playMusic();
+
         }
-    }, [sound, currentSound, audioIsPlaying, easeOutMusic, playMusic])
+    }, [vol, dispatch.audioModel, pathChanged, audioIsPlaying, playMusic, currentSound, easeOutMusic, muteClicked]);
+
+    // change the actual pathname based on the location and call changeSound when sound needs to be changed
+    // no need to change sound when navigating within the same lesson or lesson w/o a dedicated sound 
+    useEffect(() => {
+        if (pathname !== location.pathname) {
+            setPathname(location.pathname);
+            setPathChanged(true);
+        } if (sound !== currentSound) {
+            changeSound();
+        }
+    }, [location.pathname, pathname, pathChanged, currentSound, changeSound, sound]);
 
     // displaying modal only during the user's first visit to site
     useEffect(() => {
@@ -100,7 +139,7 @@ const AudioButton = () => {
                     <div className='modal-learn' >
                         {/* Display mute/unmute buttons when music is playing */}
                         < button type='button' className='mute-btn' onClick={
-                            () => pauseMusic()
+                            () => muteMusic()
                         }> Mute < GoMute /> </button >
                     </div >
                 ) : (
