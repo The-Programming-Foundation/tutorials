@@ -1,6 +1,7 @@
 import unixWonderSound from '../music/unixWonderSound.mp3';
 import learnSound from '../music/learnSound.mp3';
 import binarySound from '../music/binarySound.mp3';
+import kernelSound from '../music/kernelSound.mp3';
 import cSound from '../music/c.mp3';
 
 const selectSound = (location) => {
@@ -14,6 +15,9 @@ const selectSound = (location) => {
 
         case checkUrl('binaries'):
             return binarySound;
+
+        case checkUrl('kernel'):
+            return kernelSound;
 
         case checkUrl('c'):
             return cSound;

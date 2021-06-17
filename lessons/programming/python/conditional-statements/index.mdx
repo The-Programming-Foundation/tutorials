@@ -1,0 +1,154 @@
+---
+title: Conditional Statements
+---
+
+<CodeLabLayout title="PythonConditionalStatements">
+
+# Conditional Statements
+For some problems, we are going to take different actions depending on the conditions. 
+For example, take an umbrella when it's raining outside;  otherwise don't need to.
+
+Conditional statements are the instructions we give computers to make decisions and do something accordingly.
+
+There are different kinds of conditional statements.
+## 1. If statement:
+If a condition is true, it'll take action; otherwise, it'll do nothing.
+   
+For example, 
+```Python
+if a number is equal to the pre-set number:
+     output "You won!"
+```
+
+#### Python syntax:
+```Python 
+if condition:
+    do something
+```
+### Python implementation:
+```Python
+#Assigning a number to the winning_number variable
+winning_number = 65
+
+#Asking user to type in a lucky number, 
+#input() function gets the entered number as a string from user so int() converts it to an integer
+num = int(input("Pick a lucky number between 1 and 100: "))
+
+if num == winning_number:
+    print("You won!")
+```
+**Output:**
+```
+Pick a lucky number between 1 and 100: 65
+You won!
+```
+
+## 2. If-Else statement:
+You can assign it to perform an action if a condition is true and a different action when the condition is false; therefore, different actions can be processed based on the condition.
+
+For example, a math tutor evaluates if the answer to a math question is correct or not. It displays "Correct" if answer is correct. It displays "Incorrect" and the correct answer if the answer is incorrect.
+
+#### Python syntax:
+```Python
+if condition:
+    do something
+else:
+    do something else
+```
+
+### Python implementation:
+```Python
+answer = int(input("What is the answer of 2 to the power of 8? "))
+
+# The Python power operator ** raises the left number to the power of the right number
+if answer == 2**8:
+    print("Correct")
+else:
+    print("Incorrect. The answer is ", 2**8)
+```
+**Output:**
+```
+What is the answer of 2 to the power of 8? 64
+Incorrect. The answer is  256
+```
+```
+What is the answer of 2 to the power of 8? 256
+Correct
+```
+
+## 3. If-Elif-Else statement:
+It has more than one condition, and it takes different actions depending on the condition. If all conditions do not match, it does the action of the "else" part.
+
+For example, to find the letter grade ('A', 'B', 'C', 'D', or 'F') based on the following chart:
+```
+90-100 => "A"
+80-89 => "B"
+70-79 => "C"
+60-69 => "D"
+below 60 => "F"
+```
+
+#### Python syntax
+We can use the following syntax:
+```Python
+if condition:
+    action1
+elif condition:
+    action2
+else:
+    other_action
+```
+**Note:** There can more than one elif condition.
+
+### Python implementation:
+```Python
+score = int(input("Your score(0-100): "))
+
+if score >= 90 and score <= 100:
+    print("A")
+elif score >= 80 and score < 90:
+    print("B")
+elif score >= 70 and score < 80:
+    print("C")
+elif score >= 60 and score < 70:
+    print("D")
+elif score >= 0 and score < 60:
+    print("F")
+else:
+    print("invalid score")
+```
+**Output:**
+```
+Your score(0-100): 83
+B
+```
+
+```
+Your score(0-100): 59
+F
+```
+
+```
+Your score(0-100): -100
+invalid score```
+```
+ 
+## 4. Python shorthand if-else:
+Python provides a shorthand method like the ternary operator of C language for writing if-else statements in one line.
+
+#### Python syntax:
+```Python
+action1 if condition else action2
+```
+
+### Python implementation
+```Python
+num1, num2 = 99, 100
+print(num1, ">", num2) if num1 > num2 else print(num1, '<=', num2)
+```
+**Output:**
+```
+99 <= 100
+```
+
+</CodeLabLayout>

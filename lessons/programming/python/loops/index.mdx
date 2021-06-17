@@ -1,0 +1,105 @@
+---
+title: Loops
+---
+
+<CodeLabLayout title="PythonLoops">
+
+# Loops
+Loops in Python execute a statement or a set of statements repeatedly. The statement or the set of statements inside the loop has to be indented. The loop iterates the block sequentially until the condition is false.
+
+### for loop
+This loop executes a sequence of statements for all the given items in the list or array. The "for loop" exits the loop once the iteration of the values in the list is over.
+The range(a, b) of Python includes the number between a and b, while b is exclusive. So range(0, 10) includes numbers 0 to 9.
+```Python
+for i in range(0, 10):
+    print(i)
+```
+
+**Output:**
+```Python
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+### While loop
+This loop executes the code until the given condition for the execution is false. Here the syntax differs from the C, but the logic remains the same.
+
+```python
+i = 0
+while i < 5:
+    print(i)
+    i = i + 1
+```
+
+**Output:**
+```Python
+0
+1
+2
+3
+4
+```
+
+### Nested loop
+Nested loops are loops inside other loops. The inner loop is executed once for each iteration of the outer loop.
+We can create tables or patterns by using nested loops.
+```Python
+for i in range(1, 3):
+  for j in range(3, 6):
+    print(i, j)
+```
+
+**Output:**
+```Python
+1 3
+1 4
+1 5
+2 3
+2 4
+2 5
+```
+
+## Breaking the loop
+- **Break statement** - Break out of the loop by break keyword; this causes the process to move out of the loop and execute the next statement following the loop code.
+```Python
+search_name = input("Enter a name for searching: ")
+found = False
+name_list = ["Mary", "John", "Peter", "kelly"]
+
+for name in name_list:
+    if name == search_name:
+       found = True
+       break;
+
+print("Found") if found else print("Not found")
+```
+**Output**:
+```
+Enter a name for searching: John
+Found
+```
+- **Continue statement** -  It causes the loop to skip the remainder of its body and immediately retest its condition before reiterating.
+```python
+no_space_string = ""
+
+for char in "apple bee":
+    if char == " ": #skip the space symbol
+       continue;
+    no_space_string += char
+
+print(no_space_string)
+```
+**Output**:
+```
+applebee
+```
+
+</CodeLabLayout>
