@@ -18,7 +18,7 @@ const unix = ({ data: { site, mdx } }) => {
       <IndexSection title="Core concepts">
         <IndexItemList lessonTopic={filter('unix')} />
       </IndexSection>
-      <Chatbot/>
+      <Chatbot passage={mdx}/>
     </Layout>
   );
 }

@@ -245,14 +245,19 @@
  }
 
  .question {
-   height: 40%;
+   height: 20%;
  }
 
  .answer {
-   height: 40%;
+   height: 20%;
  }
 
- .chat-button {
+ button.submit {
+   width: 75px;
+   margin-bottom: 5%;
+ }
+
+ input.chat {
     width: 75px;
  }
 
