@@ -3,17 +3,26 @@ import '../style/style.css'
 
 const Chatbot = () => {
     const [active, setActive] = useState(false);
-
-    function clickHandler() {
+    
+    function chatClickHandler() {
         console.log("Chat Button Clicked!");
         let newState = !active;
         setActive(newState);
     }
 
+    /*function askClickHandler() {
+        console.log("Question Asked!");
+    }*/
+
     return (
         <div className="chat-container">
-          <input type="image" className="chat-logo" alt="Ask a question" 
-          src={require("./images/chatbot-icon.png").default} onClick={clickHandler}/>
+            {active ? <div className="chat-window">
+                <input type="text" className="question"/>
+                <input type="text" className="answer" readOnly/>
+                {/*<button type="button" onClick={askClickHandler}>Ask</button>*/}
+            </div> : null}
+            <input type="image" className="chat-button" alt="Ask a question" 
+            src={require("./images/chatbot-icon.png").default} onClick={chatClickHandler}/>
         </div>
     )
 

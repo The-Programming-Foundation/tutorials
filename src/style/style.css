@@ -225,15 +225,35 @@
  }
 
  .chat-container {
-    width: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 350px;
+    width: 200px;
     z-index: 2;
     position: fixed;
-    left: 45%;
-    top: 85%;
+    left: 42.5%;
+    top: 40%;
  }
  
- .chat-logo {
-    width: 100%;
+ .chat-window {
+   width: 200px;
+   height: 200px;
+   background-color: #add8e6;
+   margin-bottom: 10px;
+ }
+
+ .question {
+   height: 40%;
+ }
+
+ .answer {
+   height: 40%;
+ }
+
+ .chat-button {
+    width: 75px;
  }
 
  @media(max-width:1300px){
