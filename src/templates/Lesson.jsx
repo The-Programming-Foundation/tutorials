@@ -3,6 +3,7 @@ import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer';
 import { MDXProvider } from '@mdx-js/react';
 import { graphql } from 'gatsby';
 import Layout from '../layout/Layout';
+import Chatbot from '../layout/Chatbot.jsx'
 import Note from '../components/Note';
 import CodeEditor from '../components/CodeEditor';
 import CodeLabLayout from '../components/CodeLabLayout';
@@ -27,6 +28,7 @@ export default function Post({ data: { site, mdx }, pageContext }) {
           </Layout>
         </Col>
         </Row>
+        <Chatbot/>
       </Container>
     </>
   );
