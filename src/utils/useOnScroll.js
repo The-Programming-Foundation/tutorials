@@ -17,7 +17,7 @@ function useOnScroll(ref) {
                 // setting note to visible per entry status
                 if (entry.isVisible) setIsVisible(true);
 
-                // once idnetified as visible and later on is no loner on screen
+                // once identified as visible and later on is no loner on screen
                 // this setup is required due to the scrolled container notes are based in
                 if (isVisible && entry.intersectionRatio === 0) {
                     setScrolledPast(true);
