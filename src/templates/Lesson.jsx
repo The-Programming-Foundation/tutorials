@@ -14,7 +14,7 @@ import  '../style/style.css'
 
 const globalComponents = { Note, CodeEditor, CodeLabLayout };
 
-export default function Post({ data: { site, mdx }, pageContext }) {
+export default function Post({ data: { site, mdx, file }, pageContext }) {
   return (
   
     <>
@@ -22,13 +22,13 @@ export default function Post({ data: { site, mdx }, pageContext }) {
         <Row>
           <Col>
             <Layout site={site} pageTitle={mdx.frontmatter.title} >
-            <MDXProvider components={globalComponents}>
-              <MDXRenderer>{pageContext.body}</MDXRenderer>
-            </MDXProvider>
-          </Layout>
-        </Col>
+              <MDXProvider components={globalComponents}>
+                <MDXRenderer>{pageContext.body}</MDXRenderer>
+              </MDXProvider>
+            </Layout>
+          </Col>
         </Row>
-        <Chatbot/>
+        <Chatbot path ={mdx.fileAbsolutePath}/>
       </Container>
     </>
   );
@@ -45,6 +45,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
       }
+      fileAbsolutePath
     }
   }
 `;
