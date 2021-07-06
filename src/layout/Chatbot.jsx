@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '@tensorflow/tfjs';
-import '../style/style.css'
+import '../style/style.css';
 
 const Chatbot = ({passage}) => {
     const [active, setActive] = useState(false);
@@ -11,25 +11,22 @@ const Chatbot = ({passage}) => {
     
     function chatClickHandler() {
         console.log("Chat Button Clicked!");
-        let newState = !active;
+        const newState = !active;
         setActive(newState);
     }
 
     function questionHandler(event) {
         console.log("Question Changed!");
-        let newQuestion = event.target.value;
+        const newQuestion = event.target.value;
         setQuestion(newQuestion);
     }
 
     async function getAnswer() {
-        // Hardcoded passage to test Q&A
-        let passage = "Unix was developed in 1970";
         console.log("Getting answer...");
 
         // Model should only be loaded once - will make this change soon
         const model = await qna.load();
 
-        // Try the question "When was Unix developed?"
         console.log("Question: ", question);
         console.log("Passage: ", passage);
         const answers = await model.findAnswers(question, passage);

@@ -14,7 +14,7 @@ import  '../style/style.css'
 
 const globalComponents = { Note, CodeEditor, CodeLabLayout };
 
-export default function Post({ data: { site, mdx, file }, pageContext }) {
+export default function Post({ data: { site, mdx }, pageContext }) {
   return (
   
     <>
@@ -28,7 +28,7 @@ export default function Post({ data: { site, mdx, file }, pageContext }) {
             </Layout>
           </Col>
         </Row>
-        <Chatbot path ={mdx.fileAbsolutePath}/>
+        <Chatbot passage={mdx.internal.content}/>
       </Container>
     </>
   );
@@ -45,7 +45,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
       }
-      fileAbsolutePath
+      internal {
+        content
+      }
     }
   }
 `;
