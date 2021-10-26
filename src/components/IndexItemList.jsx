@@ -67,11 +67,13 @@ const IndexItemList = ({ lessonTopic }) => {
   const settings = {
     useCSS: true,
     centerPadding: '20px',
-    dots: false,
-    speed: 1000,
-    slidesToShow: 2,
+    dots: true,
+    speed: 200,
+    slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
+    focusOnSelect: true,
+    infinite: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [

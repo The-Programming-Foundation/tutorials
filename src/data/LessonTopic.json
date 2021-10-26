@@ -214,5 +214,45 @@
         "title": "Polymorphism",
         "subtitle": "Forms",
         "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpxbQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+    },
+    {
+        "id": 28,
+        "lessonType": "getting_started",
+        "to": "/lessons/getting_started/intro_data_science",
+        "title": "Intro to Data Science",
+        "subtitle": "Understand the basics of Data Science",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpxbQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+    },
+    {
+        "id": 29,
+        "lessonType": "data_science",
+        "to": "/getting_started/intro_data_science/module_1",
+        "title": "Module 1",
+        "subtitle": "Module 1",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+    },
+    {
+        "id": 30,
+        "lessonType": "data_science",
+        "to": "/getting_started/intro_data_science/module_2",
+        "title": "Module 2",
+        "subtitle": "Module ",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+    },
+    {
+        "id": 31,
+        "lessonType": "data_science",
+        "to": "/getting_started/intro_data_science/module_2",
+        "title": "Module 3",
+        "subtitle": "Module 3",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+    },
+    {
+        "id": 31,
+        "lessonType": "domain_languages",
+        "to": "/lessons/domain_languages/sql",
+        "title": "SQL",
+        "subtitle": "Structured Query Language",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
     }
 ]
