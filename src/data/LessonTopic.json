@@ -228,55 +228,23 @@
         "lessonType": "data_science",
         "to": "/getting_started/intro_data_science/module_1",
         "title": "Module 1",
-        "subtitle": "Module 1",
-        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+        "subtitle": "Introduction",
+        "image": "https://images.unsplash.com/photo-1637453602520-98dff8a353d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
         "id": 30,
         "lessonType": "data_science",
         "to": "/getting_started/intro_data_science/module_2",
         "title": "Module 2",
-        "subtitle": "Module ",
-        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
+        "subtitle": "Process",
+        "image": "https://images.unsplash.com/photo-1617804257036-b0c0c747812d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
         "id": 31,
         "lessonType": "data_science",
         "to": "/getting_started/intro_data_science/module_3",
         "title": "Module 3",
-        "subtitle": "Module 3",
-        "image": "https://images.squarespace-cdn.com/content/v1/5e3e5ab0244c110e4de138d4/1585022561672-XB38AWZCYSB768P09CYJ/    ke17ZwdGBToddI8pDm48kLClvqBQzoxFpMKnAwLVSht7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RTRPcCVZpx bQHDYjLt73zWsGFOx8WNN_3833FE_kuT6Bg/image-asset.jpeg?format=500w"
-    },
-    {
-        "id": 31,
-        "lessonType": "domain_languages",
-        "to": "/lessons/domain_languages/sql",
-        "title": "SQL",
-        "subtitle": "Structured Query Language",
-        "image": "https://images.unsplash.com/photo-1524351543168-8e38787614e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
-    },
-    {
-        "id": 32,
-        "lessonType": "sql",
-        "to": "/domain_languages/sql/module_1",
-        "title": "Module 1",
-        "subtitle": "Structured Query Language",
-        "image": "https://images.unsplash.com/photo-1524351543168-8e38787614e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
-    },
-    {
-        "id": 33,
-        "lessonType": "sql",
-        "to": "/domain_languages/sql/module_2",
-        "title": "Module 2",
-        "subtitle": "Structured Query Language",
-        "image": "https://images.unsplash.com/photo-1524351543168-8e38787614e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
-    },
-    {
-        "id": 34,
-        "lessonType": "sql",
-        "to": "/domain_languages/sql/module_3",
-        "title": "Module 2",
-        "subtitle": "Structured Query Language",
-        "image": "https://images.unsplash.com/photo-1524351543168-8e38787614e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
+        "subtitle": "Prediction",
+        "image": "https://images.unsplash.com/photo-1617751228405-307c069c4d54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     }
 ]
