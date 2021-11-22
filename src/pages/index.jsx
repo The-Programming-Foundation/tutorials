@@ -28,7 +28,7 @@ const index = ({ data: { site, mdx } }) => {
             <IndexSection title="Logic">
               <IndexItemList lessonTopic={filter('logic')} />
             </IndexSection>
-            <IndexSection title="Getting started with Data Science">
+            <IndexSection title="Introduction Series">
               <IndexItemList lessonTopic={filter('getting_started')} />
             </IndexSection>
           </Col>
