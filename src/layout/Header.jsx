@@ -11,10 +11,10 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
     <Container fluid style={{ padding: "0 15" }} >
-      <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="md" bg="white" variant="black">
         <Navbar.Brand href="https://www.smarterus.org/" className="navbarbrand">The Programming Foundation</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarResponsive">
-          <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} aria-controls="navbarResponsive" />
+          <FontAwesomeIcon icon={faBars} style={{ color: "#000" }} aria-controls="navbarResponsive" />
         </Navbar.Toggle>
         <Navbar.Collapse id="navbarResponsive">
           <Nav as="ul" className="ml-auto">

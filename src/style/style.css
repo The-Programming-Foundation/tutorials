@@ -1,7 +1,8 @@
 :root{
-    --primary-white:#fff;
+    --primary-white:#000;
     --primary-black: #000;
-    --primary-dark: rgba(255,255,255,0);
+    /* --primary-dark: rgba(255,255,255,0); */
+    --primary-dark: rgba(255, 255, 255, 0);
  }
   
  .slick-container {
@@ -31,14 +32,21 @@
     height: 3.4rem;
     text-align: start;
  }
+
+ a.navbar-brand:visited {
+   color: black;
+   text-decoration: none;
+ }
+
  nav a.nav-link{
-    font-size: .8rem;
+    font-size: .9rem;
+    font-weight: 500;
     letter-spacing: 0.0375rem;
     cursor: pointer;
  }
   
  nav ul li{
-    text-transform: uppercase;
+   text-decoration-color: none;
  }
  .navbar-nav > li > a {
     margin-right: 0.75rem;
@@ -46,12 +54,12 @@
     color: var(--primary-white) !important;
     border-bottom: 0.0875rem solid var(--primary-dark);
  }
- .navbar-nav > li > a.active, .navbar-nav > li > a.active:foucus {
+ .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
     background-color: var(--primary-white);
     color: var(--primary-black);
  }
  .navbar-nav > li > a:hover{
-    border-bottom: 0.1875rem solid var(--primary-white);
+    border-bottom: 0.2000rem solid var(--primary-white);
  }
   
  .footer{
@@ -93,10 +101,10 @@
  }
   
  .lesson-nav-buttons {
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    font-size: large;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
  }
   
  .modal-learn {
@@ -197,11 +205,37 @@
  .sticky-note {
    position: fixed;
    z-index: 999;
-   top:0;
-   left:20px;
-   background-color: rgb(0,215,114);
-   width: 50%;
+   top:38vw;
+   left:0px;
+   /* background-color: rgb(0,215,114); */
+   color: white;
+   width: 35%;
+   box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.775);
    padding: 0.6rem 0.8rem;
+   
+   /* background animation */
+   background: linear-gradient(90deg, #000000, #ff00ea);
+   background-size: 300% 50%;
+
+   -webkit-animation: AnimationName 9s ease infinite;
+   -moz-animation: AnimationName 9s ease infinite;
+   animation: AnimationName 9s ease infinite;
+
+   @-webkit-keyframes AnimationName {
+      0%{background-position:59% 0%}
+      50%{background-position:42% 100%}
+      100%{background-position:59% 0%}
+   }
+   @-moz-keyframes AnimationName {
+      0%{background-position:59% 0%}
+      50%{background-position:42% 100%}
+      100%{background-position:59% 0%}
+   }
+   @keyframes AnimationName {
+      0%{background-position:59% 0%}
+      50%{background-position:42% 100%}
+      100%{background-position:59% 0%}
+   }
  }
 
  .icons {
@@ -214,14 +248,14 @@
    position: absolute;
    top: 5px;
    right: 5px;
-   color: var(--primary-white);
-   font-size: 2rem;
+   color: white;
+   font-size: rem;
  }
 
  .icon-x-note {
     top: -5px;
-    right: -5px;
-    font-size: 1.3rem;
+    right: -3px;
+    font-size: 1.2rem;
  }
    
  @media(max-width:1300px){
@@ -280,6 +314,7 @@
    @media(max-width: 400px) {
       .modal-buttons {
          width: 100%;
+         background-color: black;
       }
       
       .mute-btn {

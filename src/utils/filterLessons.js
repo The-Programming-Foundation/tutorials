@@ -10,6 +10,9 @@ const filterLessons = (LessonTopic, pathname) => {
     const oopLessons = LessonTopic?.filter(type => (type.lessonType === 'oop'));
     const vimLessons = LessonTopic?.filter(type => (type.lessonType === 'vim'));
     const kernelLessons = LessonTopic?.filter(type => (type.lessonType === 'kernel'));
+    const data_scienceLessons = LessonTopic?.filter(type => (type.lessonType === 'data_science'));
+    const sqlLessons = LessonTopic?.filter(type => (type.lessonType === 'sql'));
+
 
     switch (currentLessonType) {
         case 'unix':
@@ -24,6 +27,10 @@ const filterLessons = (LessonTopic, pathname) => {
             return vimLessons;
         case 'kernel':
             return kernelLessons;
+        case 'data_science':
+            return data_scienceLessons;
+        case 'sql':
+            return sqlLessons;
         default:
             return "";
     }
