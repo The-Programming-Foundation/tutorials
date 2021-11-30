@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function NodeContainer() {
+import NodeLevel from "./NodeLevel";
+
+export default function NodeContainer(props) {
+  const { data, setNodes, level = 0, color = "black" } = props;
+  const [disabled, setDisabled] = useState(false);
+
+  if (!data || !data.length) return null;
+
   return (
-    <div>
-      <h2>node container</h2>
-    </div>
+    <>
+      {data.map((item) => (
+        <NodeLevel
+          key={item.id}
+          item={item}
+          level={level}
+          disabled={disabled}
+          setDisabled={setDisabled}
+          color={color}
+          setNodes={setNodes}
+        />
+      ))}
+    </>
   );
 }
