@@ -6,6 +6,7 @@ const ToggleBannerStyled = styled.section`
   width: 100%;
   border: 1px solid black;
   padding: 0.5em 5em;
+  margin: 0 2em;
   align-items: center;
   justify-content: center;
   gap: 4em;
