@@ -50,6 +50,10 @@ const TreeLevelStyled = styled.div`
     background-color: #000000;
   }
 
+  &.show > button {
+    background-color: #1a73e8;
+  }
+
   .black {
     background-color: #2f3032;
   }
