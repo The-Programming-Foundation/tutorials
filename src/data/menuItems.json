@@ -4,15 +4,41 @@
     "id": "1",
     "children": [
       {
-        "name": "Linux",
+        "name": "Unix",
         "id": "1-1",
         "parent": "1",
-        "path": "Pages/PageOne"
+        "children": [
+          {
+            "name": "Structure",
+            "id": "1-1-1",
+            "parent": "1-1",
+            "to": "/os/unix/structure"
+          },
+          {
+            "name": "File Structure",
+            "id": "1-1-2",
+            "parent": "1-1",
+            "to": "/os/unix/file-structure"
+          },
+          {
+            "name": "Unix Shell",
+            "id": "1-1-3",
+            "parent": "1-1",
+            "to": "/os/unix/shell"
+          }
+        ]
       },
       {
-        "name": "Windows",
+        "name": "Vim",
         "id": "1-2",
-        "parent": "1"
+        "parent": "1",
+        "to": "/os/vim"
+      },
+      {
+        "name": "Kernel",
+        "id": "1-3",
+        "parent": "1",
+        "to": "/os/kernel"
       }
     ]
   },
@@ -26,28 +52,110 @@
         "parent": "2",
         "children": [
           {
-            "name": "Hello World",
+            "name": "Structure",
             "id": "2-1-1",
             "parent": "2-1",
-            "path": "Pages/PageTwo"
+            "to": "/programming/python/structure"
           },
           {
-            "name": "Variables",
+            "name": "Hello Earth",
             "id": "2-1-2",
             "parent": "2-1",
-            "path": "Pages/PageOne"
+            "to": "/programming/python/hello-earth"
+          },
+          {
+            "name": "Calculation",
+            "id": "2-1-3",
+            "parent": "2-1",
+            "to": "/programming/python/calculation"
+          },
+          {
+            "name": "Conditional Statements",
+            "id": "2-1-4",
+            "parent": "2-1",
+            "to": "/programming/python/conditional-statements"
+          },
+          {
+            "name": "Loops",
+            "id": "2-1-5",
+            "parent": "2-1",
+            "to": "/programming/python/loops"
+          },
+          {
+            "name": "Functions",
+            "id": "2-1-6",
+            "parent": "2-1",
+            "to": "/programming/python/functions"
+          },
+          {
+            "name": "File Handling",
+            "id": "2-1-7",
+            "parent": "2-1",
+            "to": "/programming/python/file-handling"
           }
         ]
       },
       {
         "name": "C",
         "id": "2-2",
-        "parent": "2"
+        "parent": "2",
+        "children": [
+          {
+            "name": "Structure",
+            "id": "2-2-1",
+            "parent": "2-2",
+            "to": "/programming/c/structure"
+          },
+          {
+            "name": "Hello Earth",
+            "id": "2-2-2",
+            "parent": "2-2",
+            "to": "/programming/c/hello-earth"
+          },
+          {
+            "name": "Calculation",
+            "id": "2-2-3",
+            "parent": "2-2",
+            "to": "/programming/c/calculation"
+          },
+          {
+            "name": "Expansion",
+            "id": "2-2-4",
+            "parent": "2-2",
+            "to": "/programming/c/expansion"
+          }
+        ]
       },
       {
         "name": "OOP",
         "id": "2-3",
-        "parent": "2"
+        "parent": "2",
+        "children": [
+          {
+            "name": "Abstraction",
+            "id": "2-3-1",
+            "parent": "2-3",
+            "to": "/programming/oop/abstraction"
+          },
+          {
+            "name": "Inheritance",
+            "id": "2-3-2",
+            "parent": "2-3",
+            "to": "/programming/oop/inheritance"
+          },
+          {
+            "name": "Encapsulation",
+            "id": "2-3-3",
+            "parent": "2-3",
+            "to": "/programming/oop/encapsulation"
+          },
+          {
+            "name": "Polymorphism",
+            "id": "2-3-4",
+            "parent": "2-3",
+            "to": "/programming/oop/polymorphism"
+          }
+        ]
       }
     ]
   },
@@ -58,12 +166,44 @@
       {
         "name": "Gates",
         "id": "3-1",
-        "parent": "3"
+        "parent": "3",
+        "to": "/logic/gates"
       },
       {
-        "name": "Binary",
+        "name": "Binaries",
         "id": "3-2",
-        "parent": "3"
+        "parent": "3",
+        "to": "/logic/binaries"
+      }
+    ]
+  },
+  {
+    "name": "Data Science",
+    "id": "4",
+    "children": [
+      {
+        "name": "Intro to Data Science",
+        "id": "4-1",
+        "parent": "4",
+        "to": "/lessons/getting_started/intro_data_science"
+      },
+      {
+        "name": "Module 1",
+        "id": "4-2",
+        "parent": "4",
+        "to": "/getting_started/intro_data_science/module_1"
+      },
+      {
+        "name": "Module 2",
+        "id": "4-3",
+        "parent": "4",
+        "to": "/getting_started/intro_data_science/module_2"
+      },
+      {
+        "name": "Module 3",
+        "id": "4-4",
+        "parent": "4",
+        "to": "/getting_started/intro_data_science/module_3"
       }
     ]
   }
