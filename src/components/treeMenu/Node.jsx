@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "gatsby";
 
 import { findCurrentNodes } from "../../utils/treeMenu/linksHelpers";
 
@@ -29,16 +30,16 @@ export default function Node(props) {
       onMouseEnter={() => setShowHover(!showHover)}
       onMouseLeave={() => setShowHover(!showHover)}
     >
-      {item.path && (
-        <a
-          href="/"
-          className={`${disabled ? "disabled" : ""}`}
+      {item.to && (
+        <Link
+          to={item.to}
+          className={`${disabled ? "disabled" : ""} customLink`}
           onClick={() => console.log("a tag clicked")}
         >
           {item.name}
-        </a>
+        </Link>
       )}
-      {!item.path && item.name}
+      {!item.to && item.name}
     </button>
   );
 }

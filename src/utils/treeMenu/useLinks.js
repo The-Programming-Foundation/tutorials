@@ -10,7 +10,6 @@ const useLinks = ({ links = [], makePath } = {}) => {
     () => setLinkPositions(getNodesCoordinates(links, ref.current, makePath)),
     [links, makePath]
   );
-  console.log("INSIDE THE HOOK", linkPositions);
   // make sure to reposition links on window resize
   // to make content responsive
   // https://gist.github.com/gaearon/cb5add26336003ed8c0004c4ba820eae

@@ -20,23 +20,19 @@ export default function LinkContainer(props) {
   const { nodes } = props;
   const [links, setLinks] = useState([]);
   const { ref, linkPositions } = useLinks({ links, makePath });
-  console.log("inside link container", links);
+
   // when this return statment runs, and the map fn runs, we should not have any null value
   useEffect(() => {
     setLinks(nodes);
   }, [nodes]);
 
-  console.log("%cREF:", "color: cyan", ref, "linkPositions", linkPositions);
   return (
-    <svg ref={ref} id="svg-container">
+    <SvgContainer ref={ref} id="svg-container">
       {linkPositions &&
         linkPositions.length > 0 &&
-        linkPositions.map((link, i) => {
-          console.log("link", link);
-          return (
-            <path d={link.pathValue} key={i} stroke="black" strokeWidth="2" />
-          );
-        })}
-    </svg>
+        linkPositions.map((link, i) => (
+          <path d={link.pathValue} key={i} stroke="black" strokeWidth="2" />
+        ))}
+    </SvgContainer>
   );
 }

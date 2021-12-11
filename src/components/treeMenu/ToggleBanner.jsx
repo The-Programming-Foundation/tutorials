@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useLocation } from "@reach/router";
 
 const ToggleBannerStyled = styled.section`
   display: flex;
@@ -19,6 +20,7 @@ const ToggleBannerStyled = styled.section`
     background-color: black;
     color: white;
     padding: 1em 2em;
+    border: none;
   }
 
   button:hover {
@@ -28,17 +30,23 @@ const ToggleBannerStyled = styled.section`
 
 export default function ToggleBanner(props) {
   const { setShowTreeMenu, showTreeMenu } = props;
-  return (
-    <ToggleBannerStyled>
-      {showTreeMenu ? (
-        <p>Switch to Slider view</p>
-      ) : (
-        <p>Switch to the new Tree view</p>
-      )}
+  const { pathname } = useLocation();
 
-      <button onClick={() => setShowTreeMenu(!showTreeMenu)}>
-        {showTreeMenu ? "Slider View" : "Tree View"}
-      </button>
-    </ToggleBannerStyled>
+  return (
+    <>
+      {pathname === "/" && (
+        <ToggleBannerStyled>
+          {showTreeMenu ? (
+            <p>Switch to Slider view</p>
+          ) : (
+            <p>Switch to the new Tree view</p>
+          )}
+
+          <button onClick={() => setShowTreeMenu(!showTreeMenu)}>
+            {showTreeMenu ? "Slider View" : "Tree View"}
+          </button>
+        </ToggleBannerStyled>
+      )}
+    </>
   );
 }

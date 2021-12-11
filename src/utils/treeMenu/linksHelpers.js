@@ -22,7 +22,6 @@ export function makePath(start, end) {
 export function getNodesCoordinates(links, el, pathMaker) {
   // this function finds the elements on the page by Id
   // and calls getBoundingClientRect
-  console.log("INSIDE HELPER AT THE TOP", links);
   const container = el.getBoundingClientRect();
 
   const linksArr = links.map((link) => {
@@ -30,14 +29,14 @@ export function getNodesCoordinates(links, el, pathMaker) {
       const splitId = link.id.split("-");
       const parentId = splitId.slice(0, -1).join("-");
       const childId = link.id;
-      console.log("INSIDE the map", link);
+
       const parentNode = document.getElementById(parentId);
       const childNode = document.getElementById(childId);
-      console.log("CHILD NODE", childNode);
+
       if (childNode === null) return [];
       const parentRect = parentNode?.getBoundingClientRect();
       const childRect = childNode?.getBoundingClientRect();
-      console.log("CHILD RECT", childRect);
+
       parentRect.x = parentRect.x - container.x;
       parentRect.y = parentRect.y - container.y;
       childRect.x = childRect.x - container.x;
@@ -52,7 +51,6 @@ export function getNodesCoordinates(links, el, pathMaker) {
   });
 
   const filteredArr = linksArr.filter((link) => !Array.isArray(link));
-  console.log("INSIDE HELPER BOTTOM LINKS ARE", filteredArr);
 
   return filteredArr;
 }

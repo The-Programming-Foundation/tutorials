@@ -46,6 +46,14 @@ const TreeLevelStyled = styled.div`
     font-size: 0.9rem;
   }
 
+  .customLink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .customNode:hover {
     background-color: #000000;
   }

@@ -56,19 +56,21 @@ const Layout = ({ children, pageTitle, site }) => {
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <ToggleBanner
-            setShowTreeMenu={setShowTreeMenu}
-            showTreeMenu={showTreeMenu}
-          />
 
-          {showTreeMenu ? (
-            <TreeMenu />
-          ) : (
-            <Col xl={12} md={12} sm={12}>
-              {children}
-              <NavButtons />
-            </Col>
-          )}
+          <Col xl={12} md={12} sm={12}>
+            <ToggleBanner
+              setShowTreeMenu={setShowTreeMenu}
+              showTreeMenu={showTreeMenu}
+            />
+            {showTreeMenu ? (
+              <TreeMenu />
+            ) : (
+              <>
+                {children}
+                <NavButtons />
+              </>
+            )}
+          </Col>
 
           <Footer></Footer>
         </Row>
