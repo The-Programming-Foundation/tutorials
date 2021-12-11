@@ -10,20 +10,24 @@ const ToggleBannerStyled = styled.section`
   margin: 0 2em;
   align-items: center;
   justify-content: center;
-  gap: 4em;
+  gap: 0.4em;
+  border-radius: 25px;
+  background-color: black;
 
   p {
     margin: 0;
+    color: white;
   }
 
   button {
-    background-color: black;
-    color: white;
-    padding: 1em 2em;
+    background-color: white;
+    color: black;
+    padding: 0.2em 0.4em;
     border: none;
   }
 
   button:hover {
+    color: white;
     background-color: #2f3032;
   }
 `;
