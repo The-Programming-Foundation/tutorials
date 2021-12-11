@@ -30,8 +30,15 @@ export default function ToggleBanner(props) {
   const { setShowTreeMenu, showTreeMenu } = props;
   return (
     <ToggleBannerStyled>
-      <p>Switch to the new Tree view</p>
-      <button onClick={() => setShowTreeMenu(!showTreeMenu)}>Tree Menu</button>
+      {showTreeMenu ? (
+        <p>Switch to Slider view</p>
+      ) : (
+        <p>Switch to the new Tree view</p>
+      )}
+
+      <button onClick={() => setShowTreeMenu(!showTreeMenu)}>
+        {showTreeMenu ? "Slider View" : "Tree View"}
+      </button>
     </ToggleBannerStyled>
   );
 }
