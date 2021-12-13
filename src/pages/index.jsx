@@ -22,9 +22,9 @@ const index = ({ data: { site, mdx } }) => {
             <IndexSection title="Programming languages">
               <IndexItemList lessonTopic={filter('programming')} />
             </IndexSection>
-            {/* <IndexSection title="Domain-specific language(s)">
+            <IndexSection title="Domain-specific language(s)">
               <IndexItemList lessonTopic={filter('domain_languages')} />
-            </IndexSection> */}
+            </IndexSection>
             <IndexSection title="Logic">
               <IndexItemList lessonTopic={filter('logic')} />
             </IndexSection>
