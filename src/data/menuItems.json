@@ -160,49 +160,68 @@
     ]
   },
   {
-    "name": "Logic",
+    "name": "Domain Specific Languages",
     "id": "3",
     "children": [
       {
-        "name": "Gates",
+        "name": "SQL",
         "id": "3-1",
         "parent": "3",
+        "children": [
+          {
+            "name": "SQL Introduction",
+            "id": "3-1-1",
+            "parent": "3-1",
+            "to": "/domain_languages/sql/introduction"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Logic",
+    "id": "4",
+    "children": [
+      {
+        "name": "Gates",
+        "id": "4-1",
+        "parent": "4",
         "to": "/logic/gates"
       },
       {
         "name": "Binaries",
-        "id": "3-2",
-        "parent": "3",
+        "id": "4-2",
+        "parent": "4",
         "to": "/logic/binaries"
       }
     ]
   },
   {
     "name": "Data Science",
-    "id": "4",
+    "id": "5",
     "children": [
       {
         "name": "Intro to Data Science",
-        "id": "4-1",
-        "parent": "4",
+        "id": "5-1",
+        "parent": "5",
         "to": "/lessons/getting_started/intro_data_science"
       },
       {
         "name": "Module 1",
-        "id": "4-2",
-        "parent": "4",
+        "id": "5-2",
+        "parent": "5",
         "to": "/getting_started/intro_data_science/module_1"
       },
       {
         "name": "Module 2",
-        "id": "4-3",
-        "parent": "4",
+        "id": "5-3",
+        "parent": "5",
         "to": "/getting_started/intro_data_science/module_2"
       },
       {
         "name": "Module 3",
-        "id": "4-4",
-        "parent": "4",
+        "id": "5-4",
+        "parent": "5",
         "to": "/getting_started/intro_data_science/module_3"
       }
     ]
