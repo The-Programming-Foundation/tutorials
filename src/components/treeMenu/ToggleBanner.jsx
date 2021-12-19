@@ -95,12 +95,17 @@ const DragMessage = styled.div`
 export default function ToggleBanner(props) {
   const { setShowTreeMenu, showTreeMenu } = props;
   const { pathname } = useLocation();
-  const [show, setShow] = useState(true);
-
+  const [show, setShow] = useState(() => {
+    const storedValue = sessionStorage.getItem("hasSeenDragMessage");
+    return Boolean(storedValue) || true;
+  });
+  console.log("show value is", show);
   useEffect(() => {
+    // Keeps the drag message on the screen for 5 seconds
     if (showTreeMenu === true) {
-      let timer1 = setTimeout(() => setShow(false), 5000);
-      return () => clearTimeout(timer1);
+      let messageTimeout = setTimeout(() => setShow(false), 5000);
+      sessionStorage.setItem("hasSeenDragMessage", "true");
+      return () => clearTimeout(messageTimeout);
     }
     return;
   }, [showTreeMenu]);
