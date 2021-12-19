@@ -34,7 +34,6 @@ export default function Node(props) {
         <Link
           to={item.to}
           className={`${disabled ? "disabled" : ""} customLink`}
-          onClick={() => console.log("a tag clicked")}
         >
           {item.name}
         </Link>

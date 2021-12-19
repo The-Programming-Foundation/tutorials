@@ -1,7 +1,29 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { useLocation } from "@reach/router";
-import { Alert, Fade } from "react-bootstrap";
+import { Transition } from "react-transition-group";
+
+const boxEnterAnimation = keyframes`
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+`;
+
+const boxExitAnimation = keyframes`
+  0% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+100% {
+  transform: translateY(-60px);
+  opacity: 0;
+}
+`;
 
 const ToggleBannerStyled = styled.section`
   display: flex;
@@ -32,26 +54,40 @@ const ToggleBannerStyled = styled.section`
     color: white;
     background-color: #2f3032;
   }
+`;
 
-  .customAlert {
-    position: absolute;
-    text-align: center;
-    width: 50%;
-    top: 150%;
-    background-color: #2f3032;
-    color: white;
-    border-radius: 25px;
-    padding: 0.8em 3em;
+const DragMessage = styled.div`
+  position: absolute;
+  z-index: -1;
+  text-align: center;
+  width: 50%;
+  top: 150%;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  padding: 0.5em 3em;
+  ${({ status }) =>
+    (status === "entering" || status === "entered") &&
+    css`
+      animation-name: ${boxEnterAnimation};
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    `}
+  ${({ status }) =>
+    status === "exiting" &&
+    css`
+      animation-name: ${boxExitAnimation};
+      animation-duration: 2s;
+    `}
 
     .closeBtn {
-      background-color: white;
-      color: #2f3032;
-      margin-left: 1em;
+    background-color: white;
+    color: #2f3032;
+    margin-left: 1em;
 
-      &:hover {
-        background-color: black;
-        color: white;
-      }
+    &:hover {
+      background-color: #2f3032;
+      color: white;
     }
   }
 `;
@@ -63,8 +99,8 @@ export default function ToggleBanner(props) {
 
   useEffect(() => {
     if (showTreeMenu === true) {
-      let timer = setTimeout(() => setShow(false), 5000);
-      return () => clearTimeout(timer);
+      let timer1 = setTimeout(() => setShow(false), 5000);
+      return () => clearTimeout(timer1);
     }
     return;
   }, [showTreeMenu]);
@@ -78,13 +114,17 @@ export default function ToggleBanner(props) {
           <button onClick={() => setShowTreeMenu(!showTreeMenu)}>
             {showTreeMenu ? "Slider View" : "Tree View"}
           </button>
-          {showTreeMenu && show && (
-            <Fade>
-              <Alert className="customAlert" onClick={() => setShow(false)}>
-                Drag the Tree to explore!
-                <button className="closeBtn">Close</button>
-              </Alert>
-            </Fade>
+          {showTreeMenu && (
+            <Transition in={show} timeout={2000} mountOnEnter unmountOnExit>
+              {(status) => (
+                <DragMessage status={status}>
+                  Drag the Tree to explore!
+                  <button className="closeBtn" onClick={() => setShow(false)}>
+                    Close
+                  </button>
+                </DragMessage>
+              )}
+            </Transition>
           )}
         </ToggleBannerStyled>
       )}
