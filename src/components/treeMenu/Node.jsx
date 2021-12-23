@@ -33,7 +33,7 @@ export default function Node(props) {
       {item.to && (
         <Link
           to={item.to}
-          className={`${disabled ? "disabled" : ""} customLink`}
+          className={`customLink ${disabled ? "disabled" : ""}`}
         >
           {item.name}
         </Link>

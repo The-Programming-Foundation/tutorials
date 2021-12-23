@@ -70,14 +70,14 @@ const DragMessage = styled.div`
     (status === "entering" || status === "entered") &&
     css`
       animation-name: ${boxEnterAnimation};
-      animation-duration: 2s;
+      animation-duration: 1s;
       animation-fill-mode: forwards;
     `}
   ${({ status }) =>
     status === "exiting" &&
     css`
       animation-name: ${boxExitAnimation};
-      animation-duration: 2s;
+      animation-duration: 1s;
     `}
 
     .closeBtn {
@@ -92,21 +92,43 @@ const DragMessage = styled.div`
   }
 `;
 
+// We show the 'drag message' only once per browser 'session' / tab.
+// We set 'true' in sessionStorage for that purpose.
 export default function ToggleBanner(props) {
   const { setShowTreeMenu, showTreeMenu } = props;
   const { pathname } = useLocation();
-  const [show, setShow] = useState(() => {
+  const [show, setShow] = useState(true); // used by the Transition component (needs boolean)
+  const [showedMessage, setShowedMessage] = useState(() => {
+    // used for showing the message once per tab
     const storedValue = sessionStorage.getItem("hasSeenDragMessage");
-    return Boolean(storedValue) || true;
+    return Boolean(storedValue) || false;
   });
-  console.log("show value is", show);
+
+  function handleCloseMessage() {
+    setShow(false);
+    setTimeout(() => {
+      setShowedMessage(true);
+    }, 1000);
+  }
+
   useEffect(() => {
-    // Keeps the drag message on the screen for 5 seconds
+    // Keeps the drag message on the screen for 4 seconds
     if (showTreeMenu === true) {
-      let messageTimeout = setTimeout(() => setShow(false), 5000);
-      sessionStorage.setItem("hasSeenDragMessage", "true");
-      return () => clearTimeout(messageTimeout);
+      const dragMessageTimeout = setTimeout(() => {
+        setShow(false);
+        sessionStorage.setItem("hasSeenDragMessage", "true");
+      }, 2000);
+      // This second timeout to make sure our 'drag message' is removed
+      // from the screen smoothly
+      const messageTimeout = setTimeout(() => {
+        setShowedMessage(true);
+      }, 3000);
+      return () => {
+        clearTimeout(dragMessageTimeout);
+        clearTimeout(messageTimeout);
+      };
     }
+
     return;
   }, [showTreeMenu]);
 
@@ -119,12 +141,12 @@ export default function ToggleBanner(props) {
           <button onClick={() => setShowTreeMenu(!showTreeMenu)}>
             {showTreeMenu ? "Slider View" : "Tree View"}
           </button>
-          {showTreeMenu && (
-            <Transition in={show} timeout={2000} mountOnEnter unmountOnExit>
+          {showTreeMenu && !showedMessage && (
+            <Transition in={show} timeout={1500} mountOnEnter unmountOnExit>
               {(status) => (
                 <DragMessage status={status}>
                   Drag the Tree to explore!
-                  <button className="closeBtn" onClick={() => setShow(false)}>
+                  <button className="closeBtn" onClick={handleCloseMessage}>
                     Close
                   </button>
                 </DragMessage>

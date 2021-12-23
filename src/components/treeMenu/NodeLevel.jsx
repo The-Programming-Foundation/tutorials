@@ -72,6 +72,7 @@ const TreeLevelStyled = styled.div`
 
   .disabled {
     background-color: grey;
+    border-radius: 50%;
     pointer-events: none;
   }
 
