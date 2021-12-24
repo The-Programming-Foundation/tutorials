@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { findCurrentNodes } from "../../utils/treeMenu/linksHelpers";
@@ -35,6 +34,7 @@ export default function Node(props) {
         <AniLink
           paintDrip
           color="#2f3032"
+          duration={1}
           to={item.to}
           className={`customLink ${disabled ? "disabled" : ""}`}
         >
