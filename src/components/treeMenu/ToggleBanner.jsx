@@ -61,6 +61,7 @@ const DragMessage = styled.div`
   z-index: -1;
   text-align: center;
   width: 50%;
+  min-width: 400px;
   top: 150%;
   background-color: black;
   color: white;
@@ -111,8 +112,9 @@ export default function ToggleBanner(props) {
     }, 1000);
   }
 
+  // This useEffect for the drag message
   useEffect(() => {
-    // Keeps the drag message on the screen for 4 seconds
+    // Keeps the drag message on the screen for 2 seconds
     if (showTreeMenu === true) {
       const dragMessageTimeout = setTimeout(() => {
         setShow(false);
@@ -130,6 +132,15 @@ export default function ToggleBanner(props) {
     }
 
     return;
+  }, [showTreeMenu]);
+
+  // This useEffect for keeping track of the user's expanded tree
+  useEffect(() => {
+    if (showTreeMenu === true) {
+      sessionStorage.setItem("treeMenuOpen", "true");
+    } else {
+      sessionStorage.removeItem("treeMenuOpen");
+    }
   }, [showTreeMenu]);
 
   return (
