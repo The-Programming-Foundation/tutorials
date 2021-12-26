@@ -74,7 +74,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
-    `gatsby-plugin-transition-link`,
+    "gatsby-plugin-transition-link",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",

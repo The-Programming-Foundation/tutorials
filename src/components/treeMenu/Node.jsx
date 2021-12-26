@@ -15,6 +15,14 @@ export default function Node(props) {
     setNodes,
   } = props;
 
+  function handleClick() {
+    setShow(!show);
+    if (item.to) {
+      const lastExpandedNode = item.id.split("-").slice(0, -1).join("-");
+      sessionStorage.setItem("lastExpandedNode", lastExpandedNode);
+    }
+  }
+
   useEffect(() => {
     const nodes = findCurrentNodes();
     setNodes(nodes);
@@ -26,7 +34,7 @@ export default function Node(props) {
       id={item.id}
       className={`customNode ${color} ${!show && disabled ? "disabled" : ""}`}
       disabled={!show && disabled}
-      onClick={() => setShow(!show)}
+      onClick={handleClick}
       onMouseEnter={() => setShowHover(!showHover)}
       onMouseLeave={() => setShowHover(!showHover)}
     >

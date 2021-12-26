@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
 import { useLocation } from "@reach/router";
 import { Transition } from "react-transition-group";
+import { Link } from "gatsby";
 
 const boxEnterAnimation = keyframes`
   0% {
@@ -28,7 +29,6 @@ const boxExitAnimation = keyframes`
 const ToggleBannerStyled = styled.section`
   display: flex;
   width: 100%;
-  border: 1px solid black;
   padding: 0.5em 5em;
   align-items: center;
   justify-content: center;
@@ -43,20 +43,20 @@ const ToggleBannerStyled = styled.section`
     color: white;
   }
 
-  button {
+  a {
     background-color: white;
     color: black;
     padding: 0.2em 0.4em;
-    border: none;
-  }
+    text-decoration: none;
 
-  button:hover {
-    color: white;
-    background-color: #2f3032;
+    &:hover {
+      color: white;
+      background-color: #2f3032;
+    }
   }
 `;
 
-const DragMessage = styled.div`
+const DragMessageStyled = styled.div`
   position: absolute;
   z-index: -1;
   text-align: center;
@@ -95,8 +95,8 @@ const DragMessage = styled.div`
 
 // We show the 'drag message' only once per browser 'session' / tab.
 // We set 'true' in sessionStorage for that purpose.
+// The returned JSX is based on the user's location: "/" or "/treemenu"
 export default function ToggleBanner(props) {
-  const { setShowTreeMenu, showTreeMenu } = props;
   const { pathname } = useLocation();
   const [show, setShow] = useState(true); // used by the Transition component (needs boolean)
   const [showedMessage, setShowedMessage] = useState(() => {
@@ -108,14 +108,15 @@ export default function ToggleBanner(props) {
   function handleCloseMessage() {
     setShow(false);
     setTimeout(() => {
-      setShowedMessage(true);
+      // We need to set this after the user clicks on the "close" button,
+      setShowedMessage(true); // this avoids showing the message twice
     }, 1000);
   }
 
   // This useEffect for the drag message
   useEffect(() => {
     // Keeps the drag message on the screen for 2 seconds
-    if (showTreeMenu === true) {
+    if (pathname === "/treemenu") {
       const dragMessageTimeout = setTimeout(() => {
         setShow(false);
         sessionStorage.setItem("hasSeenDragMessage", "true");
@@ -132,35 +133,42 @@ export default function ToggleBanner(props) {
     }
 
     return;
-  }, [showTreeMenu]);
+  }, [pathname]);
 
   // This useEffect for keeping track of the user's expanded tree
   useEffect(() => {
-    if (showTreeMenu === true) {
+    if (pathname === "/treemenu") {
       sessionStorage.setItem("treeMenuOpen", "true");
     } else {
       sessionStorage.removeItem("treeMenuOpen");
     }
-  }, [showTreeMenu]);
+  }, [pathname]);
 
   return (
     <>
-      {pathname === "/" && (
+      {(pathname === "/" || pathname === "/treemenu") && (
         <ToggleBannerStyled>
-          {showTreeMenu ? <p>Switch to </p> : <p>Switch to the new </p>}
+          {pathname === "/treemenu" ? (
+            <p>Switch to </p>
+          ) : (
+            <p>Switch to the new </p>
+          )}
 
-          <button onClick={() => setShowTreeMenu(!showTreeMenu)}>
-            {showTreeMenu ? "Slider View" : "Tree View"}
-          </button>
-          {showTreeMenu && !showedMessage && (
+          {pathname === "/treemenu" ? (
+            <Link to="/">Slider View</Link>
+          ) : (
+            <Link to="/treemenu">Tree View</Link>
+          )}
+
+          {pathname === "/treemenu" && !showedMessage && (
             <Transition in={show} timeout={1500} mountOnEnter unmountOnExit>
               {(status) => (
-                <DragMessage status={status}>
+                <DragMessageStyled status={status}>
                   Drag the Tree to explore!
                   <button className="closeBtn" onClick={handleCloseMessage}>
                     Close
                   </button>
-                </DragMessage>
+                </DragMessageStyled>
               )}
             </Transition>
           )}

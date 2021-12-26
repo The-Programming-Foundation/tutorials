@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
+import { useLocation } from "@reach/router";
 import { Helmet } from "react-helmet";
 import "@fontsource/poppins"; // Defaults to weight 400.
 import Header from "./Header";
@@ -40,12 +41,20 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Layout = ({ children, pageTitle, site }) => {
-  const [showTreeMenu, setShowTreeMenu] = useState(false);
+  const { pathname } = useLocation();
 
   let title = site.siteMetadata.title;
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
   }
+
+  // Ensures the "Go Back" button shows only on the lessons
+  // navigated from the tree menu.
+  useEffect(() => {
+    if (pathname === "/") {
+      sessionStorage.removeItem("lastExpandedNode");
+    }
+  }, [pathname]);
 
   return (
     <>
@@ -58,18 +67,9 @@ const Layout = ({ children, pageTitle, site }) => {
           <Header></Header>
 
           <Col xl={12} md={12} sm={12}>
-            <ToggleBanner
-              setShowTreeMenu={setShowTreeMenu}
-              showTreeMenu={showTreeMenu}
-            />
-            {showTreeMenu ? (
-              <TreeMenu />
-            ) : (
-              <>
-                {children}
-                <NavButtons />
-              </>
-            )}
+            <ToggleBanner />
+            {children}
+            <NavButtons />
           </Col>
 
           <Footer></Footer>
