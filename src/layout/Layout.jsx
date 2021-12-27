@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
 import { useLocation } from "@reach/router";
 import { Helmet } from "react-helmet";
@@ -11,7 +11,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "../style/style.css";
 import ToggleBanner from "../components/treeMenu/ToggleBanner";
-import TreeMenu from "../components/treeMenu/TreeMenu";
 
 const GlobalStyle = createGlobalStyle`
  body {

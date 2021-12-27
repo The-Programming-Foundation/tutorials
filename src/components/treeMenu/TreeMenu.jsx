@@ -48,7 +48,6 @@ const TreeMenuWrapper = styled.section`
 export default function TreeMenu() {
   const [nodes, setNodes] = useState([]);
   const [cursorStyle, setCursorStyle] = useState("grab");
-  const [nodeSelection, setNodeSelection] = useState(data);
 
   const nodeRef = useRef(null);
 
@@ -64,7 +63,7 @@ export default function TreeMenu() {
         <TreeMenuWrapper ref={nodeRef} style={{ cursor: cursorStyle }}>
           <LinkContainer nodes={nodes} />
           <div className="level-wrapper" id="node-container">
-            <NodeContainer data={nodeSelection} setNodes={setNodes} />
+            <NodeContainer data={data} setNodes={setNodes} />
           </div>
         </TreeMenuWrapper>
       </Draggable>
