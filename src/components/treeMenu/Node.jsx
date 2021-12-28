@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { findCurrentNodes } from "../../utils/treeMenu/linksHelpers";
 import { reconstructNodeId } from "../../utils/treeMenu/treeExpansionHelpers";
+import useDynaRefs from "../../utils/treeMenu/useDynaRefs";
 
 export default function Node(props) {
   const {
@@ -15,14 +16,16 @@ export default function Node(props) {
     color,
     setNodes,
   } = props;
-  const nodeRef = useRef(item.id);
+  const [getRef, setRef] = useDynaRefs();
 
   function handleClick() {
     setShow(!show);
+    let lastExpandedNode = item.id;
     if (item.to) {
-      const lastExpandedNode = item.id.split("-").slice(0, -1).join("-");
-      sessionStorage.setItem("lastExpandedNode", lastExpandedNode);
+      lastExpandedNode = lastExpandedNode.split("-").slice(0, -1).join("-");
     }
+    console.log("clicked node id parent", lastExpandedNode);
+    sessionStorage.setItem("lastExpandedNode", lastExpandedNode);
   }
 
   useEffect(() => {
@@ -42,13 +45,14 @@ export default function Node(props) {
 
     while (index < idToArray.length && !item.to) {
       nodeIds.push(idToArray[index]);
+
       const currentNodeId = reconstructNodeId(nodeIds);
-      console.log("joined", currentNodeId);
-      const element = document.getElementById(currentNodeId);
-      if (element) {
-        nodeRef.current?.click();
+
+      if (currentNodeId === item.id) {
+        const currentRef = getRef(item.id);
+        currentRef.current.click();
+        console.log("currentREF is", currentRef);
       }
-      console.log("element is", element);
       index++;
     }
   }, []);
@@ -57,7 +61,7 @@ export default function Node(props) {
     <button
       type="button"
       id={item.id}
-      ref={nodeRef}
+      ref={setRef(item.id)}
       className={`customNode ${color} ${!show && disabled ? "disabled" : ""}`}
       disabled={!show && disabled}
       onClick={handleClick}
