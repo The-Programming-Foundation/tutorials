@@ -21,7 +21,8 @@ export default function Post({ data: { site, mdx }, pageContext }) {
         <Row>
           <Col>
             <Layout site={site} pageTitle={mdx.frontmatter.title}>
-              {sessionStorage.getItem("lastExpandedNode") && <GoBackButton />}
+              {window.innerWidth >= 1000 &&
+                sessionStorage.getItem("lastExpandedNode") && <GoBackButton />}
               <MDXProvider components={globalComponents}>
                 <MDXRenderer>{pageContext.body}</MDXRenderer>
               </MDXProvider>

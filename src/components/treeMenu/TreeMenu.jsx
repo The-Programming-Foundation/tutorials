@@ -29,7 +29,7 @@ const TreeMenuWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3em;
+    gap: 5em;
   }
 
   #svg-container {

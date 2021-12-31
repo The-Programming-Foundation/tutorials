@@ -204,25 +204,26 @@
         "name": "Intro to Data Science",
         "id": "5-1",
         "parent": "5",
-        "to": "/lessons/getting_started/intro_data_science"
-      },
-      {
-        "name": "Module 1",
-        "id": "5-2",
-        "parent": "5",
-        "to": "/getting_started/intro_data_science/module_1"
-      },
-      {
-        "name": "Module 2",
-        "id": "5-3",
-        "parent": "5",
-        "to": "/getting_started/intro_data_science/module_2"
-      },
-      {
-        "name": "Module 3",
-        "id": "5-4",
-        "parent": "5",
-        "to": "/getting_started/intro_data_science/module_3"
+        "children": [
+          {
+            "name": "Module 1",
+            "id": "5-1-1",
+            "parent": "5-1",
+            "to": "/getting_started/intro_data_science/module_1"
+          },
+          {
+            "name": "Module 2",
+            "id": "5-1-2",
+            "parent": "5-1",
+            "to": "/getting_started/intro_data_science/module_2"
+          },
+          {
+            "name": "Module 3",
+            "id": "5-1-3",
+            "parent": "5-1",
+            "to": "/getting_started/intro_data_science/module_3"
+          }
+        ]
       }
     ]
   }
