@@ -54,7 +54,7 @@ const Layout = ({ children, pageTitle, site }) => {
       sessionStorage.removeItem("lastExpandedNode");
     }
   }, [pathname]);
-  console.log("innerwidth", window.innerWidth);
+
   return (
     <>
       <Container fluid>
