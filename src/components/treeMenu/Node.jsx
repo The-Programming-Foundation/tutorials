@@ -58,7 +58,7 @@ export default function Node(props) {
       }
       index++;
     }
-  }, []);
+  }, [getRef, item.id]);
 
   return (
     <button
@@ -68,8 +68,8 @@ export default function Node(props) {
       className={`customNode ${color} ${!show && disabled ? "disabled" : ""}`}
       disabled={!show && disabled}
       onClick={handleClick}
-      onMouseEnter={() => setShowHover(!showHover)}
-      onMouseLeave={() => setShowHover(!showHover)}
+      onMouseOver={() => setShowHover(true)}
+      onMouseOut={() => setShowHover(false)}
     >
       {item.to && (
         <AniLink
