@@ -70,6 +70,8 @@ export default function Node(props) {
       onClick={handleClick}
       onMouseOver={() => setShowHover(true)}
       onMouseOut={() => setShowHover(false)}
+      onFocus={() => setShowHover(true)}
+      onBlur={() => setShowHover(false)}
     >
       {item.to && (
         <AniLink
