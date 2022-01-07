@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
 
 import { findCurrentNodes } from "../../utils/treeMenu/linksHelpers";
 import { reconstructNodeId } from "../../utils/treeMenu/treeExpansionHelpers";
@@ -74,15 +74,12 @@ export default function Node(props) {
       onBlur={() => setShowHover(false)}
     >
       {item.to && (
-        <AniLink
-          paintDrip
-          color="#2f3032"
-          duration={1}
+        <Link
           to={item.to}
           className={`customLink ${disabled ? "disabled" : ""}`}
         >
           {item.name}
-        </AniLink>
+        </Link>
       )}
       {!item.to && item.name}
     </button>
