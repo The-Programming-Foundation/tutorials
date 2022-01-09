@@ -1,17 +1,18 @@
 module.exports = {
   //no needed for custome domains pathPrefix: '/tutorials', // Temporary to match GH Pages prefix
   siteMetadata: {
-    siteUrl: 'https://www.theprogrammingfoundation.org/',
-    author: 'The Programming Foundation',
-    title: 'The Programming Foundation',
-    description: 'A high-level programming language for general purpose programming',
+    siteUrl: "https://www.theprogrammingfoundation.org/",
+    author: "The Programming Foundation",
+    title: "The Programming Foundation",
+    description:
+      "A high-level programming language for general purpose programming",
   },
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/lessons`,
-        name: 'lessons',
+        name: "lessons",
       },
     },
     {
@@ -39,8 +40,7 @@ module.exports = {
       options: {
         name: `lessontopic`,
         path: `${__dirname}/src/data/`,
-        
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-typescript`,
@@ -50,43 +50,43 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       options: {
-        extensions: ['.mdx', '.md'],
+        extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
           },
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: "gatsby-remark-prismjs",
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
             },
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
           },
         ],
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'The Programming Foundation',
-        short_name: 'The Programming Foundation',
-        start_url: '/',
-        background_color: '#fff',
-        theme_color: '#000000',
-        display: 'standalone',
-        icon: 'assets/logo.png',
+        name: "The Programming Foundation",
+        short_name: "The Programming Foundation",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#000000",
+        display: "standalone",
+        icon: "assets/logo.png",
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
   ],
 };
