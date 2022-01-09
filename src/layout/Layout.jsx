@@ -1,14 +1,16 @@
-import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-import { Helmet } from 'react-helmet';
-import "@fontsource/poppins" // Defaults to weight 400.
-import Header from './Header';
-import Footer from './Footer';
-import NavButtons from './NavButtons';
-import '../../assets/prism-theme.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import '../style/style.css';
+import React, { useState, useEffect } from "react";
+import { createGlobalStyle } from "styled-components";
+import { useLocation } from "@reach/router";
+import { Helmet } from "react-helmet";
+import "@fontsource/poppins"; // Defaults to weight 400.
+import Header from "./Header";
+import Footer from "./Footer";
+import NavButtons from "./NavButtons";
+import "../../assets/prism-theme.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from "react-bootstrap";
+import "../style/style.css";
+import ToggleBanner from "../components/treeMenu/ToggleBanner";
 
 const GlobalStyle = createGlobalStyle`
  body {
@@ -37,25 +39,51 @@ const GlobalStyle = createGlobalStyle`
  }
 `;
 
+const isBrowser = typeof window !== "undefined";
+
 const Layout = ({ children, pageTitle, site }) => {
+  const { pathname } = useLocation();
+  const [windowInnerWidth, setWindowInnerWidth] = useState(0);
+
   let title = site.siteMetadata.title;
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
-  };
+  }
+
+  // for Gatsby build to get rid of the window object
+  useEffect(() => {
+    const handler = () => setWindowInnerWidth(window.innerWidth);
+    if (isBrowser) {
+      setWindowInnerWidth(window.innerWidth);
+      window.addEventListener("resize", handler);
+    }
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+
+  // Ensures the "Go Back" button shows only on the lessons
+  // navigated from the tree menu.
+  useEffect(() => {
+    if (pathname === "/") {
+      sessionStorage.removeItem("lastExpandedNode");
+    }
+  }, [pathname]);
 
   return (
     <>
       <Container fluid>
-        <Row >
+        <Row>
           <Helmet title={title}>
             <html lang="en" />
           </Helmet>
           <GlobalStyle />
           <Header></Header>
-          <Col xl={12} md={12} sm={12} >
+
+          <Col xl={12} md={12} sm={12}>
+            {windowInnerWidth >= 1000 && <ToggleBanner />}
             {children}
             <NavButtons />
           </Col>
+
           <Footer></Footer>
         </Row>
       </Container>
