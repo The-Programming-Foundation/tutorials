@@ -3,6 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 import { useLocation } from "@reach/router";
 import { Transition } from "react-transition-group";
 import { Link } from "gatsby";
+import { FaTimes } from "react-icons/fa";
 
 const boxEnterAnimation = keyframes`
   0% {
@@ -66,7 +67,7 @@ const DragMessageStyled = styled.div`
   background-color: black;
   color: white;
   border-radius: 25px;
-  padding: 0.5em 3em;
+  padding: 2em 3em;
   ${({ status }) =>
     (status === "entering" || status === "entered") &&
     css`
@@ -82,14 +83,32 @@ const DragMessageStyled = styled.div`
     `}
 
     .closeBtn {
-    background-color: white;
-    color: #2f3032;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    background-color: black;
     margin-left: 1em;
+    border: none;
+    font-size: 1.5rem;
+    svg {
+      path {
+        fill: white;
+      }
+    }
 
     &:hover {
-      background-color: #2f3032;
-      color: white;
+      svg {
+        path {
+          fill: #838490;
+        }
+      }
     }
+  }
+
+  .gif-video {
+    width: 100%;
+    height: auto;
+    padding-top: 1em;
   }
 `;
 
@@ -111,27 +130,27 @@ export default function ToggleBanner(props) {
       // We need to set this after the user clicks on the "close" button,
       setShowedMessage(true); // this avoids showing the message twice
     }, 1000);
+    sessionStorage.setItem("hasSeenDragMessage", "true");
   }
 
-  // This useEffect for the drag message
+  //This useEffect for the drag message
   useEffect(() => {
     // Keeps the drag message on the screen for 2 seconds
     if (pathname === "/treemenu") {
       const dragMessageTimeout = setTimeout(() => {
         setShow(false);
         sessionStorage.setItem("hasSeenDragMessage", "true");
-      }, 2000);
+      }, 53500);
       // This second timeout to make sure our 'drag message' is removed
       // from the screen smoothly
       const messageTimeout = setTimeout(() => {
         setShowedMessage(true);
-      }, 3000);
+      }, 54000);
       return () => {
         clearTimeout(dragMessageTimeout);
         clearTimeout(messageTimeout);
       };
     }
-
     return;
   }, [pathname]);
 
@@ -161,13 +180,19 @@ export default function ToggleBanner(props) {
           )}
 
           {pathname === "/treemenu" && !showedMessage && (
-            <Transition in={show} timeout={1500} mountOnEnter unmountOnExit>
+            <Transition in={show} timeout={53000} mountOnEnter unmountOnExit>
               {(status) => (
                 <DragMessageStyled status={status}>
-                  Drag the Tree to explore!
+                  Drag the tree to explore, hover over the nodes to preview, and
+                  click the nodes to activate/deactivate
                   <button className="closeBtn" onClick={handleCloseMessage}>
-                    Close
+                    <FaTimes style={{ fill: "white" }} />
                   </button>
+                  <img
+                    src="static/instruction.gif"
+                    alt="tree instructions video"
+                    className="gif-video"
+                  />
                 </DragMessageStyled>
               )}
             </Transition>
