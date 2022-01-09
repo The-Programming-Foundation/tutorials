@@ -4,6 +4,7 @@ import { useLocation } from "@reach/router";
 import { Transition } from "react-transition-group";
 import { Link } from "gatsby";
 import { FaTimes } from "react-icons/fa";
+import demoVideo from "../../assets/instruction.gif";
 
 const boxEnterAnimation = keyframes`
   0% {
@@ -189,7 +190,7 @@ export default function ToggleBanner(props) {
                     <FaTimes style={{ fill: "white" }} />
                   </button>
                   <img
-                    src="static/instruction.gif"
+                    src={demoVideo}
                     alt="tree instructions video"
                     className="gif-video"
                   />
