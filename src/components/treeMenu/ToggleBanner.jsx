@@ -63,11 +63,11 @@ const DragMessageStyled = styled.div`
   text-align: center;
   width: 50%;
   min-width: 400px;
-  top: 150%;
+  top: 130%;
   background-color: black;
   color: white;
   border-radius: 25px;
-  padding: 2em 3em;
+  padding: 40px 3em;
   ${({ status }) =>
     (status === "entering" || status === "entered") &&
     css`
