@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
@@ -14,14 +14,27 @@ import "../style/style.css";
 
 const globalComponents = { Note, CodeEditor, CodeLabLayout };
 
+const isBrowser = typeof window !== "undefined";
+
 export default function Post({ data: { site, mdx }, pageContext }) {
+  const [windowInnerWidth, setWindowInnerWidth] = useState(0);
+
+  useEffect(() => {
+    const handler = () => setWindowInnerWidth(window.innerWidth);
+    if (isBrowser) {
+      setWindowInnerWidth(window.innerWidth);
+      window.addEventListener("resize", handler);
+    }
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+
   return (
     <>
       <Container fluid>
         <Row>
           <Col>
             <Layout site={site} pageTitle={mdx.frontmatter.title}>
-              {window.innerWidth >= 1000 &&
+              {windowInnerWidth >= 1000 &&
                 sessionStorage.getItem("lastExpandedNode") && <GoBackButton />}
               <MDXProvider components={globalComponents}>
                 <MDXRenderer>{pageContext.body}</MDXRenderer>

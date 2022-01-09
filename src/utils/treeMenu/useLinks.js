@@ -1,6 +1,8 @@
 import React from "react";
 import { getNodesCoordinates } from "./linksHelpers";
 
+const isBrowser = typeof window !== "undefined";
+
 const useLinks = ({ links = [], makePath } = {}) => {
   // we must use a reference since we need Node's DOM position
   // https://stackoverflow.com/a/55996413
@@ -14,9 +16,11 @@ const useLinks = ({ links = [], makePath } = {}) => {
   // to make content responsive
   // https://gist.github.com/gaearon/cb5add26336003ed8c0004c4ba820eae
   React.useLayoutEffect(() => {
-    repositionLinks();
-    window.addEventListener("resize", repositionLinks);
-    return () => window.removeEventListener("resize", repositionLinks);
+    if (isBrowser) {
+      repositionLinks();
+      window.addEventListener("resize", repositionLinks);
+      return () => window.removeEventListener("resize", repositionLinks);
+    }
   }, [repositionLinks]);
 
   return { ref, linkPositions };

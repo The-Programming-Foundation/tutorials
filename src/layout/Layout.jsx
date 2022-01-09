@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
 import { useLocation } from "@reach/router";
 import { Helmet } from "react-helmet";
@@ -39,13 +39,26 @@ const GlobalStyle = createGlobalStyle`
  }
 `;
 
+const isBrowser = typeof window !== "undefined";
+
 const Layout = ({ children, pageTitle, site }) => {
   const { pathname } = useLocation();
+  const [windowInnerWidth, setWindowInnerWidth] = useState(0);
 
   let title = site.siteMetadata.title;
   if (pageTitle) {
     title = `${title} - ${pageTitle}`;
   }
+
+  // for Gatsby build to get rid of the window object
+  useEffect(() => {
+    const handler = () => setWindowInnerWidth(window.innerWidth);
+    if (isBrowser) {
+      setWindowInnerWidth(window.innerWidth);
+      window.addEventListener("resize", handler);
+    }
+    return () => window.removeEventListener("resize", handler);
+  }, []);
 
   // Ensures the "Go Back" button shows only on the lessons
   // navigated from the tree menu.
@@ -66,7 +79,7 @@ const Layout = ({ children, pageTitle, site }) => {
           <Header></Header>
 
           <Col xl={12} md={12} sm={12}>
-            {window.innerWidth >= 1000 && <ToggleBanner />}
+            {windowInnerWidth >= 1000 && <ToggleBanner />}
             {children}
             <NavButtons />
           </Col>
