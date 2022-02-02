@@ -249,6 +249,14 @@
     },
     {
         "id": 32,
+        "lessonType": "data_science",
+        "to": "/getting_started/intro_data_science/module_4",
+        "title": "Module 4",
+        "subtitle": "Logistic Regression",
+        "image": "https://images.unsplash.com/photo-1516670428252-df97bba108d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+    },
+    {
+        "id": 33,
         "lessonType": "domain_languages",
         "to": "/lessons/domain_languages/sql",
         "title": "SQL Introduction",
@@ -256,7 +264,7 @@
         "image": "https://images.unsplash.com/photo-1509486432407-f8fb9cc99acd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=699&q=80"
     },
     {
-        "id": 33,
+        "id": 34,
         "lessonType": "sql",
         "to": "/domain_languages/sql/introduction",
         "title": "Introduction",
