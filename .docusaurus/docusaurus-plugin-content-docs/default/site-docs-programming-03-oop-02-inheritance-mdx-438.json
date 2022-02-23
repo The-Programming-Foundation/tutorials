@@ -1,0 +1,26 @@
+{
+  "unversionedId": "programming/oop/inheritance",
+  "id": "programming/oop/inheritance",
+  "title": "Inheritance",
+  "description": "Inheritance in OOP is a concept that allows inheriting the features of other classes. This is a real-life concept where a child inherits its properties from his parents, in a similar way a child class inherits the features of its parent class.",
+  "source": "@site/docs/programming/03-oop/02-inheritance.mdx",
+  "sourceDirName": "programming/03-oop",
+  "slug": "/programming/oop/inheritance",
+  "permalink": "/programming/oop/inheritance",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/02-inheritance.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Inheritance"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Abstraction",
+    "permalink": "/programming/oop/abstraction"
+  },
+  "next": {
+    "title": "Encapsulation",
+    "permalink": "/programming/oop/encapsulation"
+  }
+}

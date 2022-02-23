@@ -1,0 +1,208 @@
+---
+title: Calculation
+---
+
+import Draggable from "react-draggable";
+
+<Draggable>
+  <div class="card-demo" style={{ position: "relative", zIndex: 5 }}>
+    <div
+      class="card"
+      style={{
+        backgroundColor: "#000000",
+        position: "relative",
+        zIndex: 5,
+        height: "auto",
+      }}
+    >
+      <iframe
+        src="https://peaceful-bohr-249ea0.netlify.app/c.html"
+        width="100%"
+        height="180px"
+        background="black"
+        overflow="hidden"
+      ></iframe>
+      <div
+        class="card__body"
+        style={{
+          backgroundColor: "#1d9dff",
+          position: "relative",
+          zIndex: 5,
+          width: "-50px",
+          height: "auto",
+        }}
+      ></div>
+    </div>
+  </div>
+</Draggable>
+
+## Introduction
+
+C provides different ways to do arithmetic calculations. These operators are built-in functions of the C language. Real-life operations like addition, subtractions, multiplication are used in the programs for calculation.
+
+## Operators
+
+Operators are symbols that are used in expressions or during logical computations. There are 3 types of arithmetic operators.
+
+- **Unary operators** - These operate on an operand or variable **E.g**: ++,- -
+- **Binary operators** - These work on two operands **E.g**: +, -, \*, %, <, <=, !=, &&, =+, =-, %=
+- **Ternary operators** - This works for if-else conditions. **E.g**: ? :
+
+:::note
+The == operator checks whether <b>a is equal to b</b>. However, the <b>!=</b>{" "}
+operator checks whether <b>a is not equal to b</b>. Therefore, they are called
+binary operators since they either return <b>true</b> or <b>false</b>.
+:::
+
+## Addition
+
+Addition operator can be used to add multiple numbers in C. **+** operator is used to add the numbers.
+
+```c
+// Adding two numbers
+
+#include <stdio.h>
+
+int main() {
+
+  // Defining two variables
+  int num1 = 7;
+  int num2 = 4;
+
+  // Defining result variable
+  int result = num1 + num2;
+
+  printf("%d", result);
+
+  return 0;
+}
+```
+
+**Output:**
+
+```
+11
+```
+
+## Subtraction
+
+Subtraction operator **-** is used for subtraction operation.
+
+```c
+// Subtracting two numbers
+
+#include <stdio.h>
+
+int main() {
+
+  // Defining two variables
+  int num1 = 7;
+  int num2 = 4;
+
+  // Defining result variable
+  int result = num1 - num2;
+
+  printf("%d", result);
+
+  return 0;
+}
+```
+
+**Output:**
+
+```
+3
+```
+
+## Multiplication
+
+Multiplication is done using the **\*** operator.
+
+```c
+// Multiplying two numbers
+
+#include <stdio.h>
+
+int main() {
+
+  // Defining two variables
+  int num1 = 7;
+  int num2 = 4;
+
+  // Defining result variable
+  int result = num1 * num2;
+
+  printf("%d", result);
+
+  return 0;
+}
+```
+
+**Output:**
+
+```
+28
+```
+
+## Division
+
+Division operator **/** is used for division operations.
+
+```c
+// Dividing two numbers
+
+#include <stdio.h>
+
+int main() {
+
+  // Defining two variables
+  int num1 = 10;
+  int num2 = 2;
+
+  // Defining result variable
+  int result = num1 / num2;
+
+  printf("%d", result);
+
+  return 0;
+}
+```
+
+**Output:**
+
+```
+5
+```
+
+## Exponent
+
+The **pow(x, y)** function returns, **x** raised to the power of **y**. You require including `<math.h>` header file for the exponent operation.
+
+```c
+// Calculating exponent
+
+#include <stdio.h>
+
+// Another library which has the exponent function
+#include <math.h>
+
+int main() {
+
+  // Defining two variables
+  int num1 = 2;
+  int num2 = 3;
+
+  // Defining result variable using the pow(num, exponent) function
+  int result = pow(num1, num2);
+
+  printf("%d", result);
+
+  return 0;
+}
+```
+
+**Output:**
+
+```
+8
+```

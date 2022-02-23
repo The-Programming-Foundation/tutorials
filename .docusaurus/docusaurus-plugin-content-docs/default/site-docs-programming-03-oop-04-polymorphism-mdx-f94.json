@@ -1,0 +1,26 @@
+{
+  "unversionedId": "programming/oop/polymorphism",
+  "id": "programming/oop/polymorphism",
+  "title": "Polymorphism",
+  "description": "Polymorphism means having the ability to have different forms at the same time.",
+  "source": "@site/docs/programming/03-oop/04-polymorphism.mdx",
+  "sourceDirName": "programming/03-oop",
+  "slug": "/programming/oop/polymorphism",
+  "permalink": "/programming/oop/polymorphism",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/04-polymorphism.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Polymorphism"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Encapsulation",
+    "permalink": "/programming/oop/encapsulation"
+  },
+  "next": {
+    "title": "Algorithm",
+    "permalink": "/programming/algorithm/"
+  }
+}

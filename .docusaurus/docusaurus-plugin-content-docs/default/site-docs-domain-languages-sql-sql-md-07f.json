@@ -1,0 +1,25 @@
+{
+  "unversionedId": "domain_languages/sql/sql",
+  "id": "domain_languages/sql/sql",
+  "title": "SQL",
+  "description": "SQL stands for Structured Query Language. Often it is pronounced as sequel. SQL is a language used to store, access, and manage the data in the database. SQL is considered a standard; however, different versions of the SQL language are different. But all versions of SQL will follow the standard, and hence they all support at least the significant commands with slight variations in the syntax.",
+  "source": "@site/docs/domain_languages/sql/sql.md",
+  "sourceDirName": "domain_languages/sql",
+  "slug": "/domain_languages/sql/",
+  "permalink": "/domain_languages/sql/",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/domain_languages/sql/sql.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "SQL"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Gates",
+    "permalink": "/logic/gates"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/domain_languages/sql/introduction"
+  }
+}

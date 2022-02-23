@@ -1,0 +1,25 @@
+{
+  "unversionedId": "domain_languages/sql/introduction",
+  "id": "domain_languages/sql/introduction",
+  "title": "Introduction",
+  "description": "What is SQL?",
+  "source": "@site/docs/domain_languages/sql/introduction.md",
+  "sourceDirName": "domain_languages/sql",
+  "slug": "/domain_languages/sql/introduction",
+  "permalink": "/domain_languages/sql/introduction",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/domain_languages/sql/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Introduction"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SQL",
+    "permalink": "/domain_languages/sql/"
+  },
+  "next": {
+    "title": "Data Science",
+    "permalink": "/getting_started/intro_data_science/"
+  }
+}

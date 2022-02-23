@@ -1,0 +1,26 @@
+{
+  "unversionedId": "programming/c/calculation",
+  "id": "programming/c/calculation",
+  "title": "Calculation",
+  "description": "<div",
+  "source": "@site/docs/programming/01-c/03-calculation.mdx",
+  "sourceDirName": "programming/01-c",
+  "slug": "/programming/c/calculation",
+  "permalink": "/programming/c/calculation",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/03-calculation.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Calculation"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hello Earth",
+    "permalink": "/programming/c/hello-earth"
+  },
+  "next": {
+    "title": "Expansion",
+    "permalink": "/programming/c/expansion"
+  }
+}

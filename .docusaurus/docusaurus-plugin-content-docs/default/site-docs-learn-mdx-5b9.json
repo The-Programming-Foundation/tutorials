@@ -1,0 +1,24 @@
+{
+  "unversionedId": "learn",
+  "id": "learn",
+  "title": "Learn",
+  "description": "Operating system(s) and component(s)",
+  "source": "@site/docs/learn.mdx",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/learn.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Learn",
+    "sidebar_position": 1,
+    "slug": "/"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Kernel",
+    "permalink": "/os/kernel/introduction"
+  }
+}

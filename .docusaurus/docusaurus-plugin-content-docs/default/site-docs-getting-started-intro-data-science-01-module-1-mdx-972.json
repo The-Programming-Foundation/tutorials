@@ -1,0 +1,26 @@
+{
+  "unversionedId": "getting_started/intro_data_science/module1",
+  "id": "getting_started/intro_data_science/module1",
+  "title": "Module 1 - Introduction",
+  "description": "This is an introductory module that will familiarize you to some of the data science terms.",
+  "source": "@site/docs/getting_started/intro_data_science/01-module1.mdx",
+  "sourceDirName": "getting_started/intro_data_science",
+  "slug": "/getting_started/intro_data_science/module1",
+  "permalink": "/getting_started/intro_data_science/module1",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/01-module1.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Module 1 - Introduction"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Data Science",
+    "permalink": "/getting_started/intro_data_science/"
+  },
+  "next": {
+    "title": "Module 2 - Process",
+    "permalink": "/getting_started/intro_data_science/module2"
+  }
+}

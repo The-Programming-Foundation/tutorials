@@ -1,0 +1,26 @@
+{
+  "unversionedId": "programming/c/hello-earth",
+  "id": "programming/c/hello-earth",
+  "title": "Hello Earth",
+  "description": "<div",
+  "source": "@site/docs/programming/01-c/02-hello-earth.mdx",
+  "sourceDirName": "programming/01-c",
+  "slug": "/programming/c/hello-earth",
+  "permalink": "/programming/c/hello-earth",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/02-hello-earth.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Hello Earth"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Structure",
+    "permalink": "/programming/c/structure"
+  },
+  "next": {
+    "title": "Calculation",
+    "permalink": "/programming/c/calculation"
+  }
+}

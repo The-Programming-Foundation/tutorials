@@ -1,0 +1,43 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Lato');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-font-family-base: 'Lato';
+  --ifm-color-primary: #0000ff;
+  --ifm-color-primary-dark: #0000e6;
+  --ifm-color-primary-darker: #0000d9;
+  --ifm-color-primary-darkest: #0000b3;
+  --ifm-color-primary-light: #1a1aff;
+  --ifm-color-primary-lighter: #2626ff;
+  --ifm-color-primary-lightest: #4d4dff;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-font-family-base: 'Lato';
+  --ifm-color-primary: #3dabff;
+  --ifm-color-primary-dark: #1d9dff;
+  --ifm-color-primary-darker: #0e96ff;
+  --ifm-color-primary-darkest: #007ddd;
+  --ifm-color-primary-light: #5db9ff;
+  --ifm-color-primary-lighter: #6cc0ff;
+  --ifm-color-primary-lightest: #9cd4ff;
+  --ifm-background-color: #000000;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}

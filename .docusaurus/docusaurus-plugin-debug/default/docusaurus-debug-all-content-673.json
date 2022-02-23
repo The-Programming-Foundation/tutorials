@@ -1,0 +1,1510 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/",
+          "tagsPath": "/tags",
+          "versionEditUrl": "https://github.com/The-Programming-Foundation/tutorials/docs",
+          "versionEditUrlLocalized": "https://github.com/The-Programming-Foundation/tutorials/i18n/en/docusaurus-plugin-content-docs/current",
+          "versionBanner": null,
+          "versionBadge": false,
+          "versionClassName": "docs-version-current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/subha/Downloads/tutorials/sidebars.js",
+          "contentPath": "/home/subha/Downloads/tutorials/docs",
+          "contentPathLocalized": "/home/subha/Downloads/tutorials/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "domain_languages/sql/introduction",
+              "id": "domain_languages/sql/introduction",
+              "title": "Introduction",
+              "description": "What is SQL?",
+              "source": "@site/docs/domain_languages/sql/introduction.md",
+              "sourceDirName": "domain_languages/sql",
+              "slug": "/domain_languages/sql/introduction",
+              "permalink": "/domain_languages/sql/introduction",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/domain_languages/sql/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Introduction"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "SQL",
+                "permalink": "/domain_languages/sql/"
+              },
+              "next": {
+                "title": "Data Science",
+                "permalink": "/getting_started/intro_data_science/"
+              }
+            },
+            {
+              "unversionedId": "domain_languages/sql/sql",
+              "id": "domain_languages/sql/sql",
+              "title": "SQL",
+              "description": "SQL stands for Structured Query Language. Often it is pronounced as sequel. SQL is a language used to store, access, and manage the data in the database. SQL is considered a standard; however, different versions of the SQL language are different. But all versions of SQL will follow the standard, and hence they all support at least the significant commands with slight variations in the syntax.",
+              "source": "@site/docs/domain_languages/sql/sql.md",
+              "sourceDirName": "domain_languages/sql",
+              "slug": "/domain_languages/sql/",
+              "permalink": "/domain_languages/sql/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/domain_languages/sql/sql.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "SQL"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Gates",
+                "permalink": "/logic/gates"
+              },
+              "next": {
+                "title": "Introduction",
+                "permalink": "/domain_languages/sql/introduction"
+              }
+            },
+            {
+              "unversionedId": "getting_started/intro_data_science/intro_data_science",
+              "id": "getting_started/intro_data_science/intro_data_science",
+              "title": "Data Science",
+              "description": "Data Science careers are one of the most highly compensated careers worldwide currently. Due to its broad application in every industry, there is a higher demand for data scientists who can analyze complex data and communicate the results effectively. In this course, we will be covering the basics of data science and learning the tools used for data science from scratch. We will start the lessons at the beginner level and move up to the advanced level.",
+              "source": "@site/docs/getting_started/intro_data_science/intro_data_science.md",
+              "sourceDirName": "getting_started/intro_data_science",
+              "slug": "/getting_started/intro_data_science/",
+              "permalink": "/getting_started/intro_data_science/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/intro_data_science.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Data Science"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/domain_languages/sql/introduction"
+              },
+              "next": {
+                "title": "Module 1 - Introduction",
+                "permalink": "/getting_started/intro_data_science/module1"
+              }
+            },
+            {
+              "unversionedId": "getting_started/intro_data_science/module1",
+              "id": "getting_started/intro_data_science/module1",
+              "title": "Module 1 - Introduction",
+              "description": "This is an introductory module that will familiarize you to some of the data science terms.",
+              "source": "@site/docs/getting_started/intro_data_science/01-module1.mdx",
+              "sourceDirName": "getting_started/intro_data_science",
+              "slug": "/getting_started/intro_data_science/module1",
+              "permalink": "/getting_started/intro_data_science/module1",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/01-module1.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Module 1 - Introduction"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Data Science",
+                "permalink": "/getting_started/intro_data_science/"
+              },
+              "next": {
+                "title": "Module 2 - Process",
+                "permalink": "/getting_started/intro_data_science/module2"
+              }
+            },
+            {
+              "unversionedId": "getting_started/intro_data_science/module2",
+              "id": "getting_started/intro_data_science/module2",
+              "title": "Module 2 - Process",
+              "description": "Data Science Project",
+              "source": "@site/docs/getting_started/intro_data_science/02-module2.mdx",
+              "sourceDirName": "getting_started/intro_data_science",
+              "slug": "/getting_started/intro_data_science/module2",
+              "permalink": "/getting_started/intro_data_science/module2",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/02-module2.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Module 2 - Process"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Module 1 - Introduction",
+                "permalink": "/getting_started/intro_data_science/module1"
+              },
+              "next": {
+                "title": "Module 3 - Residual value",
+                "permalink": "/getting_started/intro_data_science/module3"
+              }
+            },
+            {
+              "unversionedId": "getting_started/intro_data_science/module3",
+              "id": "getting_started/intro_data_science/module3",
+              "title": "Module 3 - Residual value",
+              "description": "What is a Residual value?",
+              "source": "@site/docs/getting_started/intro_data_science/03-module3.mdx",
+              "sourceDirName": "getting_started/intro_data_science",
+              "slug": "/getting_started/intro_data_science/module3",
+              "permalink": "/getting_started/intro_data_science/module3",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/03-module3.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Module 3 - Residual value"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Module 2 - Process",
+                "permalink": "/getting_started/intro_data_science/module2"
+              },
+              "next": {
+                "title": "Module 4 - Logistic Regression",
+                "permalink": "/getting_started/intro_data_science/module4"
+              }
+            },
+            {
+              "unversionedId": "getting_started/intro_data_science/module4",
+              "id": "getting_started/intro_data_science/module4",
+              "title": "Module 4 - Logistic Regression",
+              "description": "What is Logistic Regression?",
+              "source": "@site/docs/getting_started/intro_data_science/04-module4.mdx",
+              "sourceDirName": "getting_started/intro_data_science",
+              "slug": "/getting_started/intro_data_science/module4",
+              "permalink": "/getting_started/intro_data_science/module4",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/04-module4.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Module 4 - Logistic Regression"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Module 3 - Residual value",
+                "permalink": "/getting_started/intro_data_science/module3"
+              }
+            },
+            {
+              "unversionedId": "learn",
+              "id": "learn",
+              "title": "Learn",
+              "description": "Operating system(s) and component(s)",
+              "source": "@site/docs/learn.mdx",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/learn.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Learn",
+                "sidebar_position": 1,
+                "slug": "/"
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Kernel",
+                "permalink": "/os/kernel/introduction"
+              }
+            },
+            {
+              "unversionedId": "logic/binaries",
+              "id": "logic/binaries",
+              "title": "Binaries",
+              "description": "Computers only understand 0s and 1s",
+              "source": "@site/docs/logic/01-binaries.mdx",
+              "sourceDirName": "logic",
+              "slug": "/logic/binaries",
+              "permalink": "/logic/binaries",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/logic/01-binaries.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Binaries"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Algorithms",
+                "permalink": "/programming/algorithm/introduction"
+              },
+              "next": {
+                "title": "Gates",
+                "permalink": "/logic/gates"
+              }
+            },
+            {
+              "unversionedId": "logic/gates",
+              "id": "logic/gates",
+              "title": "Gates",
+              "description": "Digits 0 and 1, have a numerical significance on our lives. The numbers having 0 are valued when the zeros are to the right rather than to the left. E.g: number 100 is valued than number 001. But in smart digital devices, it has logical significance. The digits 1 and 0 are valued as high and low numbers. While these digits are valued as the output, the decision making element is called the Logic Gates.",
+              "source": "@site/docs/logic/02-gates.mdx",
+              "sourceDirName": "logic",
+              "slug": "/logic/gates",
+              "permalink": "/logic/gates",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/logic/02-gates.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Gates"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Binaries",
+                "permalink": "/logic/binaries"
+              },
+              "next": {
+                "title": "SQL",
+                "permalink": "/domain_languages/sql/"
+              }
+            },
+            {
+              "unversionedId": "os/kernel/introduction",
+              "id": "os/kernel/introduction",
+              "title": "Kernel",
+              "description": "The kernel is the core component of an operating system. It takes complete control over the system by bridging the gap between the users and hardware.",
+              "source": "@site/docs/os/kernel/introduction.md",
+              "sourceDirName": "os/kernel",
+              "slug": "/os/kernel/introduction",
+              "permalink": "/os/kernel/introduction",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/kernel/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Kernel"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Learn",
+                "permalink": "/"
+              },
+              "next": {
+                "title": "Unix",
+                "permalink": "/os/unix/"
+              }
+            },
+            {
+              "unversionedId": "os/unix/File Structure",
+              "id": "os/unix/File Structure",
+              "title": "Unix File Structure",
+              "description": "The UNIX file structure is like an inverted tree and arranged in a hierarchical structure.",
+              "source": "@site/docs/os/unix/02-File Structure.mdx",
+              "sourceDirName": "os/unix",
+              "slug": "/os/unix/File Structure",
+              "permalink": "/os/unix/File Structure",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/unix/02-File Structure.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Unix File Structure"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Structure",
+                "permalink": "/os/unix/Structure"
+              },
+              "next": {
+                "title": "Unix Shell",
+                "permalink": "/os/unix/Shell"
+              }
+            },
+            {
+              "unversionedId": "os/unix/Shell",
+              "id": "os/unix/Shell",
+              "title": "Unix Shell",
+              "description": "<div",
+              "source": "@site/docs/os/unix/03-Shell.mdx",
+              "sourceDirName": "os/unix",
+              "slug": "/os/unix/Shell",
+              "permalink": "/os/unix/Shell",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/unix/03-Shell.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Unix Shell"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Unix File Structure",
+                "permalink": "/os/unix/File Structure"
+              },
+              "next": {
+                "title": "Vim",
+                "permalink": "/os/vim/introduction"
+              }
+            },
+            {
+              "unversionedId": "os/unix/Structure",
+              "id": "os/unix/Structure",
+              "title": "Structure",
+              "description": "Components",
+              "source": "@site/docs/os/unix/01-Structure.mdx",
+              "sourceDirName": "os/unix",
+              "slug": "/os/unix/Structure",
+              "permalink": "/os/unix/Structure",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/unix/01-Structure.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Structure"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Unix",
+                "permalink": "/os/unix/"
+              },
+              "next": {
+                "title": "Unix File Structure",
+                "permalink": "/os/unix/File Structure"
+              }
+            },
+            {
+              "unversionedId": "os/unix/unix",
+              "id": "os/unix/unix",
+              "title": "Unix",
+              "description": "The Unix operating system was developed by Ken Thompson, Dennis Ritchie in 1970 at Bell Labs research center. It was created to be a stable, multi-user and multi-tasking system for desktops and servers.",
+              "source": "@site/docs/os/unix/unix.md",
+              "sourceDirName": "os/unix",
+              "slug": "/os/unix/",
+              "permalink": "/os/unix/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/unix/unix.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Unix",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Kernel",
+                "permalink": "/os/kernel/introduction"
+              },
+              "next": {
+                "title": "Structure",
+                "permalink": "/os/unix/Structure"
+              }
+            },
+            {
+              "unversionedId": "os/vim/introduction",
+              "id": "os/vim/introduction",
+              "title": "Vim",
+              "description": "Vim stands for Vi Improved. This text editor is found in UNIX based operating systems. It has many commands to create new files and edit the configuration files of an operating system.",
+              "source": "@site/docs/os/vim/introduction.md",
+              "sourceDirName": "os/vim",
+              "slug": "/os/vim/introduction",
+              "permalink": "/os/vim/introduction",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/vim/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Vim"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Unix Shell",
+                "permalink": "/os/unix/Shell"
+              },
+              "next": {
+                "title": "C",
+                "permalink": "/programming/c/"
+              }
+            },
+            {
+              "unversionedId": "programming/algorithm/algorithm",
+              "id": "programming/algorithm/algorithm",
+              "title": "Algorithm",
+              "description": "Instructing the computer in steps.",
+              "source": "@site/docs/programming/04-algorithm/04-algorithm.md",
+              "sourceDirName": "programming/04-algorithm",
+              "slug": "/programming/algorithm/",
+              "permalink": "/programming/algorithm/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/04-algorithm/04-algorithm.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Algorithm"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Polymorphism",
+                "permalink": "/programming/oop/polymorphism"
+              },
+              "next": {
+                "title": "Algorithms",
+                "permalink": "/programming/algorithm/introduction"
+              }
+            },
+            {
+              "unversionedId": "programming/algorithm/introduction",
+              "id": "programming/algorithm/introduction",
+              "title": "Algorithms",
+              "description": "An algorithm is the set of instructions in steps to solve a problem.",
+              "source": "@site/docs/programming/04-algorithm/introduction.md",
+              "sourceDirName": "programming/04-algorithm",
+              "slug": "/programming/algorithm/introduction",
+              "permalink": "/programming/algorithm/introduction",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/04-algorithm/introduction.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Algorithms"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Algorithm",
+                "permalink": "/programming/algorithm/"
+              },
+              "next": {
+                "title": "Binaries",
+                "permalink": "/logic/binaries"
+              }
+            },
+            {
+              "unversionedId": "programming/c/c",
+              "id": "programming/c/c",
+              "title": "C",
+              "description": "C is a general purpose programming language which can be used to build operating systems, modules for embedded systems and other wide range of computer applications.",
+              "source": "@site/docs/programming/01-c/01-c.md",
+              "sourceDirName": "programming/01-c",
+              "slug": "/programming/c/",
+              "permalink": "/programming/c/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/01-c.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "C",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Vim",
+                "permalink": "/os/vim/introduction"
+              },
+              "next": {
+                "title": "Structure",
+                "permalink": "/programming/c/structure"
+              }
+            },
+            {
+              "unversionedId": "programming/c/calculation",
+              "id": "programming/c/calculation",
+              "title": "Calculation",
+              "description": "<div",
+              "source": "@site/docs/programming/01-c/03-calculation.mdx",
+              "sourceDirName": "programming/01-c",
+              "slug": "/programming/c/calculation",
+              "permalink": "/programming/c/calculation",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/03-calculation.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Calculation"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hello Earth",
+                "permalink": "/programming/c/hello-earth"
+              },
+              "next": {
+                "title": "Expansion",
+                "permalink": "/programming/c/expansion"
+              }
+            },
+            {
+              "unversionedId": "programming/c/expansion",
+              "id": "programming/c/expansion",
+              "title": "Expansion",
+              "description": "<div",
+              "source": "@site/docs/programming/01-c/04-expansion.mdx",
+              "sourceDirName": "programming/01-c",
+              "slug": "/programming/c/expansion",
+              "permalink": "/programming/c/expansion",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/04-expansion.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Expansion"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Calculation",
+                "permalink": "/programming/c/calculation"
+              },
+              "next": {
+                "title": "Python",
+                "permalink": "/programming/python/"
+              }
+            },
+            {
+              "unversionedId": "programming/c/hello-earth",
+              "id": "programming/c/hello-earth",
+              "title": "Hello Earth",
+              "description": "<div",
+              "source": "@site/docs/programming/01-c/02-hello-earth.mdx",
+              "sourceDirName": "programming/01-c",
+              "slug": "/programming/c/hello-earth",
+              "permalink": "/programming/c/hello-earth",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/02-hello-earth.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Hello Earth"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Structure",
+                "permalink": "/programming/c/structure"
+              },
+              "next": {
+                "title": "Calculation",
+                "permalink": "/programming/c/calculation"
+              }
+            },
+            {
+              "unversionedId": "programming/c/structure",
+              "id": "programming/c/structure",
+              "title": "Structure",
+              "description": "<div",
+              "source": "@site/docs/programming/01-c/01-structure.mdx",
+              "sourceDirName": "programming/01-c",
+              "slug": "/programming/c/structure",
+              "permalink": "/programming/c/structure",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/01-c/01-structure.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Structure"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "C",
+                "permalink": "/programming/c/"
+              },
+              "next": {
+                "title": "Hello Earth",
+                "permalink": "/programming/c/hello-earth"
+              }
+            },
+            {
+              "unversionedId": "programming/oop/abstraction",
+              "id": "programming/oop/abstraction",
+              "title": "Abstraction",
+              "description": "Abstraction concept comes with a real-time scenario, where only necessary details are revealed.",
+              "source": "@site/docs/programming/03-oop/01-abstraction.mdx",
+              "sourceDirName": "programming/03-oop",
+              "slug": "/programming/oop/abstraction",
+              "permalink": "/programming/oop/abstraction",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/01-abstraction.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Abstraction"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Object oriented programming",
+                "permalink": "/programming/oop/"
+              },
+              "next": {
+                "title": "Inheritance",
+                "permalink": "/programming/oop/inheritance"
+              }
+            },
+            {
+              "unversionedId": "programming/oop/encapsulation",
+              "id": "programming/oop/encapsulation",
+              "title": "Encapsulation",
+              "description": "Encapsulation enables us to wrap the data and functions into a single unit.",
+              "source": "@site/docs/programming/03-oop/03-encapsulation.mdx",
+              "sourceDirName": "programming/03-oop",
+              "slug": "/programming/oop/encapsulation",
+              "permalink": "/programming/oop/encapsulation",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/03-encapsulation.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Encapsulation"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Inheritance",
+                "permalink": "/programming/oop/inheritance"
+              },
+              "next": {
+                "title": "Polymorphism",
+                "permalink": "/programming/oop/polymorphism"
+              }
+            },
+            {
+              "unversionedId": "programming/oop/inheritance",
+              "id": "programming/oop/inheritance",
+              "title": "Inheritance",
+              "description": "Inheritance in OOP is a concept that allows inheriting the features of other classes. This is a real-life concept where a child inherits its properties from his parents, in a similar way a child class inherits the features of its parent class.",
+              "source": "@site/docs/programming/03-oop/02-inheritance.mdx",
+              "sourceDirName": "programming/03-oop",
+              "slug": "/programming/oop/inheritance",
+              "permalink": "/programming/oop/inheritance",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/02-inheritance.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Inheritance"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Abstraction",
+                "permalink": "/programming/oop/abstraction"
+              },
+              "next": {
+                "title": "Encapsulation",
+                "permalink": "/programming/oop/encapsulation"
+              }
+            },
+            {
+              "unversionedId": "programming/oop/oop",
+              "id": "programming/oop/oop",
+              "title": "Object oriented programming",
+              "description": "A practical way to approach programming",
+              "source": "@site/docs/programming/03-oop/03-oop.md",
+              "sourceDirName": "programming/03-oop",
+              "slug": "/programming/oop/",
+              "permalink": "/programming/oop/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/03-oop.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Object oriented programming"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "File Handling",
+                "permalink": "/programming/python/file-handling"
+              },
+              "next": {
+                "title": "Abstraction",
+                "permalink": "/programming/oop/abstraction"
+              }
+            },
+            {
+              "unversionedId": "programming/oop/polymorphism",
+              "id": "programming/oop/polymorphism",
+              "title": "Polymorphism",
+              "description": "Polymorphism means having the ability to have different forms at the same time.",
+              "source": "@site/docs/programming/03-oop/04-polymorphism.mdx",
+              "sourceDirName": "programming/03-oop",
+              "slug": "/programming/oop/polymorphism",
+              "permalink": "/programming/oop/polymorphism",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/03-oop/04-polymorphism.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Polymorphism"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Encapsulation",
+                "permalink": "/programming/oop/encapsulation"
+              },
+              "next": {
+                "title": "Algorithm",
+                "permalink": "/programming/algorithm/"
+              }
+            },
+            {
+              "unversionedId": "programming/python/calculation",
+              "id": "programming/python/calculation",
+              "title": "Calculation",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/03-calculation.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/calculation",
+              "permalink": "/programming/python/calculation",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/03-calculation.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Calculation"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Hello Earth",
+                "permalink": "/programming/python/hello-earth"
+              },
+              "next": {
+                "title": "Conditional Statements",
+                "permalink": "/programming/python/conditional-statements"
+              }
+            },
+            {
+              "unversionedId": "programming/python/conditional-statements",
+              "id": "programming/python/conditional-statements",
+              "title": "Conditional Statements",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/04-conditional-statements.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/conditional-statements",
+              "permalink": "/programming/python/conditional-statements",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/04-conditional-statements.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Conditional Statements"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Calculation",
+                "permalink": "/programming/python/calculation"
+              },
+              "next": {
+                "title": "Loops",
+                "permalink": "/programming/python/loops"
+              }
+            },
+            {
+              "unversionedId": "programming/python/file-handling",
+              "id": "programming/python/file-handling",
+              "title": "File Handling",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/07-file-handling.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/file-handling",
+              "permalink": "/programming/python/file-handling",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/07-file-handling.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "title": "File Handling"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Functions",
+                "permalink": "/programming/python/functions"
+              },
+              "next": {
+                "title": "Object oriented programming",
+                "permalink": "/programming/oop/"
+              }
+            },
+            {
+              "unversionedId": "programming/python/functions",
+              "id": "programming/python/functions",
+              "title": "Functions",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/06-functions.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/functions",
+              "permalink": "/programming/python/functions",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/06-functions.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "title": "Functions"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Loops",
+                "permalink": "/programming/python/loops"
+              },
+              "next": {
+                "title": "File Handling",
+                "permalink": "/programming/python/file-handling"
+              }
+            },
+            {
+              "unversionedId": "programming/python/hello-earth",
+              "id": "programming/python/hello-earth",
+              "title": "Hello Earth",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/02-hello-earth.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/hello-earth",
+              "permalink": "/programming/python/hello-earth",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/02-hello-earth.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Hello Earth"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Structure",
+                "permalink": "/programming/python/structure"
+              },
+              "next": {
+                "title": "Calculation",
+                "permalink": "/programming/python/calculation"
+              }
+            },
+            {
+              "unversionedId": "programming/python/loops",
+              "id": "programming/python/loops",
+              "title": "Loops",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/05-loops.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/loops",
+              "permalink": "/programming/python/loops",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/05-loops.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "Loops"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Conditional Statements",
+                "permalink": "/programming/python/conditional-statements"
+              },
+              "next": {
+                "title": "Functions",
+                "permalink": "/programming/python/functions"
+              }
+            },
+            {
+              "unversionedId": "programming/python/python",
+              "id": "programming/python/python",
+              "title": "Python",
+              "description": "Python is a high-level language for general purpose programming.",
+              "source": "@site/docs/programming/02-python/02-python.md",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/",
+              "permalink": "/programming/python/",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/02-python.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Python"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Expansion",
+                "permalink": "/programming/c/expansion"
+              },
+              "next": {
+                "title": "Structure",
+                "permalink": "/programming/python/structure"
+              }
+            },
+            {
+              "unversionedId": "programming/python/structure",
+              "id": "programming/python/structure",
+              "title": "Structure",
+              "description": "<div",
+              "source": "@site/docs/programming/02-python/01-structure.mdx",
+              "sourceDirName": "programming/02-python",
+              "slug": "/programming/python/structure",
+              "permalink": "/programming/python/structure",
+              "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/programming/02-python/01-structure.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Structure"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Python",
+                "permalink": "/programming/python/"
+              },
+              "next": {
+                "title": "Hello Earth",
+                "permalink": "/programming/python/hello-earth"
+              }
+            }
+          ],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "learn"
+              },
+              {
+                "type": "category",
+                "label": "Operating system(s) and component(s)",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Kernel",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "os/kernel/introduction"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Unix",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "os/unix/Structure"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "os/unix/File Structure"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "os/unix/Shell"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "os/unix/unix"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Vim",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "os/vim/introduction"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Programming language(s) and concepts",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "C",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "programming/c/structure"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/c/hello-earth"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/c/calculation"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/c/expansion"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "programming/c/c"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Python",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "programming/python/structure"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/python/hello-earth"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/python/calculation"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/python/conditional-statements"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/python/loops"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/python/functions"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/python/file-handling"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "programming/python/python"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Object oriented programming",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "programming/oop/abstraction"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/oop/inheritance"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/oop/encapsulation"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "programming/oop/polymorphism"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "programming/oop/oop"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Algorithm",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "programming/algorithm/introduction"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "programming/algorithm/algorithm"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Logic",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "logic/binaries"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "logic/gates"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Domain-specific language(s)",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "SQL",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "domain_languages/sql/introduction"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "domain_languages/sql/sql"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Getting Started Series",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Data Science",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "getting_started/intro_data_science/module1"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "getting_started/intro_data_science/module2"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "getting_started/intro_data_science/module3"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "getting_started/intro_data_science/module4"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "getting_started/intro_data_science/intro_data_science"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "mainDocId": "learn",
+          "categoryGeneratedIndices": []
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [
+        {
+          "id": "welcome",
+          "metadata": {
+            "permalink": "/blog/welcome",
+            "source": "@site/blog/2021-08-26-welcome/index.md",
+            "title": "Welcome",
+            "description": "Docusaurus blogging features are powered by the blog plugin.",
+            "date": "2021-08-26T00:00:00.000Z",
+            "formattedDate": "August 26, 2021",
+            "tags": [
+              {
+                "label": "facebook",
+                "permalink": "/blog/tags/facebook"
+              },
+              {
+                "label": "hello",
+                "permalink": "/blog/tags/hello"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.405,
+            "truncated": false,
+            "authors": [
+              {
+                "name": "Sébastien Lorber",
+                "title": "Docusaurus maintainer",
+                "url": "https://sebastienlorber.com",
+                "imageURL": "https://github.com/slorber.png",
+                "key": "slorber"
+              },
+              {
+                "name": "Yangshun Tay",
+                "title": "Front End Engineer @ Facebook",
+                "url": "https://github.com/yangshun",
+                "imageURL": "https://github.com/yangshun.png",
+                "key": "yangshun"
+              }
+            ],
+            "frontMatter": {
+              "slug": "welcome",
+              "title": "Welcome",
+              "authors": [
+                "slorber",
+                "yangshun"
+              ],
+              "tags": [
+                "facebook",
+                "hello",
+                "docusaurus"
+              ]
+            },
+            "nextItem": {
+              "title": "MDX Blog Post",
+              "permalink": "/blog/mdx-blog-post"
+            }
+          },
+          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\n\nSimply add Markdown files (or folders) to the `blog` directory.\n\nRegular blog authors can be added to `authors.yml`.\n\nThe blog post date can be extracted from filenames, such as:\n\n- `2019-05-30-welcome.md`\n- `2019-05-30-welcome/index.md`\n\nA blog post folder can be convenient to co-locate blog post images:\n\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\n\nThe blog supports tags as well!\n\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
+        },
+        {
+          "id": "mdx-blog-post",
+          "metadata": {
+            "permalink": "/blog/mdx-blog-post",
+            "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
+            "title": "MDX Blog Post",
+            "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
+            "date": "2021-08-01T00:00:00.000Z",
+            "formattedDate": "August 1, 2021",
+            "tags": [
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.175,
+            "truncated": false,
+            "authors": [
+              {
+                "name": "Sébastien Lorber",
+                "title": "Docusaurus maintainer",
+                "url": "https://sebastienlorber.com",
+                "imageURL": "https://github.com/slorber.png",
+                "key": "slorber"
+              }
+            ],
+            "frontMatter": {
+              "slug": "mdx-blog-post",
+              "title": "MDX Blog Post",
+              "authors": [
+                "slorber"
+              ],
+              "tags": [
+                "docusaurus"
+              ]
+            },
+            "prevItem": {
+              "title": "Welcome",
+              "permalink": "/blog/welcome"
+            },
+            "nextItem": {
+              "title": "Long Blog Post",
+              "permalink": "/blog/long-blog-post"
+            }
+          },
+          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\n\n:::tip\n\nUse the power of React to create interactive blog posts.\n\n```js\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n```\n\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n\n:::"
+        },
+        {
+          "id": "long-blog-post",
+          "metadata": {
+            "permalink": "/blog/long-blog-post",
+            "source": "@site/blog/2019-05-29-long-blog-post.md",
+            "title": "Long Blog Post",
+            "description": "This is the summary of a very long blog post,",
+            "date": "2019-05-29T00:00:00.000Z",
+            "formattedDate": "May 29, 2019",
+            "tags": [
+              {
+                "label": "hello",
+                "permalink": "/blog/tags/hello"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 2.05,
+            "truncated": true,
+            "authors": [
+              {
+                "name": "Endilie Yacop Sucipto",
+                "title": "Maintainer of Docusaurus",
+                "url": "https://github.com/endiliey",
+                "imageURL": "https://github.com/endiliey.png",
+                "key": "endi"
+              }
+            ],
+            "frontMatter": {
+              "slug": "long-blog-post",
+              "title": "Long Blog Post",
+              "authors": "endi",
+              "tags": [
+                "hello",
+                "docusaurus"
+              ]
+            },
+            "prevItem": {
+              "title": "MDX Blog Post",
+              "permalink": "/blog/mdx-blog-post"
+            },
+            "nextItem": {
+              "title": "First Blog Post",
+              "permalink": "/blog/first-blog-post"
+            }
+          },
+          "content": "This is the summary of a very long blog post,\n\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\n\n<!--truncate-->\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+        },
+        {
+          "id": "first-blog-post",
+          "metadata": {
+            "permalink": "/blog/first-blog-post",
+            "source": "@site/blog/2019-05-28-first-blog-post.md",
+            "title": "First Blog Post",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
+            "date": "2019-05-28T00:00:00.000Z",
+            "formattedDate": "May 28, 2019",
+            "tags": [
+              {
+                "label": "hola",
+                "permalink": "/blog/tags/hola"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.12,
+            "truncated": false,
+            "authors": [
+              {
+                "name": "Gao Wei",
+                "title": "Docusaurus Core Team",
+                "url": "https://github.com/wgao19",
+                "image_url": "https://github.com/wgao19.png",
+                "imageURL": "https://github.com/wgao19.png"
+              }
+            ],
+            "frontMatter": {
+              "slug": "first-blog-post",
+              "title": "First Blog Post",
+              "authors": {
+                "name": "Gao Wei",
+                "title": "Docusaurus Core Team",
+                "url": "https://github.com/wgao19",
+                "image_url": "https://github.com/wgao19.png",
+                "imageURL": "https://github.com/wgao19.png"
+              },
+              "tags": [
+                "hola",
+                "docusaurus"
+              ]
+            },
+            "prevItem": {
+              "title": "Long Blog Post",
+              "permalink": "/blog/long-blog-post"
+            }
+          },
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+        }
+      ],
+      "blogListPaginated": [
+        {
+          "metadata": {
+            "permalink": "/blog",
+            "page": 1,
+            "postsPerPage": 10,
+            "totalPages": 1,
+            "totalCount": 4,
+            "previousPage": null,
+            "nextPage": null,
+            "blogDescription": "Blog",
+            "blogTitle": "Blog"
+          },
+          "items": [
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ]
+        }
+      ],
+      "blogTags": {
+        "/blog/tags/facebook": {
+          "name": "facebook",
+          "items": [
+            "welcome"
+          ],
+          "permalink": "/blog/tags/facebook"
+        },
+        "/blog/tags/hello": {
+          "name": "hello",
+          "items": [
+            "welcome",
+            "long-blog-post"
+          ],
+          "permalink": "/blog/tags/hello"
+        },
+        "/blog/tags/docusaurus": {
+          "name": "docusaurus",
+          "items": [
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/docusaurus"
+        },
+        "/blog/tags/hola": {
+          "name": "hola",
+          "items": [
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/hola"
+        }
+      },
+      "blogTagsListPath": "/blog/tags"
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        }
+      }
+    ]
+  },
+  "docusaurus-plugin-google-analytics": {
+    "default": null
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}

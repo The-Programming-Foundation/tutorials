@@ -1,0 +1,276 @@
+{
+  "/__docusaurus/debug-3d6": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/config-914": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/content-c28": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-3cf": {
+    "component": "component---theme-debug-global-dataede-0fa"
+  },
+  "/__docusaurus/debug/metadata-31b": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4"
+  },
+  "/__docusaurus/debug/registry-0da": {
+    "component": "component---theme-debug-registry-679-501"
+  },
+  "/__docusaurus/debug/routes-244": {
+    "component": "component---theme-debug-routes-946-699"
+  },
+  "/blog-520": {
+    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      },
+      {
+        "content": "content---blogf-4-f-cd7"
+      },
+      {
+        "content": "content---blog-871-381"
+      },
+      {
+        "content": "content---blog-925-e00"
+      }
+    ],
+    "metadata": "metadata---blogb-2-b-df1"
+  },
+  "/blog/archive-f4c": {
+    "component": "component---theme-blog-archive-page-9-e-4-1d8",
+    "archive": "archive---blog-archiveb-2-f-393"
+  },
+  "/blog/first-blog-post-6c7": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-first-blog-poste-27-4a1"
+  },
+  "/blog/long-blog-post-f06": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-long-blog-post-736-bc7"
+  },
+  "/blog/mdx-blog-post-bee": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-mdx-blog-post-593-37b"
+  },
+  "/blog/tags-e13": {
+    "component": "component---theme-blog-tags-list-page-01-a-d0b",
+    "sidebar": "sidebar---blog-814-8ac",
+    "tags": "tags---blog-tagsa-70-da2"
+  },
+  "/blog/tags/docusaurus-ddf": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      },
+      {
+        "content": "content---blogf-4-f-cd7"
+      },
+      {
+        "content": "content---blog-871-381"
+      },
+      {
+        "content": "content---blog-925-e00"
+      }
+    ],
+    "metadata": "metadata---blog-tags-docusaurusa-80-728"
+  },
+  "/blog/tags/facebook-ede": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      }
+    ],
+    "metadata": "metadata---blog-tags-facebook-031-c52"
+  },
+  "/blog/tags/hello-4c2": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      },
+      {
+        "content": "content---blog-871-381"
+      }
+    ],
+    "metadata": "metadata---blog-tags-hello-30-a-bed"
+  },
+  "/blog/tags/hola-752": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-925-e00"
+      }
+    ],
+    "metadata": "metadata---blog-tags-holae-16-18a"
+  },
+  "/blog/welcome-bfa": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-welcomed-9-f-ffb"
+  },
+  "/markdown-page-be1": {
+    "component": "component---theme-mdx-page-1-f-3-b90",
+    "content": "content---markdown-page-393-028"
+  },
+  "/-909": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---935-fcf"
+  },
+  "/-af1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-b-9-171"
+  },
+  "/domain_languages/sql/-7e0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---domain-languages-sql-07-f-d58"
+  },
+  "/domain_languages/sql/introduction-603": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---domain-languages-sql-introductionce-7-bbd"
+  },
+  "/getting_started/intro_data_science/-115": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---getting-started-intro-data-science-40-d-71c"
+  },
+  "/getting_started/intro_data_science/module1-0eb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---getting-started-intro-data-science-module-1972-9c3"
+  },
+  "/getting_started/intro_data_science/module2-c78": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---getting-started-intro-data-science-module-26-c-8-131"
+  },
+  "/getting_started/intro_data_science/module3-939": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---getting-started-intro-data-science-module-3-a-5-c-9a7"
+  },
+  "/getting_started/intro_data_science/module4-c0c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---getting-started-intro-data-science-module-4-d-8-b-53b"
+  },
+  "/logic/binaries-778": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---logic-binariesc-49-e43"
+  },
+  "/logic/gates-7fc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---logic-gatesc-6-d-2c4"
+  },
+  "/os/kernel/introduction-46f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---os-kernel-introductiona-56-0d5"
+  },
+  "/os/unix/-940": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---os-unix-1-be-fe7"
+  },
+  "/os/unix/File Structure-d5e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---os-unix-file-structure-3-bd-de8"
+  },
+  "/os/unix/Shell-e14": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---os-unix-shell-1-dc-94b"
+  },
+  "/os/unix/Structure-974": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---os-unix-structure-7-c-5-954"
+  },
+  "/os/vim/introduction-7d2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---os-vim-introductionc-94-d06"
+  },
+  "/programming/algorithm/-3bb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-algorithm-b-75-8bb"
+  },
+  "/programming/algorithm/introduction-7a5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-algorithm-introduction-491-bcc"
+  },
+  "/programming/c/-08a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-c-b-65-a7b"
+  },
+  "/programming/c/calculation-bc2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-c-calculation-8-bf-3ec"
+  },
+  "/programming/c/expansion-909": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-c-expansiona-53-f97"
+  },
+  "/programming/c/hello-earth-5be": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-c-hello-earthb-33-ddc"
+  },
+  "/programming/c/structure-178": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-c-structure-1-f-3-1d5"
+  },
+  "/programming/oop/-8ab": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-oop-263-d73"
+  },
+  "/programming/oop/abstraction-367": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-oop-abstraction-94-c-e54"
+  },
+  "/programming/oop/encapsulation-3cd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-oop-encapsulationa-6-c-998"
+  },
+  "/programming/oop/inheritance-1f9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-oop-inheritance-438-a9e"
+  },
+  "/programming/oop/polymorphism-b06": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-oop-polymorphismf-94-d26"
+  },
+  "/programming/python/-0bf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-c-96-31e"
+  },
+  "/programming/python/calculation-f33": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-calculationf-22-ea4"
+  },
+  "/programming/python/conditional-statements-b91": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-conditional-statements-276-502"
+  },
+  "/programming/python/file-handling-396": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-file-handling-283-8fa"
+  },
+  "/programming/python/functions-ddb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-functions-504-1d0"
+  },
+  "/programming/python/hello-earth-6dc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-hello-earth-0-a-8-f93"
+  },
+  "/programming/python/loops-ffb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-loopsc-61-27a"
+  },
+  "/programming/python/structure-173": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---programming-python-structurebb-7-890"
+  }
+}

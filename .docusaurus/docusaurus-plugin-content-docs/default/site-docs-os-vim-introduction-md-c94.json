@@ -1,0 +1,25 @@
+{
+  "unversionedId": "os/vim/introduction",
+  "id": "os/vim/introduction",
+  "title": "Vim",
+  "description": "Vim stands for Vi Improved. This text editor is found in UNIX based operating systems. It has many commands to create new files and edit the configuration files of an operating system.",
+  "source": "@site/docs/os/vim/introduction.md",
+  "sourceDirName": "os/vim",
+  "slug": "/os/vim/introduction",
+  "permalink": "/os/vim/introduction",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/vim/introduction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Vim"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Unix Shell",
+    "permalink": "/os/unix/Shell"
+  },
+  "next": {
+    "title": "C",
+    "permalink": "/programming/c/"
+  }
+}

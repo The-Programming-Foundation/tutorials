@@ -1,0 +1,26 @@
+{
+  "unversionedId": "logic/gates",
+  "id": "logic/gates",
+  "title": "Gates",
+  "description": "Digits 0 and 1, have a numerical significance on our lives. The numbers having 0 are valued when the zeros are to the right rather than to the left. E.g: number 100 is valued than number 001. But in smart digital devices, it has logical significance. The digits 1 and 0 are valued as high and low numbers. While these digits are valued as the output, the decision making element is called the Logic Gates.",
+  "source": "@site/docs/logic/02-gates.mdx",
+  "sourceDirName": "logic",
+  "slug": "/logic/gates",
+  "permalink": "/logic/gates",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/logic/02-gates.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Gates"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Binaries",
+    "permalink": "/logic/binaries"
+  },
+  "next": {
+    "title": "SQL",
+    "permalink": "/domain_languages/sql/"
+  }
+}

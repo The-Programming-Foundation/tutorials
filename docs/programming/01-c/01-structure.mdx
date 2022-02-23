@@ -1,0 +1,135 @@
+---
+title: Structure
+---
+
+import Draggable from "react-draggable";
+
+<Draggable>
+  <div class="card-demo" style={{ position: "relative", zIndex: 5 }}>
+    <div
+      class="card"
+      style={{
+        backgroundColor: "#000000",
+        position: "relative",
+        zIndex: 5,
+        height: "auto",
+      }}
+    >
+      <iframe
+        src="https://peaceful-bohr-249ea0.netlify.app/c.html"
+        width="100%"
+        height="180px"
+        background="black"
+        overflow="hidden"
+      ></iframe>
+      <div
+        class="card__body"
+        style={{
+          backgroundColor: "#1d9dff",
+          position: "relative",
+          zIndex: 5,
+          width: "-50px",
+          height: "auto",
+        }}
+      ></div>
+    </div>
+  </div>
+</Draggable>
+
+## Introdcution
+
+The structure of C programs consists of the header files, source files, main function, and comments. Along with these, you have functions, variables, statements, and expressions.
+
+## Compile
+
+C compiles instructions. This means - C takes instructions from the programmer and converts them to machine readable language to help the computer understand and follow the instructions. Therefore, to run a C program, it needs to be compiled first.
+
+## Data type
+
+The data types are declared as variables or functions of different types. They have a specific associated memory and specific operations that are performed. These are the common data types:
+
+- **int** - The value ranges from **−32,767 to +32,767**
+- **char** - Any letter from **A to Z** or **a to z**
+- **float** - single precision floating point number
+- **double** - double precision floating point number
+
+## Header file
+
+Header files are files with **.h** extension. These contain the declaration of functions that are used in the program. For example, including the `<stdio.h>` allows you to use the **printf()** function. The header files define data types, function prototypes, and C pre-processor directives. You can also have custom header files with **.h** extensions to define the functions that can be directly used in the application.
+
+## Source file
+
+The file that includes the code and uses the header files is a source file with extension **.c**. By including the header file, the source file directs the C compiler to process the header file before compilation. The source file also includes the data type, variables, functions and all the code required for functional application.
+
+## Main function
+
+The **main()** function starts the execution of the program and the entry point of the program. Once you compile and run the program, the execution control enters the **main()**.
+
+- The void defines the return type of a function. It is nothing and states that the **main()** does not return any value after executing your code.
+- C executes the **main()** function first.
+
+```c
+int main() {
+  ...
+  ...
+  return 0;
+}
+```
+
+## Return statement
+
+A return statement stops execution of the function and gives back control to the calling function. In the above example, the calling function is `main()`.
+
+This returns an integer:
+
+```c
+return 0;
+```
+
+## Comment
+
+Comments in C language allow you to describe the code or the logic written for the program. You can have single or multiple lines of comments.
+
+A single line comment can be declared using `//`
+
+```c
+// This is a comment
+```
+
+A multi line comment can be declared using `/* */`
+
+```c
+/*
+First line
+Second line
+third line
+...
+...
+...
+*/
+```
+
+## Compiling a C program
+
+We need compilers to compile a C program. Famous C compilers include, **gcc** and **clang**.
+
+In a Unix system, to compile a **.c** file:
+
+```sh
+user@theprogrammingfoundation:~$ gcc your_program.c
+```
+
+Once compiled, you can see the binary file by typing ls:
+
+```sh
+user@theprogrammingfoundation:~$ ls
+Desktop  Documents  Downloads  Pictures  Music  Public  Videos  a.out
+```
+
+By default the compiled binary file is called, **a.out**.
+To run the binary file:
+
+```sh
+user@theprogrammingfoundation:~$ ./a.out
+Hello Earth
+```

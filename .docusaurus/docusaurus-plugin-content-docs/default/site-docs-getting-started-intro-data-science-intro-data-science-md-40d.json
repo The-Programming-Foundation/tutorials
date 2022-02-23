@@ -1,0 +1,25 @@
+{
+  "unversionedId": "getting_started/intro_data_science/intro_data_science",
+  "id": "getting_started/intro_data_science/intro_data_science",
+  "title": "Data Science",
+  "description": "Data Science careers are one of the most highly compensated careers worldwide currently. Due to its broad application in every industry, there is a higher demand for data scientists who can analyze complex data and communicate the results effectively. In this course, we will be covering the basics of data science and learning the tools used for data science from scratch. We will start the lessons at the beginner level and move up to the advanced level.",
+  "source": "@site/docs/getting_started/intro_data_science/intro_data_science.md",
+  "sourceDirName": "getting_started/intro_data_science",
+  "slug": "/getting_started/intro_data_science/",
+  "permalink": "/getting_started/intro_data_science/",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/getting_started/intro_data_science/intro_data_science.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Data Science"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/domain_languages/sql/introduction"
+  },
+  "next": {
+    "title": "Module 1 - Introduction",
+    "permalink": "/getting_started/intro_data_science/module1"
+  }
+}

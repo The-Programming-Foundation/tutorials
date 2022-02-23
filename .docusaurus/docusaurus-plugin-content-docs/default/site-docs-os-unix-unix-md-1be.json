@@ -1,0 +1,27 @@
+{
+  "unversionedId": "os/unix/unix",
+  "id": "os/unix/unix",
+  "title": "Unix",
+  "description": "The Unix operating system was developed by Ken Thompson, Dennis Ritchie in 1970 at Bell Labs research center. It was created to be a stable, multi-user and multi-tasking system for desktops and servers.",
+  "source": "@site/docs/os/unix/unix.md",
+  "sourceDirName": "os/unix",
+  "slug": "/os/unix/",
+  "permalink": "/os/unix/",
+  "editUrl": "https://github.com/The-Programming-Foundation/tutorials/docs/os/unix/unix.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Unix",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Kernel",
+    "permalink": "/os/kernel/introduction"
+  },
+  "next": {
+    "title": "Structure",
+    "permalink": "/os/unix/Structure"
+  }
+}
