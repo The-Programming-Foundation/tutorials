@@ -6,7 +6,7 @@ Modify the docusaurus.config.js file at your site's root instead.
 export default {
   "title": "The Programming Foundation",
   "tagline": "We believe that, everybody, regardless of their age, disabilities or educational background, should learn operating systems and programming. We focus on education that is based on written instruction and concise documentation.",
-  "url": "https://your-docusaurus-test-site.com",
+  "url": "https://learn.theprogrammingfoundation.org/",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",

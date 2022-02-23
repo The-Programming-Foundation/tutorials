@@ -1,0 +1,30 @@
+{
+  "/tutorials/blog/tags/facebook": {
+    "allTagsPath": "/tutorials/blog/tags",
+    "slug": "/tutorials/blog/tags/facebook",
+    "name": "facebook",
+    "count": 1,
+    "permalink": "/tutorials/blog/tags/facebook"
+  },
+  "/tutorials/blog/tags/hello": {
+    "allTagsPath": "/tutorials/blog/tags",
+    "slug": "/tutorials/blog/tags/hello",
+    "name": "hello",
+    "count": 2,
+    "permalink": "/tutorials/blog/tags/hello"
+  },
+  "/tutorials/blog/tags/docusaurus": {
+    "allTagsPath": "/tutorials/blog/tags",
+    "slug": "/tutorials/blog/tags/docusaurus",
+    "name": "docusaurus",
+    "count": 4,
+    "permalink": "/tutorials/blog/tags/docusaurus"
+  },
+  "/tutorials/blog/tags/hola": {
+    "allTagsPath": "/tutorials/blog/tags",
+    "slug": "/tutorials/blog/tags/hola",
+    "name": "hola",
+    "count": 1,
+    "permalink": "/tutorials/blog/tags/hola"
+  }
+}
