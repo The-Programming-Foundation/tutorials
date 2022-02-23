@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'The Programming Foundation', // Usually your GitHub org/user name.
+  organizationName: 'The-Programming-Foundation', // Usually your GitHub org/user name.
   projectName: 'tutorials', // Usually your repo name.
 
   presets: [
