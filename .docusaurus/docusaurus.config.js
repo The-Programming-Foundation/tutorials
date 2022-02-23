@@ -11,7 +11,7 @@ export default {
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
-  "organizationName": "The Programming Foundation",
+  "organizationName": "The-Programming-Foundation",
   "projectName": "tutorials",
   "presets": [
     [
