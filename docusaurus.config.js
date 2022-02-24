@@ -24,7 +24,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/The-Programming-Foundation/tutorials',
+          editUrl: 'https://github.com/The-Programming-Foundation/tutorials/edit/4.0/',
         },
         googleAnalytics: {
           trackingID: 'UA-168060731-2',
