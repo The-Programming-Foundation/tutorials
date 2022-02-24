@@ -20,7 +20,7 @@ export default {
         "docs": {
           "routeBasePath": "/",
           "sidebarPath": "/home/subha/Downloads/tutorials/sidebars.js",
-          "editUrl": "https://github.com/The-Programming-Foundation/tutorials"
+          "editUrl": "https://github.com/The-Programming-Foundation/tutorials/edit/4.0/"
         },
         "googleAnalytics": {
           "trackingID": "UA-168060731-2",
@@ -273,8 +273,8 @@ export default {
     "announcementBar": {
       "id": "announcement",
       "content": "This is the Spaceship update, our most ambitious update so far! We have entirely reimagined our Learn platform experience.",
-      "backgroundColor": "#007ddd",
-      "textColor": "#000",
+      "backgroundColor": "#0c164f",
+      "textColor": "#fff",
       "isCloseable": true
     },
     "scripts": [

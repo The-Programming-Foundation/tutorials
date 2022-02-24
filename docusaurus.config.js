@@ -130,8 +130,8 @@ const config = {
         id: 'announcement',
         content:
           'This is the Spaceship update, our most ambitious update so far! We have entirely reimagined our Learn platform experience.',
-        backgroundColor: '#007ddd',
-        textColor: '#000',
+        backgroundColor: '#0c164f',
+        textColor: '#fff',
         isCloseable: true,
       },
       scripts: [
