@@ -54,24 +54,28 @@ const config = {
             position: 'left',
             label: 'Learn',
           },
-          // {
-          //   type: 'dropdown',
-          //   label: 'Spawn VMs',
-          //   items: [
-          //     {
-          //       label: 'Unix',
-          //       href: '#unix',
-          //     },
-          //     {
-          //       label: 'C',
-          //       href: '#c',
-          //     },
-          //     {
-          //       label: 'Python',
-          //       href: '#python',
-          //     },
-          //   ],
-          // },
+          {
+            type: 'dropdown',
+            label: 'Engage',
+            items: [
+              {
+                label: 'Virtual Machine - Unix',
+                href: 'https://vm.theprogrammingfoundation.org/',
+              },
+              {
+                label: 'Virtual Machine - C',
+                href: 'https://vm.theprogrammingfoundation.org/c.html',
+              },
+              {
+                label: 'Virtual Machine - Python',
+                href: 'https://vm.theprogrammingfoundation.org/images/emulation/python.html',
+              },
+              {
+                label: 'Jupyter Notebook',
+                href: 'https://notebook.theprogrammingfoundation.org/lab/index.html',
+              },          
+            ],
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/The-Programming-Foundation/tutorials',

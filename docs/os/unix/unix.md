@@ -20,7 +20,7 @@ An interactive draggable virtual machine appears on top of every lesson based on
       style={{ backgroundColor: "#000000", position: "relative", zIndex: 5, height: "auto",}}
     >
       <iframe
-        src="https://peaceful-bohr-249ea0.netlify.app/"
+        src="https://vm.theprogrammingfoundation.org/"
         width="100%"
         height="180px"
         background= "black"
