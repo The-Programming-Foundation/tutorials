@@ -41,3 +41,15 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.unix-gradient {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.kernel-gradient {
+  background: linear-gradient(90deg, rgba(251,8,141,1) 0%, rgba(254,206,19,1) 53%, rgba(255,134,0,1) 100%);
+}
+
+.vim-gradient {
+  background: linear-gradient(90deg, rgba(34,1,7,1) 0%, rgba(125,4,25,1) 73%, rgba(251,8,51,1) 100%);
+}
