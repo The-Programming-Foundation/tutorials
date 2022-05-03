@@ -34,4 +34,39 @@ A random forest regression/classification tree is an ensemble machine learning a
 
 ![4](./images5/4.png)
 
+**Features & Feature Importance:**
+In machine learning, the variables are addressed as features. Let’s have a look at the dataset below. Heart disease is our dependent variable and all other variables in the dataset like smoking, alcohol drinking, physical activity etc. are our independent variables. These variables are addressed as features in the machine learning world.
+
+![5](./images5/5.png)
+
+:::info
+**Are all the independent variables equally important in predicting heart disease?**
+
+No! Some variables have high importance in predicting heart disease when compared to others. For example, race/physical activity/diabetic status are high predictors when compared to the profession of the patient.
+:::
+
+Any algorithm you use for predicting a dependent variable will assign the importance to the independent features to predict the outcome based on that. The process of assigning the importance to the features is done by adding weights (a number) to each feature. So for example, race/physical activity will have higher weights when compared to the profession of the patient will be assigned a lower weight.
+
+**Loss Function**
+In machine learning the loss function is defined as the difference or the distance between the predicted outcome and actual outcome.
+
+### Overfitting
+
+The term overfitting is used in machine learning when the predictive model works great on the training dataset and does not show the desirable results on the new dataset. In simple terms, the model is too closely aligned to the training data set points and cannot be generalized on other datasets. Even though it shows 99% accuracy on a training dataset, when you run a new data set the accuracy is around 50%. That’s how you can say that the model is overfitting.
+
+**What causes overfitting?**
+
+- Training dataset is too small.
+- Variance is too high
+- Predictive model is too complex
+- Training dataset might contain noise (meaningless values)
+
+**How to address overfitting?**
+
+There are several ways to address overfitting. In this module we will be discussing L1 & L2 regularization.
+
+- **L1 Regularization (Lasso regression):** This is a regularization technique which adds an absolute value of coefficient as the penalty. It reduces the weights of the features and adjusts it closer to 0. L1 regularization is very helpful when we have more features. The features with zero coefficients or closer to 0 coefficients are dropped.
+
+- **L2 Regularization (Ridge Regression):** This is a regularization technique which adds a squared value of coefficient as the penalty. It reduces the weights of the features and adjusts it closer to 0. L2 regularization is helpful in case of collinear predictors.
+
 Module 6 will include details on how to use python to predict the outcome using random forest regression.
