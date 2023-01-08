@@ -12,6 +12,7 @@ Launch a [**Jupyter Notebook**](https://notebook.theprogrammingfoundation.org/)
 
 :::info Evolving Series Author
 
-Nalini Parimi (Data Analyst) | Content Contributor at The Programming Foundation
+Nalini Parimi (Data Analyst) | Content Contributor at The Programming Foundation  
+Shiwangi Deshpande (Data Scientist) | Content Contributor at The Programming Foundation
 
 :::
