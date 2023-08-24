@@ -150,10 +150,6 @@ function Footer() {
         Leadership
       </a>
       <span class="footer__link-separator">·</span>
-      <a class="footer__link-item" href="https://www.smarterus.org/donate">
-        Donate
-      </a>
-      <span class="footer__link-separator">·</span>
       <a class="footer__link-item" href="https://www.smarterus.org/privacy">
         Privacy
       </a>
